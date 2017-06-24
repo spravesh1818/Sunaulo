@@ -13,12 +13,12 @@
 					
 					<ul class="social_icons clearfix dark">
 						<li>
-							<a target="_blank" href="http://facebook.com/QuanticaLabs" class="social_icon facebook" title="facebook">
+							<a target="_blank" href="" class="social_icon facebook" title="facebook">
 								&nbsp;
 							</a>
 						</li>
 						<li>
-							<a target="_blank" href="https://twitter.com/QuanticaLabs" class="social_icon twitter" title="twitter">
+							<a target="_blank" href="" class="social_icon twitter" title="twitter">
 								&nbsp;
 							</a>
 						</li>
@@ -54,7 +54,7 @@
 			<div class="header_container small">
 				<div class="header clearfix" >
 					<div class="logo">
-						<h1><a href="index9ba3.html?page=home" title="Pressroom"><img src="images/solid.png" height="81px;" align="Center" /> </a></h1>
+						<h1><a href="" title=""><img src="images/solid.png" height="81px;" align="Center" /> </a></h1>
 						</div>
 					
 					<img src="images/baalika.png" height="75px;"  align="Right" /> 
@@ -68,7 +68,7 @@
 				<nav>
 <ul class="sf-menu selected">
 	<li >
-		<a href="index.php" >
+		<a href="" >
 			गृह पृष्ठ
 		</a>
 		
@@ -98,7 +98,7 @@
 						<h5><a href="indexb878.html?page=post" title="New Painkiller Rekindles Addiction Concerns">
 <!--tittle-->New Painkiller Rekindles Addiction Concerns</a></h5>
 						<ul class="post_details simple">
-							<li class="category"><a  href="indexdced.html?page=category&amp;cat=health">
+							<li class="category"><a  href="">
 <!--Category-->HEALTH</a></li>
 							<li class="date">
 <!-- Posted date-->10:11 PM, Feb 02
