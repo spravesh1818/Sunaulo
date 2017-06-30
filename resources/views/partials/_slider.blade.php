@@ -14,7 +14,7 @@
 			<h2><a href="indexb878.html?page=post" title="Nuclear Fusion Closer to Becoming a Reality">
 <!--Tittle Of Slider Or Post-->{{$article->title}}</a></h2>
 			<p class="clearfix">
-<!--Short Content Of Post-->{{$article->content}}</p>
+<!--Short Content Of Post-->{!!$article->content!!}</p>
 		</div>
 	</li>
 

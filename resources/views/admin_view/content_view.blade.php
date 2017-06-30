@@ -4,14 +4,15 @@ View Users
 @endsection
 
 @section('main_header')
-View Users
+View Content
 @endsection
 
 @section('destination')
-View Users
+View Content
 @endsection
 
 @section('content')
+ <link rel="stylesheet" href={{ URL::asset('css/myFont.css')}}>
 	<div class='container'>
 	<table class='table'>
 		<tr>
@@ -32,13 +33,13 @@ View Users
 			<td>{{$article->title}}</td>
 			<td>{{$article->category}}</td>
 			<td>{{$article->keywords}}</td>
-			<td>{{$article->content}}</td>
+			<td>{!!substr($article->content,0,10)!!}...</td>
 			<td>{{$article->author}}</td>
 			<td>{{$article->created_at}}</td>
 			<td><a href='{{route('content.edit',$article->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
 				{!!Form::open(['route'=>['content.destroy',$article->id],'method'=>'delete'])!!}
 				{{Form::submit('Delete',array('class'=>'btn btn-primary'))}}
-				{!!Form::close()!!}
+				{!!Form::close()!!}</td>
 		</tr>
 		@endforeach
 	</table>

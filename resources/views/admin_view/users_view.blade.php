@@ -16,12 +16,8 @@ View Users
 	<table class='table'>
 		<tr>
 			<th>#</th>
-			<th>First Name</th>
-			<th>Middle Name</th>
-			<th>Last Name</th>
 			<th>Username</th>
 			<th>Email</th>
-			<th>Phone</th>
 			<th>Actions</th>
 		</tr>
 
@@ -29,13 +25,14 @@ View Users
 		@foreach ($users as $user)
 		<tr>
 			<th>{{$user->id}}</th>
-			<td>{{$user->firstName}}</td>
-			<td>{{$user->middleName}}</td>
-			<td>{{$user->lastName}}</td>
-			<td>{{$user->username}}</td>
+			<td>{{$user->name}}</td>
+			
 			<td>{{$user->email}}</td>
-			<td>{{$user->phone}}</td>
-			<td><a href='{{route('users.edit',$user->id)}}' class='btn btn-primary btn-sm' style='margin-right:2px;'>Edit</a><a href='{{route('users.destroy',$user->id)}}' class='btn btn-primary btn-sm'>Delete</a></td>
+			
+			<td><a href='#' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
+				{!!Form::open(['route'=>['user.destroy',$user->id],'method'=>'delete'])!!}
+				{{Form::submit('Delete',array('class'=>'btn btn-primary'))}}
+				{!!Form::close()!!}</td>
 		</tr>
 		@endforeach
 

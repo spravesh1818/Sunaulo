@@ -23,6 +23,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href={{ URL::asset('css/AdminLTE.min.css')}}>
     <link rel="stylesheet" href={{ URL::asset('css/bootstrap.min.css') }}>
     <link rel="stylesheet" href={{ URL::asset('css/skin-red.min.css')}}>
+    <link rel="stylesheet" href={{ URL::asset('css/myFont.css')}}>
+    
   
   
 
@@ -81,7 +83,8 @@ desired effect
             <!-- Menu toggle button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
-              <?php #if inbox=0 then don't show the span below?>
+              <?php #if inbox=0 then don't show the span below
+              ?>
               <span class="label label-success">{{0}}</span>
             </a>
             <ul class="dropdown-menu">
@@ -120,7 +123,7 @@ desired effect
               <!-- The user image in the navbar-->
               <img src={{URL::asset('images/user2-160x160.jpg')}} class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Username</span>
+              <span class="hidden-xs">{{auth()->user()->name}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -140,7 +143,7 @@ desired effect
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -163,7 +166,7 @@ desired effect
           <img src={{URL::asset('images/user2-160x160.jpg')}} class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Username</p>
+          <p>{{auth()->user()->name}}</p>
           <!-- Status -->
           
         </div>
@@ -174,6 +177,7 @@ desired effect
         <li class="header">Menu Items</li>
         <!-- Optionally, you can add icons to the links -->
         <li><a href="/"><i class="fa fa-home"></i> <span>DashBoard</span></a></li>
+        
         <li class="treeview">
           <a href="#"><i class="fa fa-user"></i> <span>User</span>
             <span class="pull-right-container">
@@ -181,10 +185,11 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href={{route('users.index')}}>View</a></li>
-            <li><a href={{route('users.create')}}>Add</a></li>
+            <li><a href={{route('user.index')}}>View</a></li>
+            <li><a href={{route('user.create')}}>Add</a></li>
           </ul>
         </li>
+
         <li class="treeview">
           <a href="#"><i class="fa fa-book"></i> <span>Content</span>
             <span class="pull-right-container">
@@ -196,18 +201,15 @@ desired effect
             <li><a href={{route('content.create')}}>Add</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            
-                                            <i class="fa fa-sign-out"></i>Logout
-                                        </a>
 
-          
-            
+        <li class="treeview">
+          <a href="/logout"><i class="fa fa-sign-out"></i> <span>Logout</span>
+            <span class="pull-right-container">
+             
+            </span>
           </a>
         </li>
+        
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -256,6 +258,7 @@ desired effect
 
 <!-- jQuery 2.2.3 -->
 <script src={{ URL::asset('js/jquery-2.2.3.min.js') }}></script>
+
 <script src={{ URL::asset('js/bootstrap.min.js') }}></script>
 <script src={{ URL::asset('js/app.min.js') }}></script>
 
