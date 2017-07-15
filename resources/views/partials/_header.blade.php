@@ -11,12 +11,12 @@
 					
 					<ul class="social_icons clearfix dark">
 						<li>
-							<a target="_blank" href="http://facebook.com/QuanticaLabs" class="social_icon facebook" title="facebook">
+							<a target="_blank" href="" class="social_icon facebook" title="facebook">
 								&nbsp;
 							</a>
 						</li>
 						<li>
-							<a target="_blank" href="https://twitter.com/QuanticaLabs" class="social_icon twitter" title="twitter">
+							<a target="_blank" href="" class="social_icon twitter" title="twitter">
 								&nbsp;
 							</a>
 						</li>
@@ -29,13 +29,13 @@
 							<li class="posts">
 								<ul class="latest_news_scrolling_list">
 									<li>
-										<a href="indexb878.html?page=post" title="">Climate Change Debate While Britain Floods</a>
+										<a href="" title="">Climate Change Debate While Britain Floods</a>
 									</li>
 									<li>
-										<a href="indexb878.html?page=post" title="">The Public Health Crisis Hiding in Our Food</a>
+										<a href="" title="">The Public Health Crisis Hiding in Our Food</a>
 									</li>
 									<li>
-										<a href="indexb878.html?page=post" title="">Nuclear Fusion Closer to Becoming a Reality</a>
+										<a href="" title="">Nuclear Fusion Closer to Becoming a Reality</a>
 									</li>
 								</ul>
 							</li>
@@ -57,7 +57,7 @@
 			<div class="header_container small">
 				<div class="header clearfix" >
 					<div class="logo">
-						<h1><a href="index9ba3.html?page=home" title="Pressroom"><img src="images/solid.png" height="81px;" align="Center" /> </a></h1>
+						<h1><a href="index9ba3.html?page=home" title=""><img src="images/solid.png" height="81px;" align="Center" /> </a></h1>
 						</div>
 					
 					<img src="images/baalika.png" height="75px;"  align="Right" /> 
@@ -419,6 +419,13 @@
 			</li>
 		</ul>
 	</li>
+
+	<li class="menu">
+		<a href={{ route('quiz') }} title="Pages">
+			Quiz
+		</a>
+		
+	</li>
 </ul>
 </nav>
 <div class="mobile_menu_container">
@@ -442,136 +449,7 @@
 			</a>
 			
 		</li>
-		<li class="submenu">
-			<a href="indexb878.html?page=post" title="Post Formats">
-				Post Formats
-			</a>
-			<ul>
-				<li>
-					<a href="indexb878.html?page=post" title="Post Default">
-						Post Default
-					</a>
-				</li>
-				<li>
-					<a href="indexba02.html?page=post_gallery" title="Post Gallery">
-						Post Gallery
-					</a>
-				</li>
-				<li>
-					<a href="index4e1c.html?page=post_small_image" title="Post Small Image">
-						Post Small Image
-					</a>
-				</li>
-				<li>
-					<a href="indexb2ff.html?page=post_video" title="Post Video YouTube">
-						Post Video Youtube
-					</a>
-				</li>
-				<li>
-					<a href="indexe1c9.html?page=post_video_2" title="Post Video Vimeo">
-						Post Video Vimeo
-					</a>
-				</li>
-				<li>
-					<a href="index224d.html?page=post_soundcloud" title="Post Soundcloud">
-						Post Soundcloud
-					</a>
-				</li>
-				<li>
-					<a href="indexda5d.html?page=post_review" title="Post Review Style 1">
-						Post Review Style 1
-					</a>
-				</li>
-				<li>
-					<a href="index17b1.html?page=post_review_2" title="Post Review Style 2">
-						Post Review Style 2
-					</a>
-				</li>
-				<li>
-					<a href="index4b64.html?page=post_quote" title="Post Quote Style 1">
-						Post Quote Style 1
-					</a>
-				</li>
-				<li>
-					<a href="index205e.html?page=post_quote_2" title="Post Quote Style 2">
-						Post Quote Style 2
-					</a>
-				</li>
-			</ul>
-		</li>
-		<li class="submenu">
-			<a href="indexf6f2.html?page=blog" title="Blog">
-				Blog
-			</a>
-			<ul>
-				<li>
-					<a href="index6bfc.html?page=blog_small_slider" title="Blog Small Slider">
-						Blog Small Slider
-					</a>
-				</li>
-				<li class="submenu">
-					<a href="indexf6f2.html?page=blog" title="Blog 1 column">
-						Blog 1 Column
-					</a>
-					<ul>
-						<li>
-							<a href="indexf6f2.html?page=blog" title="Blog With Right Sidebar">
-								Blog With Right Sidebar
-							</a>
-						</li>
-						<li>
-							<a href="index501e.html?page=blog_left_sidebar" title="Blog With Left Sidebar">
-								Blog With Left Sidebar
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="submenu">
-					<a href="index914a.html?page=blog_2_columns" title="Blog 2 columns">
-						Blog 2 Columns
-					</a>
-					<ul>
-						<li>
-							<a href="index914a.html?page=blog_2_columns" title="Right Sidebar">
-								Right Sidebar
-							</a>
-						</li>
-						<li>
-							<a href="index467f.html?page=blog_2_columns_left_sidebar" title="Left Sidebar">
-								Left Sidebar
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="index9680.html?page=blog_3_columns" title="Blog 3 Columns">
-						Blog 3 Columns
-					</a>
-				</li>
-				<li>
-					<a href="index644e.html?page=search&amp;s=Maecenas+Mauris" title="Search Page Template">
-						Search Page Template
-					</a>
-				</li>
-			</ul>
-		</li>
-		<li class="submenu">
-			<a href="indexde65.html?page=authors" title="Authors">
-				Authors
-			</a>
-			<ul>
-				<li>
-					<a href="indexde65.html?page=authors" title="Authors List">
-						Authors List
-					</a>
-				</li>
-				<li>
-					<a href="index27b5.html?page=author" title="Author Single">
-						Author Single
-					</a>
-				</li>
-			</ul>
-		</li>
+
 		<li class="submenu">
 			<a href="indexdced.html?page=category&amp;cat=health" title="Categories">
 				कोटी / वर्ग 

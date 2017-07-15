@@ -35,7 +35,7 @@ View Content
 			<td>{{$article->keywords}}</td>
 			<td>{!!substr($article->content,0,10)!!}...</td>
 			<td>{{$article->author}}</td>
-			<td>{{$article->created_at}}</td>
+			<td>{{date('F d, Y', strtotime($article->created_at))}}</td>
 			<td><a href='{{route('content.edit',$article->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
 				{!!Form::open(['route'=>['content.destroy',$article->id],'method'=>'delete'])!!}
 				{{Form::submit('Delete',array('class'=>'btn btn-primary'))}}

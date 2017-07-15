@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\articles;
+use App\category;
+use App\Files;
 use Illuminate\Http\Request;
 use Session;
+use Image;
+use App\comment;
 
 class ArticlesController extends Controller
 {
@@ -31,7 +35,8 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-       return view('admin_view.content_add');
+        $category=category::all();
+        return view('admin_view.content_add')->withCategories($category);
     }
 
     /**
@@ -51,10 +56,39 @@ class ArticlesController extends Controller
             ));
         //complete the request
         */
-
             $article=new articles;
             $article->title=$request->title;
             $article->content=$request->content;
+            $article->category=$request->category;
+            $article->mostRead=0;
+            $article->numberofComments=0;
+
+            //save our image
+            if($request->hasFile('image')){
+                $image=$request->file('image');
+                $filename=time().'.'.$image->getClientOriginalExtension();
+                $location=public_path('uploads/'.$filename);   
+                Image::make($image)->resize(1250,550)->save($location);
+
+                $article->image=$filename;
+
+            }
+
+            if($request->hasFile('file')){
+                $numberOfFiles=0;
+                foreach($request->file as $file){
+                    $filename=$numberOfFiles.time().'.'.$file->getClientOriginalExtension();
+                    $file->storeAs('public',$filename);
+                    $numberOfFiles++;
+                    $file=new Files;
+                    $file->fileName=$filename;
+                    $file->title=$article->title;
+                    $file->save();
+
+                }
+                $article->numberOfFiles=$numberOfFiles;
+            }
+
 
             $article->save();
             Session::flash('success','The article was successfully created');
@@ -101,12 +135,25 @@ class ArticlesController extends Controller
      */
     public function update(Request $request,$id)
     {
-        //validae the data
+        //validate the data
 
         //save the database
             $article=articles::find($id);
             $article->title=$request->input('title');
             $article->content=$request->input('content');
+            $article->category=$request->input('category');
+            if($request->hasFile('image')){
+                $image=$request->file('image');
+                $filename=time().'.'.$image->getClientOriginalExtension();
+                $location=public_path('images/articleheader/'.$filename);   
+                Image::make($image)->resize(1250,550)->save($location);
+                $old_filename=$article->image;
+                $article->image=$filename;
+
+                \Storage::delete($old_filename);
+            }
+
+    
             $article->save();
             Session::flash('success','The article was successfully updated');
         //redirect with flash data to content.show
@@ -122,6 +169,12 @@ class ArticlesController extends Controller
     public function destroy($id)
     {
         $article=articles::find($id);
+        $comments=comment::all()->where('article_id',$id);
+        foreach ($comments as $comment) {
+            $comment->delete();
+        }
+        
+        \Storage::delete($article->image);
         $article->delete();
         Session::flash('success',"The post was successfully deleted");
         return redirect()->route('content.index');

@@ -77,7 +77,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user=User::find($id);
+        return view('admin_view.edit_user')->withUsers($user);
     }
 
     /**
@@ -89,7 +90,13 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $user=User::find($id);
+         $user->name=$request->input('name');
+         $user->email=$request->input('email');
+         $user->password=bcrypt($request->input('password'));
+         $user->save();
+         Session::flash('success','The user was successfully updated');
+         return redirect()->route('user.index');
     }
 
     /**

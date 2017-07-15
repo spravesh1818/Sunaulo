@@ -190,6 +190,19 @@ desired effect
           </ul>
         </li>
 
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-user"></i> <span>Quiz</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href={{route('quiz.index')}}>View</a></li>
+            <li><a href={{route('quiz.create')}}>Add</a></li>
+          </ul>
+        </li>
+
         <li class="treeview">
           <a href="#"><i class="fa fa-book"></i> <span>Content</span>
             <span class="pull-right-container">
@@ -199,6 +212,18 @@ desired effect
           <ul class="treeview-menu">
             <li><a href={{route('content.index')}}>View</a></li>
             <li><a href={{route('content.create')}}>Add</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-book"></i> <span>Categories</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href={{route('category.index')}}>View</a></li>
+            <li><a href={{route('category.create')}}>Add</a></li>
           </ul>
         </li>
 
