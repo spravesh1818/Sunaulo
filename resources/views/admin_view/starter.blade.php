@@ -283,7 +283,7 @@ desired effect
 
 <!-- jQuery 2.2.3 -->
 <script src={{ URL::asset('js/jquery-2.2.3.min.js') }}></script>
-
+<script src={{ URL::asset('js/preeti.js') }}></script>
 <script src={{ URL::asset('js/bootstrap.min.js') }}></script>
 <script src={{ URL::asset('js/app.min.js') }}></script>
 

@@ -4,13 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\articles;
+Use App\category;
 use App\users;
 use App\comment;
 class PageController extends Controller
 {
 	public function home(){
+		$category=category::all();
+		$random=array();;
+		foreach ($category as $cat) {
+			array_push($random,$cat->title);
+		}
+		shuffle($random);
 		$article=articles::orderBy('id','desc')->whereNotNull('image')->limit(4)->get();
-		return view('index')->withArticles($article);
+		return view('index')->withArticles($article)->withCategory($random[0]);
 	}
 
 	public function show($id){
