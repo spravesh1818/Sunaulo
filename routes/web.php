@@ -12,7 +12,9 @@
 */
 
 Route::get('/','PageController@home')->name('home');
-Route::get('/single/{content}','PageController@show')->name('view');
+Route::get('/categories/{category}','PageController@categorywise')->name('category');
+Route::get('/allpost','PageController@allpost')->name('all');
+Route::get('/article/{content}','PageController@show')->name('view');
 Route::post('/comment','PageController@comment')->name('comment.post');
 
 Route::get('/login','loginController@login')->name('login');
@@ -42,7 +44,13 @@ Route::group(['prefix'=>'/dashboard'],function(){
 	Route::put('/quiz/{quiz}','quizController@update')->name('quiz.update');
 	Route::delete('/quiz/{quiz}','quizController@destroy')->name('quiz.destroy');
 
-
+	Route::get('/quizq','quizController@indexq')->name('quiz.indexq');
+	Route::get('/quizq/create','quizController@createq')->name('quiz.createq');
+	Route::post('/quizq','quizController@storeq')->name('quiz.storeq');
+	Route::get('/quizq/{quiz}','quizController@showq')->name('quiz.showq');
+	Route::get('/quizq/{quiz}/edit','quizController@editq')->name('quiz.editq');
+	Route::put('/quizq/{quiz}','quizController@updateq')->name('quiz.updateq');
+	Route::delete('/quizq/{quiz}','quizController@destroyq')->name('quiz.destroyq');
 
 	#category routes
 

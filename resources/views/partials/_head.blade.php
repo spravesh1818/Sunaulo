@@ -27,7 +27,7 @@
 				<!--<link rel="stylesheet" type="text/css" href="style/dark_skin.css">-->
 		<!--<link rel="stylesheet" type="text/css" href="style/high_contrast_skin.css">-->
 		<link rel="shortcut icon" href={{ URL::asset('images/solid.png')}}>
-
+		<link rel="stylesheet" href={{asset('css/preeti.css')}}>
 
 		<script type="text/javascript" src={{ URL::asset('js/jquery-1.12.4.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('jquery-migrate-1.4.1.min.js')}}></script>
@@ -46,5 +46,4 @@
 		<script type="text/javascript" src={{ URL::asset('js/googlemap.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/main.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/odometer.min.js')}}></script>
-		
 	</head>

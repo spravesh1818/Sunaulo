@@ -38,14 +38,21 @@
 <!-- Post sof popular post-->
 					<div id="sidebar-most-read">
 						<ul class="blog rating page_margin_top clearfix">
-							@foreach($articles as $article)
+							
+						@php
+							$sorted=$articles;
+							$sorted=$sorted->sortByDesc('mostRead');
+						@endphp
+						
+							
+							@foreach($sorted as $article)
 							<li class="post">
 								<a href={{route('view',$article->id)}} title={{$article->title}}>
-<!--image source-->				<img src='images/samples/510x187/image_12.jpg' alt='img'>
+<!--image source-->				<img src={{ asset('uploads/'.$article->image) }} alt='img'>
 								</a>
 								<div class="post_content">
 									
-									<span class="number animated_element" data-value="100"></span>
+									<span class="number animated_element" data-value="{{$article->mostRead}}"></span>
 									<h5><a href={{ route('view',$article->id )}} title="{{$article->title}}">
 <!--tittle-->						{{$article->title}}</a></h5>
 									<ul class="post_details simple">
@@ -55,57 +62,36 @@
 								</div>
 							</li>
 							@endforeach
-							<li class="post">
-								<a href={{route('view',$article->id)}} title={{$article->title}}>
-<!--image source-->				<img src='images/samples/510x187/image_12.jpg' alt='img'>
-								</a>
-								<div class="post_content">
-									
-									<span class="number animated_element" data-value="150"></span>
-									<h5><a href={{ route('view',$article->id )}} title="{{$article->title}}">
-<!--tittle-->						{{$article->title}}</a></h5>
-									<ul class="post_details simple">
-										<li class="category"><a href="" title={{$article->category}}>
-<!--category-->							{{$article->category}}</a></li>
-									</ul>
-								</div>
-							</li>
 						</ul>
 						<a class="more page_margin_top" href="#">SHOW MORE</a>
 					</div>
 <!-- Most Commented Post-->
 					<div id="sidebar-most-commented">
 						<ul class="blog rating page_margin_top clearfix">
-						@foreach($articles as $article)
+						@php
+							$sorted=$articles;
+							$sorted=$sorted->sortByDesc('numberofComments');
+						@endphp
+						
+							
+							@foreach($sorted as $article)
 							<li class="post">
-								<a href={{$article->title}} title={{$article->title}}>
-<!-- image-->					<img src='images/samples/510x187/image_02.jpg' alt='img'>
+								<a href={{route('view',$article->id)}} title={{$article->title}}>
+<!--image source-->				<img src={{ asset('uploads/'.$article->image) }} alt='img'>
 								</a>
 								<div class="post_content">
-									<span class="number animated_element" data-value={{$article->numberofComments}}></span>
-									<h5><a href={{ route('view',$article->id) }} title="{{$article->title}}">
+									
+									<span class="number animated_element" data-value="{{$article->numberofComments}}"></span>
+									<h5><a href={{ route('view',$article->id )}} title="{{$article->title}}">
 <!--tittle-->						{{$article->title}}</a></h5>
 									<ul class="post_details simple">
-										<li class="category"><a href= title="{{$article->category}}">
-<!--category-->						{{$article->category}}</a></li>
+										<li class="category"><a href="" title={{$article->category}}>
+<!--category-->							{{$article->category}}</a></li>
 									</ul>
-								</div>	
+								</div>
 							</li>
 							@endforeach
-							<li class="post">
-								<a href={{$article->title}} title={{$article->title}}>
-<!-- image-->					<img src='images/samples/510x187/image_02.jpg' alt='img'>
-								</a>
-								<div class="post_content">
-									<span class="number animated_element" data-value="40"></span>
-									<h5><a href={{ route('view',$article->id) }} title="{{$article->title}}">
-<!--tittle-->						{{$article->title}}</a></h5>
-									<ul class="post_details simple">
-										<li class="category"><a href= title="{{$article->category}}">
-<!--category-->						{{$article->category}}</a></li>
-									</ul>
-								</div>	
-							</li>
+							
 						</ul>
 						<a class="more page_margin_top" href="#">SHOW MORE</a>
 					</div>

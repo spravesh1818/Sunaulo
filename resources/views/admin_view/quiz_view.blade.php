@@ -17,7 +17,7 @@ View Content
 	<table class='table'>
 		<tr>
 			<th>#</th>
-			<th>Qusetion</th>
+			<th>Question</th>
 			<th>Answer</th>
 			<th>Option 1</th>
 			<th>Option 2</th>

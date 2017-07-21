@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\category;
+use App\articles;
 
 class categoryController extends Controller
 {
@@ -36,6 +37,10 @@ class categoryController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,array(
+          'title'=>'required|max:255',
+            ));
+
         $category=new category;
         $category->title=$request->title;
 
@@ -86,6 +91,13 @@ class categoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $category=category::find($id);
+        $articles=articles::all()->where('category',$category->title);
+        foreach ($articles as $article) {
+            $article->delete();
+        }
+        $category->delete();
+        return redirect()->route('category.index');
     }
 }

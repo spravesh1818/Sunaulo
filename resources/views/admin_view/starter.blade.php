@@ -13,6 +13,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Bootstrap 3.3.6 -->
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
@@ -192,14 +193,15 @@ desired effect
 
 
         <li class="treeview">
-          <a href="#"><i class="fa fa-user"></i> <span>Quiz</span>
+          <a href="#"><i class="fa fa-question-circle"></i> <span>Quiz</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href={{route('quiz.index')}}>View</a></li>
-            <li><a href={{route('quiz.create')}}>Add</a></li>
+            <li><a href={{route('quiz.index')}}>View All Questions</a></li>
+            <li><a href={{route('quiz.create')}}>Add Questions</a></li>
+            <li><a href={{route('quiz.createq')}}>Create a Quiz</a></li>
           </ul>
         </li>
 
@@ -216,7 +218,7 @@ desired effect
         </li>
 
         <li class="treeview">
-          <a href="#"><i class="fa fa-book"></i> <span>Categories</span>
+          <a href="#"><i class="fa fa-folder-o"></i> <span>Categories</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -286,6 +288,7 @@ desired effect
 <script src={{ URL::asset('js/preeti.js') }}></script>
 <script src={{ URL::asset('js/bootstrap.min.js') }}></script>
 <script src={{ URL::asset('js/app.min.js') }}></script>
+
 
 </body>
 </html>

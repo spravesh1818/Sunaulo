@@ -29,7 +29,7 @@
 									
 									<p>{!!$articles->content!!}</p>
 									
-									<a title="6 Comments" href="indexb878.html?page=post" class="read_more page_margin_top scroll_to_comments"><span class="arrow"></span><span>6 COMMENTS</span></a>
+									<a title="{{$articles->numberofComments}} Comments" href="indexb878.html?page=post" class="read_more page_margin_top scroll_to_comments"><span class="arrow"></span><span>{{$articles->numberofComments}} COMMENTS</span></a>
 								</div>
 							</div>
 							<div class="author_box animated_element">
@@ -146,12 +146,9 @@
 					@foreach($comment as $comment)
 					<ul id="comments_list">
 						<li class="comment clearfix" id="comment-1">
-							<div class="comment_author_avatar">
-								&nbsp;
-							</div>
 							<div class="comment_details">
 								<div class="posted_by clearfix">
-									<h5><a class="author" href="#" title={{$comment->name}}>{{$comment->name}}</a></h5>
+									<h5><strong><a class="author" href="#" title={{$comment->name}}>{{$comment->name}}</a></strong></h5>
 									<abbr title={{$comment->created_at}} class="timeago">{{$comment->created_at}}</abbr>
 								</div>
 								<p>

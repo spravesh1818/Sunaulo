@@ -30,105 +30,51 @@
 						<h1>This is a Quiz</h1>
 					</header>
 				</div>
-				<a href="#one" class="more">Start</a>
+				<a href="#{{$questions[0]->id}}" class="more">Start</a>
 			</section>
-
+		<form method='post' action="{{ route('quiz.indexq') }}">
+		{{csrf_field()}}
+		@php
+			$i=2;
+		@endphp
 		<!-- One -->
-			<section id="one" class="wrapper post bg-img" data-bg="banner2.jpg">
+		@foreach($questions as $question)
+			<section id="{{$question->id}}" class="wrapper post bg-img" data-bg="banner{{$i}}.jpg">
 				<div class="inner">
 					<article class="box">
 						<header>
-							<h2>Q1: What is a machine?</h2>
+							<h2>{{$question->question}}</h2>
 						</header>
+						@php
+							$shuffle=[];
+							array_push($shuffle,$question->answer);
+							array_push($shuffle,$question->option1);
+							array_push($shuffle,$question->option2);
+							array_push($shuffle,$question->option3);
+							shuffle($shuffle)
+						@endphp
+
 						<div class="content">
-							
-  							<input type='radio' name="choice1" value="Motor"/> Motor<br>
-  							<input type="radio" name="choice1" value="Car"/> Car<br>
-  							<input type="radio" name="choice1" value="Zipper"/> Zipper<br>
-  							<input type="radio" name="choice1" value="Lever"/> Lever
+  							<input type='radio' name="choice{{$i}}" value="{{$shuffle[0]}}"/>{{$shuffle[0]}}<br>
+  							<input type="radio" name="choice{{$i}}" value={{$shuffle[1]}}/>{{$shuffle[1]}}<br>
+  							<input type="radio" name="choice{{$i}}" value="{{$shuffle[2]}}"/> {{$shuffle[2]}}<br>
+  							<input type="radio" name="choice{{$i}}" value="{{$shuffle[3]}}"/>{{$shuffle[3]}}
 							
 						</div>
 						<footer>
 						<a href="#banner" class="button alt">Back</a>
-							<a href="#two" class="button alt">Next Question</a>
 						</footer>
 					</article>
 				</div>
-				<a href="#two" class="more">Next Question</a>
+				<a href="#{{$question->id+1}}" class="more">Start</a>
 			</section>
-
+			@php
+				$i++;	
+			@endphp
+			@endforeach
+			<input type="submit" name="submit" value="Submit">
+		</form>
 		<!-- Two -->
-			<section id="two" class="wrapper post bg-img" data-bg="banner5.jpg">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>Q2: What animal is in 100 NRS bill?</h2>
-						</header>
-						<div class="content">
-							<form>
-  							<input type="radio" name="choice2" value="Two-horned Rhino"> Two-horned Rhino<br>
-  							<input type="radio" name="choice2" value="One-horned Rhino"> One-horned Rhino<br>
-  							<input type="radio" name="choice2" value="Tiger"> Tiger<br>
-  							<input type="radio" name="choice2" value="Lever"> Goat<br>
-							</form>
-						</div>
-						<footer>
-							<a href="#one" class="button alt">Back</a>
-							<a href="#three" class="button alt">Next Question</a>
-						</footer>
-					</article>
-				</div>
-				<a href="#three" class="more">Next Question</a>
-			</section>
-
-		<!-- Three -->
-			<section id="three" class="wrapper post bg-img" data-bg="banner4.jpg">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>Q3: Why is Gode fat?</h2>
-						</header>
-						<div class="content">
-							<form>
-  							<input type="radio" name="choice3" value="Genetics"> Genetics<br>
-  							<input type="radio" name="choice3" value="Lazy"> Lazy<br>
-  							<input type="radio" name="choice3" value="Obesity"> Obesity<br>
-  							<input type="radio" name="choice3" value="Eats anythinng"> Eats anythinng<br>
-							</form>
-						</div>
-						<footer>
-						<a href="#two" class="button alt">Back</a>
-							<a href="#four" class="button alt">Next Question</a>
-						</footer>
-					</article>
-				</div>
-				<a href="#four" class="more">Next Question</a>
-			</section>
-
-		<!-- Four -->
-			<section id="four" class="wrapper post bg-img" data-bg="banner3.jpg">
-				<div class="inner">
-					<article class="box">
-						<header>
-							<h2>Q4: Why is the radio button not loading?</h2>
-							
-						</header>
-						<div class="content">
-							<form>
-  							<input type="radio" name="choice4" value="Bad code"> Bad code<br>
-  							<input type="radio" name="choice4" value="Wrong JavaScript"> Wrong JavaScript<br>
-  							<input type="radio" name="choice4" value="Noob coder"> Noob coder<br>
-  							<input type="radio" name="choice4" value="Have no clue"> Have no clue<br>
-							</form>
-						</div>
-						<footer>
-						<a href="#three" class="button alt">Back</a>
-							<a href="#banner" class="button alt">Next Question</a>
-						</footer>
-					</article>
-				</div>
-			</section>
-
 			
 		<!-- Footer -->
 

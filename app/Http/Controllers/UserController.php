@@ -40,9 +40,9 @@ class UserController extends Controller
         //validate the input data
 
         $this->validate($request,array(
-            'name'=>'required|max:255',
+            'name'=>'required|max:255|unique:users,name',
             'password'=>'required|max:255|confirmed',
-            'email'=>'required|max:255',
+            'email'=>'required|max:255|unique:users,email',
             ));
 
         //write to the daabase and redirect to the view

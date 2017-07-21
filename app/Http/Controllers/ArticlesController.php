@@ -48,14 +48,13 @@ class ArticlesController extends Controller
     public function store(Request $request)
     {
         //validate first
-        /*$this->validate($request,array(
+        $this->validate($request,array(
           'title'=>'required|max:255',
             'category'=>'required|max:255',
-            'keywords'=>'required|max:255',
-            'author'=>'required|max:255',
+            'content'=>'required',
+            'image'=>'image',
             ));
         //complete the request
-        */
             $article=new articles;
             $article->title=$request->title;
             $article->content=$request->content;
@@ -136,6 +135,12 @@ class ArticlesController extends Controller
     public function update(Request $request,$id)
     {
         //validate the data
+        $this->validate($request,array(
+          'title'=>'required|max:255',
+            'category'=>'required|max:255',
+            'content'=>'required',
+            'image'=>'image',
+            ));
 
         //save the database
             $article=articles::find($id);

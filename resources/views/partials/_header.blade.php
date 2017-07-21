@@ -381,25 +381,19 @@
 		</a>
 		<ul>
 			<li>
-				<a href="category.php?page=category&amp;cat=health" title="Health">
-					स्वास्थ 
+				<a href="{{ route('all')}}" title="all">
+					All articles
 				</a>
 			</li>
+			@foreach($categories as $category) 
+			
 			<li>
-				<a href="indexdd47.html?page=category&amp;cat=science" title="Science">
-					बिज्ञान 
+				<a href="{{ route('category',$category->id) }}" title="{{$category->title}}">
+					{{$category->title}}
 				</a>
 			</li>
-			<li>
-				<a href="index5d3d.html?page=category&amp;cat=sports" title="Sports">
-					खेलकुद 
-				</a>
-			</li>
-			<li>
-				<a href="index7855.html?page=category&amp;cat=world" title="World">
-					बिस्व 
-				</a>
-			</li>
+		@endforeach
+			
 					</ul>
 	</li>
 	<li class="submenu">

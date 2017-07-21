@@ -28,12 +28,24 @@ Add Category
 			<th>{{$category->id}}</th>
 			<td>{{$category->title}}</td>
 			<td>{{date('F d, Y', strtotime($category->created_at))}}</td>
-			<td><a href='{{route('content.edit',$category->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
-				{!!Form::open(['route'=>['content.destroy',$category->id],'method'=>'delete'])!!}
-				{{Form::submit('Delete',array('class'=>'btn btn-primary'))}}
+			<td><a href='{{route('category.edit',$category->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
+				{!!Form::open(['route'=>['category.destroy',$category->id],'method'=>'delete','onsubmit'=>'return val()'])!!}
+				{{Form::submit('Delete',array('class'=>'btn btn-primary','id'=>'delete'))}}
 				{!!Form::close()!!}</td>
 		</tr>
 		@endforeach
 	</table>
+
+	<script>
+	function val(){
+		if(confirm("Deleting this post will remove its related articles as well!Are you sure you want to delete?"))
+		{
+			document.forms['delete'].submit();
+		}
+		else{
+			return false;
+		}
+	}
+	</script>
 </div>
 @endsection

@@ -13,8 +13,8 @@
 			</ul>
 			<h2 style="font-size:40px;"><a href={{ route('view',$article->id)}} title={{$article->title}}>
 <!--Tittle Of Slider Or Post-->{{$article->title}}</a></h2>
-			<p class="clearfix" style="font-size:35px;">
-<!--Short Content Of Post-->{!!substr($article->content,0,850)!!}...</p>
+			<p class="clearfix" style="font-size:25px;">
+<!--Short Content Of Post-->{!!substr($article->content,0,400)!!}...</p>
 		</div>
 	</li>
 
