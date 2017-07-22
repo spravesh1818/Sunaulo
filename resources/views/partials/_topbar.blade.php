@@ -46,7 +46,6 @@
 								<abbr title="04 June 2014" class="timeago">04 June 2014</abbr>
 															
 						</li>
-						<li>sdvfdvdv</li>
 						</ul>
 					</div>
 				</div>
