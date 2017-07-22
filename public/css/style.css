@@ -3262,7 +3262,7 @@ li.detail.category
 }
 .header_top_bar .social_icons li
 {
-	padding: 8px 0 8px 5px;
+	padding: 8px 0 0px 0px;
 }
 .social_icons .social_icon:hover,
 .social_icons.colors .social_icon
