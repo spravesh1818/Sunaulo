@@ -18,7 +18,7 @@ Add Users
             <div class="panel panel-default">
                 <div class="panel-heading">Add A User</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('user.store') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ route('user.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -71,6 +71,10 @@ Add Users
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+
+                        <div class="col-md-8 col-md-offset-4">
+                                <input type="file" name="usr_avatar" class="form-control" accept="image/*" >
+                            </div>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

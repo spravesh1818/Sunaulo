@@ -19,7 +19,6 @@ class CreateArticlesTable extends Migration
             $table->string('category')->default('programs');
             $table->string('keywords')->default("No keywords");
             $table->text('content');
-            //$table->binary('image');
             $table->string('author')->default("Pravesh Chapagain");
             $table->timestamps();
         });

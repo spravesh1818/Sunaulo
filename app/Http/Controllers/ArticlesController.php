@@ -61,6 +61,7 @@ class ArticlesController extends Controller
             $article->category=$request->category;
             $article->mostRead=0;
             $article->numberofComments=0;
+            $article->author=$request->author;
 
             //save our image
             if($request->hasFile('image')){

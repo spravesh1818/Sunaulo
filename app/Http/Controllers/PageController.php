@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\articles;
 Use App\category;
-use App\users;
+use App\User;
 use App\comment;
 use App\quizC;
 use App\quiz;
@@ -24,6 +24,11 @@ class PageController extends Controller
 
 	public function show($id){
 		$article=articles::find($id);
+		$user=User::all()->where('name',$article->author);
+		$author;
+		foreach($user as $user)
+			$author=$user;
+
 		$count=$article->mostRead;
 		$count++;
 		$article->mostRead=$count;
@@ -33,7 +38,7 @@ class PageController extends Controller
         $categories=category::all();
 
         
-       return view('single')->withArticles($article)->withContent($content)->withComment($comment)->withCategories($categories);
+       return view('single')->withArticles($article)->withContent($content)->withComment($comment)->withCategories($categories)->withAuthor($author);
 	}
 
 	public function allpost(){

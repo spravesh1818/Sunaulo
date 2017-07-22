@@ -33,6 +33,7 @@ Add Content
 		<option>{{$category->title}}</option>
 		@endforeach
 	</select><br>
+	<input type="text" name="author" style="display:none;" value={{auth()->user()->name}}>
 	{{Form::label('image','Upload article display picture')}}
 	{{Form::file('image',array('class'=>'form-control','accept'=>'image/*','style'=>'margin-bottom:20px;'))}}
 

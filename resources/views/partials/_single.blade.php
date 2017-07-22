@@ -34,11 +34,16 @@
 							</div>
 							<div class="author_box animated_element">
 								<div class="author">
-									<a title="Pravesh Chapagain" href="index27b5.html?page=author" class="thumb">
-										<img alt="img" src={{ URL::asset('images/noprofile.png')}} style="width:100px;height:100px">
+									<a title="{{$articles->author}}" href="index27b5.html?page=author" class="thumb">
+									@if(!empty($author->usr_avatar))
+										<img alt="img" src={{ asset('uploads/'.$author->usr_avatar) }} style="width:100px;height:100px">
+									@else
+									<img alt="img" src={{asset('images/noprofile.png')}} style="width:100px;height:100px">
+									@endif
+
 									</a>
 									<div class="details">
-										<h5><a title="Anna Shubina" href="index27b5.html?page=author">{{$articles->author}}</a></h5>
+										<h5><a title="{{$articles->author}}" href="">{{$articles->author}}</a></h5>
 										<h6>EDITOR</h6>
 									</div>
 								</div>

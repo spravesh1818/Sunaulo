@@ -124,17 +124,25 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
+              @if(!empty(auth()->user()->usr_avatar))
+                <img src={{URL::asset('uploads/'.auth()->user()->usr_avatar)}} class="user-image" alt="User Image">
+             @else
               <img src={{URL::asset('images/user2-160x160.jpg')}} class="user-image" alt="User Image">
+              @endif
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
               <span class="hidden-xs">{{auth()->user()->name}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src={{URL::asset('images/user2-160x160.jpg')}} class="img-circle" alt="User Image">
+                @if(!empty(auth()->user()->usr_avatar))
+                <img src={{URL::asset('uploads/'.auth()->user()->usr_avatar)}} class="img-circle" alt="User Image">
+                @else
+               <img src={{URL::asset('images/user2-160x160.jpg')}} class="img-circle" alt="User Image">
+              @endif
 
                 <p>
-                  Pravesh Chapagain 
+                  {{auth()->user()->name}}
                   <small>Designation</small>
                 </p>
               </li>
@@ -166,7 +174,12 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
+        @if(!empty(auth()->user()->usr_avatar))
+          <img src={{URL::asset('uploads/'.auth()->user()->usr_avatar)}} class="img-circle" alt="User Image">
+        @else
           <img src={{URL::asset('images/user2-160x160.jpg')}} class="img-circle" alt="User Image">
+        @endif
+          
         </div>
         <div class="pull-left info">
           <p>{{auth()->user()->name}}</p>

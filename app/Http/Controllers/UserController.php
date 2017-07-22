@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Session;
+use Image;
 
 class UserController extends Controller
 {
@@ -43,6 +44,7 @@ class UserController extends Controller
             'name'=>'required|max:255|unique:users,name',
             'password'=>'required|max:255|confirmed',
             'email'=>'required|max:255|unique:users,email',
+
             ));
 
         //write to the daabase and redirect to the view
@@ -50,8 +52,19 @@ class UserController extends Controller
             $user->name=$request->name;
             $user->password=bcrypt($request->password);
             $user->email=$request->email;
-            $user->save();
+            
 
+            if($request->hasFile('usr_avatar')){
+                $image=$request->file('usr_avatar');
+                $filename="u".time().'.'.$image->getClientOriginalExtension();
+                $location=public_path('uploads/'.$filename);   
+                Image::make($image)->resize(100,100)->save($location);
+
+                $user->usr_avatar=$filename;
+
+            }
+
+            $user->save();
             Session::flash('success','The user was successfully created');
             return redirect()->route('user.index');
 
