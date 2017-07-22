@@ -1,36 +1,15 @@
-<div class="column column_1_3">
-				<h4 class="box_header">Recommended</h4>
-				<ul class="blog small_margin clearfix">
-<!-- Remove from Here-->
-					<li class="post">
-						<a href="indexb878.html?page=post" title="The Public Health Crisis Hiding in Our Food">
-							<img src='images/samples/510x187/image_01.jpg' alt='img'>
-						</a>
-						<div class="post_content">
-							<h5>
-								<a href="indexb878.html?page=post" title="The Public Health Crisis Hiding in Our Food">Climate Change Debate While Britain Floods</a>
-							</h5>
-							<ul class="post_details simple">
-								<li class="category"><a href="index7855.html?page=category&amp;cat=world" title="WORLD">WORLD</a></li>
-								<li class="date">
-									10:11 PM, Feb 02
-								</li>
-							</ul>
-						</div>
-					</li>
-<!-- Remove Upto Here-->
-				</ul>
+<div class="col-3 right">
 				<div class="tabs no_scroll page_margin_top_section clearfix">
 					<ul class="tabs_navigation clearfix">
 						<li>
 							<a href="#sidebar-most-read" title="Most Read">
-<!-- Popular Post-->Most Read
+<!-- Popular Post-->अधिक मत्रा्मा पढ़ीएको
 							</a>
 							<span></span>
 						</li>
 						<li>
 							<a href="#sidebar-most-commented" title="Commented">
-<!-- Most Commented-->Commented
+<!-- Most Commented-->अधिक प्रतिक्रिया भएको
 							</a>
 							<span></span>
 						</li>
@@ -47,9 +26,11 @@
 							
 							@foreach($sorted as $article)
 							<li class="post">
+							@if(!empty($article->image))
 								<a href={{route('view',$article->id)}} title={{$article->title}}>
 <!--image source-->				<img src={{ asset('uploads/'.$article->image) }} alt='img'>
 								</a>
+							@endif
 								<div class="post_content">
 									
 									<span class="number animated_element" data-value="{{$article->mostRead}}"></span>
@@ -76,9 +57,11 @@
 							
 							@foreach($sorted as $article)
 							<li class="post">
+							@if(!empty($article->image))
 								<a href={{route('view',$article->id)}} title={{$article->title}}>
 <!--image source-->				<img src={{ asset('uploads/'.$article->image) }} alt='img'>
 								</a>
+							@endif
 								<div class="post_content">
 									
 									<span class="number animated_element" data-value="{{$article->numberofComments}}"></span>
@@ -96,4 +79,4 @@
 						<a class="more page_margin_top" href="#">SHOW MORE</a>
 					</div>
 					</div>
-</div></div></div></div>
+</div>

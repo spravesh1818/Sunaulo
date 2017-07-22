@@ -18,7 +18,7 @@ class PageController extends Controller
 			array_push($random,$cat->title);
 		}
 		shuffle($random);
-		$article=articles::orderBy('id','desc')->whereNotNull('image')->limit(4)->get();
+		$article=articles::orderBy('id','desc')->limit(4)->get();
 		return view('index')->withArticles($article)->withCategory($random[0])->withCategories($category);
 	}
 
