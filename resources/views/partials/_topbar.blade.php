@@ -8,7 +8,9 @@
 					</form>
 					
 					<ul class="social_icons clearfix dark">
+					<li style="padding-top: 0px;">
 						@include('partials._mobilenav')
+						</li>
 						<li>
 							<a target="_blank" href="" class="social_icon facebook" title="facebook">
 								&nbsp;
@@ -43,11 +45,8 @@
 								<abbr title="04 May 2014" class="timeago">04 May 2014</abbr>
 								<abbr title="04 June 2014" class="timeago">04 June 2014</abbr>
 															
-							</li>
-						</ul>
-						<ul>
-						<li>
-						
+						</li>
+						<li>sdvfdvdv</li>
 						</ul>
 					</div>
 				</div>
