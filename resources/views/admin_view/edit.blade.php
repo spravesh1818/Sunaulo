@@ -25,8 +25,13 @@ Edit content
 	@endif
 	<script src={{ URL::asset('ckeditor/ckeditor.js') }}></script>
 	{!!Form::model($articles,['route'=>['content.update',$articles->id],'method'=>'PUT','files'=>true,'style'=>'margin-left:100px;fontsize:35px;margin-top:20px;width:700px;'])!!}
-	{{Form::text('title',null,array('class'=>'form-control','placeholder'=>'Title','style'=>'width:200px;margin-top:20px','required'))}}
-
+	{{Form::text('title',null,array('class'=>'form-control','placeholder'=>'Title','style'=>'width:200px;margin-top:20px','required'))}}<br>
+	<select name="category" class="form-control" style="width:200px">
+		<option value="" disabled selected>Select your option</option>
+		@foreach ($categories as $category)
+		<option>{{$category->title}}</option>
+		@endforeach
+	</select><br>
 	{{Form::label('image','Upload article display picture')}}
 	{{Form::file('image',array('class'=>'form-control','style'=>'margin-bottom:20px;'))}}
 

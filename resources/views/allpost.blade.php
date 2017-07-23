@@ -51,7 +51,7 @@
 								<ul class="post_details">
 									<li class="category"><a title="{{$article->category}}">{{$article->category}}</a></li>
 									<li class="date">
-										{{$article->updated_at}}
+										{{date('F d, Y', strtotime($article->updated_at))}}
 									</li>
 								</ul>
 								

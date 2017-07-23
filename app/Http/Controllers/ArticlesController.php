@@ -120,10 +120,10 @@ class ArticlesController extends Controller
     {
         //find the post in the database and save it as a variable
         $edit=articles::find($id);
-    
+        $category=category::all();
 
         //return the view and pass in the variable created
-        return view('admin_view.edit')->withArticles($edit);
+        return view('admin_view.edit')->withArticles($edit)->withCategories($category);
     }
 
     /**
@@ -151,7 +151,7 @@ class ArticlesController extends Controller
             if($request->hasFile('image')){
                 $image=$request->file('image');
                 $filename=time().'.'.$image->getClientOriginalExtension();
-                $location=public_path('images/articleheader/'.$filename);   
+                $location=public_path('uploads/'.$filename);   
                 Image::make($image)->resize(1250,550)->save($location);
                 $old_filename=$article->image;
                 $article->image=$filename;
