@@ -1,0 +1,13 @@
+*
+.row-3{width: 70%;}
+.social-1{padding-left:40%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+        [classs*="row-"]{
+        width: 100.33%;
+    }
+    [class*="social-1"]{
+        padding-left: 10%;
+    }
+}
