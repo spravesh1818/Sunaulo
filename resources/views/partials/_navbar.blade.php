@@ -2,7 +2,7 @@
 <nav>
 			<ul class="sf-menu selected">
 			<li >
-				<a href="index.php" >
+				<a href="{{ route('home') }}" >
 					गृह पृष्ठ
 				</a>
 				

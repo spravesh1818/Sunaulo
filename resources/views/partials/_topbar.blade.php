@@ -29,22 +29,15 @@
 							
 							<li class="posts">
 								<ul class="latest_news_scrolling_list">
+									@foreach($articles as $article)
 									<li>
-										<a href="" title="">Climate Change Debate While Britain Floods</a>
+										<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">{{$article->title}}</a>
 									</li>
-									<li>
-										<a href="" title="">The Public Health Crisis Hiding in Our Food</a>
-									</li>
-									<li>
-										<a href="" title="">Nuclear Fusion Closer to Becoming a Reality</a>
-									</li>
+									@endforeach
 								</ul>
 							</li>
 							<li class="date">
-								<abbr title="04 Apr 2014" class="timeago current">04 Apr 2014</abbr>
-								<abbr title="04 May 2014" class="timeago">04 May 2014</abbr>
-								<abbr title="04 June 2014" class="timeago">04 June 2014</abbr>
-															
+				
 						</li>
 						</ul>
 					</div>

@@ -10,31 +10,31 @@
 					<div class="post single">
 						
 						<ul class="post_details clearfix">
-							<li class="detail category">In <a href="indexdced.html?page=category&amp;cat=health" title="HEALTH">{{$articles->category}}</a></li>
-							<li class="detail date">{{date('F d, Y', strtotime($articles->updated_at))}}</li>
-							<li class="detail author">{{$articles->author}}</li>
+							<li class="detail category">In <a href="indexdced.html?page=category&amp;cat=health" title="HEALTH">{{$article->category}}</a></li>
+							<li class="detail date">{{date('F d, Y', strtotime($article->updated_at))}}</li>
+							<li class="detail author">{{$article->author}}</li>
 							<li class="detail views"></li>
 							<li class="detail comments"><a href="#comments_list" class="scroll_to_comments" title="6 Comments"></a></li>
 						</ul>
-							<img src='{{asset('uploads/'.$articles->image)}}' alt='img'>
+							<img src='{{asset('uploads/'.$article->image)}}' alt='img'>
 						</a>
 
 						<div class="post_content page_margin_top_section clearfix">
 							<div class="content_box">
 								<h1 class="post_title">
-								{{$articles->title}}
+								{{$article->title}}
 								</h1>
 								<div class="text">
 									<p></p>
 									
-									<p>{!!$articles->content!!}</p>
+									<p>{!!$article->content!!}</p>
 									
-									<a title="{{$articles->numberofComments}} Comments" href="indexb878.html?page=post" class="read_more page_margin_top scroll_to_comments"><span class="arrow"></span><span>{{$articles->numberofComments}} COMMENTS</span></a>
+									<a title="{{$article->numberofComments}} Comments" href="indexb878.html?page=post" class="read_more page_margin_top scroll_to_comments"><span class="arrow"></span><span>{{$article->numberofComments}} COMMENTS</span></a>
 								</div>
 							</div>
 							<div class="author_box animated_element">
 								<div class="author">
-									<a title="{{$articles->author}}" href="index27b5.html?page=author" class="thumb">
+									<a title="{{$article->author}}" href="index27b5.html?page=author" class="thumb">
 									@if(!empty($author->usr_avatar))
 										<img alt="img" src={{ asset('uploads/'.$author->usr_avatar) }} style="width:100px;height:100px">
 									@else
@@ -43,7 +43,7 @@
 
 									</a>
 									<div class="details">
-										<h5><a title="{{$articles->author}}" href="">{{$articles->author}}</a></h5>
+										<h5><a title="{{$article->author}}" href="">{{$article->author}}</a></h5>
 										<h6>EDITOR</h6>
 									</div>
 								</div>
@@ -97,7 +97,7 @@
 					</ul>
 					<ul class="taxonomies categories right clearfix">
 						<li>
-							<a href="indexdced.html?page=category&amp;cat=health" title="HEALTH">{{$articles->category}}</a>
+							<a href="indexdced.html?page=category&amp;cat=health" title="HEALTH">{{$article->category}}</a>
 						</li>
 					</ul>
 				</div>
@@ -135,7 +135,7 @@
 						<fieldset>
 							<textarea name="comment" placeholder="Comment *" required>Comment *</textarea>
 							<select name='article_id' style="display:none;">
-									<option>{{$articles->id}}</option>
+									<option>{{$article->id}}</option>
 							</select>
 						</fieldset>
 						<fieldset>

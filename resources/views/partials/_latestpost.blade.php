@@ -24,7 +24,7 @@
 								<li class="category"><a href="" title="{{$article->category}}">
 <!--Category-->{{$article->category}}</a></li>
 								<li class="date">
-<!--Posted Date-->{{$article->updated_at}}
+<!--Posted Date-->{{date('F d, Y', strtotime($article->updated_at))}}
 								</li>
 							</ul><br><br><br>
 							<p>
@@ -60,7 +60,7 @@
 								<li class="category"><a href="" title="{{$article->category}}">
 <!--Category-->{{$article->category}}</a></li>
 								<li class="date">
-<!--Posted Date-->{{$article->updated_at}}
+<!--Posted Date-->{{date('F d, Y', strtotime($article->updated_at))}}
 								</li>
 							</ul><br><br><br>
 							<p>

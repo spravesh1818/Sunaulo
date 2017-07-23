@@ -26,7 +26,7 @@
 								<li class="category"><a href="" title="{{$selected[0]->category}}">
 <!--Category-->{{$selected[0]->category}}</a></li>
 								<li class="date">
-<!--Posted Date-->{{$selected[0]->updated_at}}
+<!--Posted Date-->{{date('F d, Y', strtotime($selected[0]->updated_at))}}
 								</li>
 							</ul><br><br><br>
 							<p>
@@ -69,7 +69,7 @@
 											<li class="category"><a href="" title="{{$article->title}}">
 <!--Category-->							{{$article->category}}</a></li>
 											<li class="date">
-<!-- Posted date-->							{{$article->updated_at}}
+<!-- Posted date-->							{{date('F d, Y', strtotime($article->updated_at))}}
 											</li>
 										</ul>
 						

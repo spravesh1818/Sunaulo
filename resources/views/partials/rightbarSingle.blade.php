@@ -2,13 +2,13 @@
 				<div class="tabs no_scroll clearfix">
 					<ul class="tabs_navigation clearfix">
 						<li>
-							<a href="#sidebar-most-read" title="Most Read">
+							<a href="#sidebar-most-read" title="">
 								Most Read
 							</a>
 							<span></span>
 						</li>
 						<li>
-							<a href="#sidebar-most-commented" title="Commented">
+							<a href="#sidebar-most-commented" title="">
 								Commented
 							</a>
 							<span></span>
@@ -16,35 +16,39 @@
 					</ul>
 					<div id="sidebar-most-read">
 						<ul class="blog rating page_margin_top clearfix">
+							@foreach($mostread as $article)
 							<li class="post">
-								<a href="indexb878.html?page=post" title="Nuclear Fusion Closer to Becoming a Reality">
+								<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
 									<!--<img src='images/samples/510x187/image_12.jpg' alt='img'>-->
 								</a>
 								<div class="post_content">
-									<span class="number animated_element" data-value="6 257"></span>
-									<h5><a href="indexb878.html?page=post" title="New Painkiller Rekindles Addiction Concerns">New Painkiller Rekindles Addiction Concerns</a></h5>
+									<span class="number animated_element" data-value="{{$article->mostRead}}"></span>
+									<h5><a href="{{route('view',$article->id)}}" title="{{$article->title}}">{{$article->title}}</a></h5>
 									<ul class="post_details simple">
-										<li class="category"><a href="indexdced.html?page=category&amp;cat=health" title="HEALTH">HEALTH</a></li>
+										<li class="category"><a href="indexdced.html?page=category&amp;cat=health" title="{{$article->category}}">{{$article->category}}</a></li>
 									</ul>
 								</div>
 							</li>
+							@endforeach
 						</ul>
-						<a class="more page_margin_top" href="#">SHOW MORE</a>
+						<a class="more page_margin_top" href="">SHOW MORE</a>
 					</div>
 					<div id="sidebar-most-commented">
 						<ul class="blog rating page_margin_top clearfix">
+							@foreach($commented as $article)
 							<li class="post">
-								<a href="indexb878.html?page=post" title="Nuclear Fusion Closer to Becoming a Reality">
+								<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
 									<!--<img src='images/samples/510x187/image_02.jpg' alt='img'>-->
 								</a>
 								<div class="post_content">
-									<span class="number animated_element" data-value="70"></span>
-									<h5><a href="indexb878.html?page=post" title="New Painkiller Rekindles Addiction Concerns">New Painkiller Rekindles Addiction Concerns</a></h5>
+									<span class="number animated_element" data-value="{{$article->numberofComments}}"></span>
+									<h5><a href="{{ route('view',$article->id) }}" title="{{$article->title}}">{{$article->title}}</a></h5>
 									<ul class="post_details simple">
-										<li class="category"><a href="indexdced.html?page=category&amp;cat=health" title="HEALTH">HEALTH</a></li>
+										<li class="category"><a href="" title="{{$article->category}}">{{$article->category}}</a></li>
 									</ul>
 								</div>
 							</li>
+							@endforeach
 						</ul>
 						<a class="more page_margin_top" href="#">SHOW MORE</a>
 					</div>

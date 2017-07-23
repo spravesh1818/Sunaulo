@@ -23,6 +23,7 @@ class PageController extends Controller
 	}
 
 	public function show($id){
+		$articles=articles::orderBy('id','desc')->limit(4)->get();
 		$article=articles::find($id);
 		$user=User::all()->where('name',$article->author);
 		$author;
@@ -37,8 +38,11 @@ class PageController extends Controller
         $comment=comment::all()->where('article_id',$id);
         $categories=category::all();
 
+        $commented=articles::orderBy('numberofComments','desc')->limit(4)->get();
+        $mostRead=articles::orderBy('mostRead','desc')->limit(4)->get();
+
         
-       return view('single')->withArticles($article)->withContent($content)->withComment($comment)->withCategories($categories)->withAuthor($author);
+       return view('single')->withArticle($article)->withContent($content)->withComment($comment)->withCategories($categories)->withAuthor($author)->withMostread($mostRead)->withCommented($commented)->withArticles($articles);
 	}
 
 	public function allpost(){

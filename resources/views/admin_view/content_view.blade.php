@@ -44,9 +44,6 @@ View Content
 		@endforeach
 	</table>
 </div>
-
-
-
 @endsection
 
 
