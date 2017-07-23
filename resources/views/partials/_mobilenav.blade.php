@@ -49,7 +49,7 @@
 
 <button onclick="myFunction()" class="dropbtn"><i class="fa fa-navicon" style="font-size:30px;color:black"></i></button>
   <div id="myDropdown" class="dropdown-content">
-    <a>Home</a>
+    <a href={{route('home')}}>Home</a>
     <a>News</a>
     <a>Contact</a>
   </div>
