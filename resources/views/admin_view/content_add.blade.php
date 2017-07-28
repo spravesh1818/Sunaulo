@@ -29,6 +29,7 @@ Add Content
 	{{Form::text('title',null,array('class'=>'form-control','id'=>'title','placeholder'=>'Title'))}}<br>
 	<select name="category" class="form-control" style="width:200px">
 		<option value="" disabled selected>Select your option</option>
+		<option>khulduli</option>
 		@foreach ($categories as $category)
 		<option>{{$category->title}}</option>
 		@endforeach

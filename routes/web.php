@@ -12,6 +12,7 @@
 */
 
 Route::get('/','PageController@home')->name('home');
+Route::get('/test','PageController@special')->name('khulduli');
 Route::get('/categories/{category}','PageController@categorywise')->name('category');
 Route::get('/allpost','PageController@allpost')->name('all');
 Route::get('/article/{content}','PageController@show')->name('view');
@@ -23,6 +24,8 @@ Route::post('/login','loginController@verify')->name('login.verify');
 Route::get('/logout','loginController@destroy')->name('logout');
 Route::get('/quiz','PageController@quiz')->name('quiz'); 
 Route::get('/fetchcategories','PageController@fetchcategories')->name('test'); 
+Route::get('/fetchspecial','PageController@fetchspecial')->name('khulduli'); 
+
 
 Route::group(['prefix'=>'/dashboard'],function(){
 	Route::get('','ArticlesController@index')->name('dashboard');

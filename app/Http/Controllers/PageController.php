@@ -52,6 +52,13 @@ class PageController extends Controller
 		return view('allpost')->withArticles($articles)->withCategories($categories);
 	}
 
+	public function special(){
+		$categories=category::all();
+		//print_r($categories[0]->title);
+		$articles=articles::where('category','khulduli')->simplePaginate(1);
+		return view('special')->withArticles($articles)->withCategories($categories);
+	}
+
 	public function categorywise($id){
 		$category=category::find($id);
 		$categories=category::all();
@@ -101,5 +108,9 @@ class PageController extends Controller
 		return response()->json($articles);
 	}
 
+	public function fetchspecial(){
+		$articles=articles::all()->where('category','khulduli')->toJson();
+		return response()->json($articles);
+	}
 
 }

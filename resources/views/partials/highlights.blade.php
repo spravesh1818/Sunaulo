@@ -11,26 +11,9 @@
 <div class="col-3 right" style="padding-top: 25px;">
  <div>
     <h4 class="box_header"> खुल्दुली </h4>
-    <ul>
-    	<li class="post">
-			<div class="post_content">
-			<h5><a href="facebook.com">Khulduli debut</a></h5>
-			</div>
-		</li>
+    <ul id="special">
+    	
 
-
-		<li class="post">
-			<div class="post_content">
-			<h5><a>Khulduli debut</a></h5>
-			</div>
-		</li>
-
-
-		<li class="post">
-			<div class="post_content">
-			<h5><a>Khulduli debut</a></h5>
-			</div>
-		</li>
     </ul>
 
  </div>
