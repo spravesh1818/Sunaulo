@@ -7,6 +7,10 @@
 				</a>
 				
 			</li>
+
+			<li id="output">
+				
+			</li>
 			<li class="submenu">
 				<a href="#" title="Pages">
 					समाचार 

@@ -10,15 +10,17 @@
 					<div class="post single">
 						
 						<ul class="post_details clearfix">
-							<li class="detail category">In <a href="indexdced.html?page=category&amp;cat=health" title="HEALTH">{{$article->category}}</a></li>
+							<li class="detail category">In <a href="" title="HEALTH">{{$article->category}}</a></li>
 							<li class="detail date">{{date('F d, Y', strtotime($article->updated_at))}}</li>
 							<li class="detail author">{{$article->author}}</li>
 							<li class="detail views"></li>
-							<li class="detail comments"><a href="#comments_list" class="scroll_to_comments" title="6 Comments"></a></li>
+							<li class="detail comments"><a href="#comments_list" class="scroll_to_comments" title="{{$article->numberofComments}} Comments"></a></li>
 						</ul>
+						@if(!empty($article->image))
+						<a href="{{ route('view',$article->id) }}">
 							<img src='{{asset('uploads/'.$article->image)}}' alt='img'>
 						</a>
-
+						@endif
 						<div class="post_content page_margin_top_section clearfix">
 							<div class="content_box">
 								<h1 class="post_title">

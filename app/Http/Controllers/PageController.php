@@ -96,5 +96,10 @@ class PageController extends Controller
 		return view('partials._quiz')->withQuestions($questions);
 	}
 
+	public function fetchArticles(){
+		$articles=articles::all()->toJson();
+		return response()->json($articles);
+	}
+
 
 }
