@@ -22,7 +22,7 @@ Route::get('/login','loginController@login')->name('login');
 Route::post('/login','loginController@verify')->name('login.verify');
 Route::get('/logout','loginController@destroy')->name('logout');
 Route::get('/quiz','PageController@quiz')->name('quiz'); 
-Route::get('/fetchArticles','PageController@fetchArticles')->name('test'); 
+Route::get('/fetchcategories','PageController@fetchcategories')->name('test'); 
 
 Route::group(['prefix'=>'/dashboard'],function(){
 	Route::get('','ArticlesController@index')->name('dashboard');

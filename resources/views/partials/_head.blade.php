@@ -52,4 +52,5 @@
 		<script type="text/javascript" src={{ URL::asset('js/main.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/odometer.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/topbutton.js')}}></script>
+		<script type="text/javascript" src={{ URL::asset('js/mainPageAjax.js')}}></script>
 	</head>

@@ -13,10 +13,7 @@
       </ul>
         </li>
     <li> <a href=""><span>कोटी / वर्ग</span></a>
-          <ul>
-        <li><a href="">स्वास्थ्य</a></li>
-        <li><a href="">खुल्दुली</a></li>
-        <li><a href="">बेन्ग्य</a></li>
+      <ul id='output'>
       </ul>
         </li>
     <li><a href="">हाम्रोबारे</a></li>

@@ -19,7 +19,7 @@ class PageController extends Controller
 		}
 		shuffle($random);
 		$article=articles::orderBy('id','desc')->limit(4)->get();
-		return view('index')->withArticles($article)->withCategory($random[0])->withCategories($category);
+		return view('index')->withArticles($article)->withCategory($random[0]);
 	}
 
 	public function show($id){
@@ -96,8 +96,8 @@ class PageController extends Controller
 		return view('partials._quiz')->withQuestions($questions);
 	}
 
-	public function fetchArticles(){
-		$articles=articles::all()->toJson();
+	public function fetchcategories(){
+		$articles=category::all()->toJson();
 		return response()->json($articles);
 	}
 

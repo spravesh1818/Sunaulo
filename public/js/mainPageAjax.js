@@ -3,11 +3,11 @@ $(document).ready(function (){
 
 	$.ajax({
 		type:'GET',
-		url:'/fetchArticles',
+		url:'/fetchcategories',
 		success:function(data){
 			var response=JSON.parse(data);
-			//$('#output').append(response[0].title);
-			//console.log(response[0].title);
+			for(i=0;i<response.length;i++)
+			 $('#output').append('<li><a href="http://127.0.0.1:8000/categories/'+response[i].id+'">'+response[i].title+'</a></li>')
 		},
 		error:function(){
 			alert('error saving order');
