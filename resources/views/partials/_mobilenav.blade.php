@@ -23,7 +23,7 @@
     position: absolute;
     
     min-width: 160px;
-    overflow: hidden;
+    overflow: show;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 10;
 }

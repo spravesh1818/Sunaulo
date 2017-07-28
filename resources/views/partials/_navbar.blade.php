@@ -1,69 +1,37 @@
-<div class="menu_container clearfix style_5 sticky">
-<nav>
-			<ul class="sf-menu selected">
-			<li >
-				<a href="{{ route('home') }}" >
-					गृह पृष्ठ
-				</a>
-				
-			</li>
+ 
 
-			<li id="output">
-				
-			</li>
-			<li class="submenu">
-				<a href="#" title="Pages">
-					समाचार 
-				</a>
-				
-			</li>
-	@include('partials._megamenu')<!--thulo menu sakiyo-->
-	
-	<li class="submenu">
-		<a href="#" title="Categories">
-			कोटी / वर्ग 
-		</a>
-		<ul>
-			<li>
-				<a href="{{ route('all')}}" title="all">
-					All articles
-				</a>
-			</li>
-			@foreach($categories as $category) 
-			
-			<li>
-				<a href="{{ route('category',$category->id) }}" title="{{$category->title}}">
-					{{$category->title}}
-				</a>
-			</li>
-		@endforeach
-			
-					</ul>
-	</li>
-	<li class="submenu">
-		<a  title="Contact">
-			हाम्रोबारे 
-		</a>
-		<ul class="expand_left_contact">
-			<li>
-				<a href="about.php" title="Contact Style 1">
-					हाम्रोबारे 
-				</a>
-			</li>
-			<li>
-				<a href="contact.php" title="Contact Style 2">
-					सम्पर्क 
-				</a>
-			</li>
-		</ul>
-	</li>
-
-	<li class="menu">
-		<a href={{ route('quiz') }} title="Pages">
-			Quiz
-		</a>
-		
-	</li>
-</ul>
+<nav id="nav" role="navigation"> <a href="#nav" title="Show navigation">Show navigation</a> <a href="#" title="Hide navigation">Hide navigation</a>
+      <ul class="clearfix">
+    <li><a href="">गृह पृष्ठ</a></li>
+    
+    <li> <a href=""><span>समाचार</span></a>
+          <ul>
+        <li><a href="">स्वास्थ्य</a></li>
+        <li><a href="">खुल्दुली</a></li>
+        <li><a href="">बेन्ग्य</a></li>
+        <li><a href="">संसार</a></li>
+      </ul>
+        </li>
+    <li> <a href=""><span>कोटी / वर्ग</span></a>
+          <ul>
+        <li><a href="">स्वास्थ्य</a></li>
+        <li><a href="">खुल्दुली</a></li>
+        <li><a href="">बेन्ग्य</a></li>
+      </ul>
+        </li>
+    <li><a href="">हाम्रोबारे</a></li>
+  </ul>
 </nav>
-</div>
+
+
+<script src="{{asset('js/headermain.js')}}"></script>
+
+<script src="{{asset('js/headertap.js')}}"></script> 
+  
+
+<script>
+  $( function()
+  {
+    $( '#nav li:has(ul)' ).doubleTapToGo();
+  });
+</script>

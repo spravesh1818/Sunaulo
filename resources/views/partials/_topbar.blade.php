@@ -8,9 +8,7 @@
 					</form>
 					
 					<ul class="social_icons clearfix dark">
-					<li style="padding-top: 0px;">
-						@include('partials._mobilenav')
-						</li>
+					
 						<li>
 							<a target="_blank" href="" class="social_icon facebook" title="facebook">
 								&nbsp;

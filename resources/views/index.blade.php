@@ -8,5 +8,5 @@
 @include('partials._recommended')
 @include('partials._rightbar')
 <!-- Latest Post From One Category-->
-<@include('partials._latestcat')
+
 @include('partials._footer')

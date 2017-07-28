@@ -24,6 +24,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+  		<link rel="stylesheet" href={{ URL::asset('css/headerstyle.css')}}>
 				<!--<link rel="stylesheet" type="text/css" href="style/dark_skin.css">-->
 		<!--<link rel="stylesheet" type="text/css" href="style/high_contrast_skin.css">-->
 		<link rel="shortcut icon" href={{ URL::asset('images/solid.png')}}>
@@ -33,7 +35,6 @@
 		<link rel="stylesheet" href={{asset('css/footS.css')}}>
 		<link rel="stylesheet" href={{asset('css/topbutton.css')}}>
 		<script type="text/javascript" src={{ URL::asset('js/jquery-1.12.4.min.js')}}></script>
-		<script type="text/javascript" src={{ URL::asset('js/mainPageAjax.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('jquery-migrate-1.4.1.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery.ba-bbq.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery-ui-1.11.1.custom.min.js')}}></script>
