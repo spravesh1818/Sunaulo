@@ -7,7 +7,7 @@ $(document).ready(function (){
 		success:function(data){
 			var response=JSON.parse(data);
 			for(i=0;i<response.length;i++)
-			 $('#output').append('<li>'+response[i].title+'</li>')
+			 $('#output').add('<li>'+response[i].title+'</li>')
 		},
 		error:function(){
 			alert('error saving order');
