@@ -1,7 +1,19 @@
 
 $(document).ready(function (){
 
-	
+	$.ajax({
+		type:'GET',
+		url:'/fetchcategories',
+		success:function(data){
+			var response=JSON.parse(data);
+			for(i=0;i<response.length;i++)
+			 $('#output').append('<li>'+response[i].title+'</li>')
+		},
+		error:function(){
+			alert('error saving order');
+		}
+	});
+
 
 	$.ajax({
 		type:'GET',
