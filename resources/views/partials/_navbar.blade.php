@@ -13,7 +13,7 @@
       </ul>
         </li>
     <li> <a href=""><span>कोटी / वर्ग</span></a>
-      <ul id="output1">
+      <ul id="output">
       </ul>
         </li>
     <li><a href="">हाम्रोबारे</a></li>
