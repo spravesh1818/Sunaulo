@@ -4,7 +4,7 @@
 		<div class="page_layout page_margin_top clearfix">
 		<hr class="divider page_margin_top">
 		<div class="row page_margin_top">
-			<div class="col-19" style="width: 65%;">
+			<div class="col-9">
 				<div class="row">
 					<div class="post single">
 					<ul class="post_details clearfix">
@@ -172,3 +172,4 @@
 					@endforeach
 				</div>
 			</div>
+			@include('partials._rightbar')
