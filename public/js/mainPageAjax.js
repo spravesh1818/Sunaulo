@@ -7,7 +7,7 @@ $(document).ready(function (){
 		success:function(data){
 			var response=JSON.parse(data);
 			$.each(response, function () {
-				$('#output').append('<li><a href="http://youtube.com">'+this.title+'</a></li>');
+				$('#output').append('<li><a href="">'+this.title+'</a></li>');
 			});
 		},
 		error:function(){
