@@ -22,7 +22,7 @@ $(document).ready(function (){
 		success:function(data){
 			var response=JSON.parse(data);
 			if(Object.keys(response).length==0){
-				$('#special').append('<li class="post"><div class="post_content"><h5><a href="/test">No khulduli right now</a></h5></div></li>');
+				$('#special').append('<li class="post"><div class="post_content"><h5><a>No khulduli right now</a></h5></div></li>');
   					iterator+=1;
 			}
 			else{
@@ -31,7 +31,7 @@ $(document).ready(function (){
 				if(iterator==4)
 					return false;
 				else
-					$('#special').append('<li class="post"><div class="post_content"><h5><a href="">'+this.title+'</a></h5></div></li>');
+					$('#special').append('<li class="post"><div class="post_content"><h5><a href="/test">'+this.title+'</a></h5></div></li>');
   					iterator+=1;
 			});}
 
