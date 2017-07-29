@@ -6,7 +6,8 @@ $(document).ready(function (){
 		url:'/fetchcategories',
 		success:function(data){
 			var response=JSON.parse(data);
-			console.log(response[0].title)
+			for(i=0;i<response.length;i++)
+			 $('#new').append('<li>'+response[i].title+'</li>')
 		},
 		error:function(){
 			alert('error saving order');
