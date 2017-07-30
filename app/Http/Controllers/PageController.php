@@ -20,10 +20,8 @@ class PageController extends Controller
 		shuffle($random);
 		$article=articles::all()->where('category','!=','khulduli');
 		$articles=$article->sortByDesc('created_at');
-		foreach ($articles as $article) {
-			echo "<br>".$article->title;	
-		}
-		//return view('index')->withArticles($articles)->withCategory($random[0]);
+		
+		return view('index')->withArticles($articles)->withCategory($random[0]);
 	}
 
 	public function show($id){
