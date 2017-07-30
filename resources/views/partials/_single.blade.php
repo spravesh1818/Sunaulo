@@ -8,7 +8,7 @@
 				<div class="row">
 					<div class="post single">
 					<ul class="post_details clearfix">
-							<li class="detail category">In <a href="indexdced.html?page=category&amp;cat=health" title="HEALTH">{{$article->category}}</a></li>
+							<li class="detail category">In <a href="" title="{{$article->category}}">{{$article->category}}</a></li>
 							<li class="detail date">{{date('F d, Y', strtotime($article->updated_at))}}</li>
 							<li class="detail author">{{$article->author}}</li>
 							<li class="detail views"></li>
