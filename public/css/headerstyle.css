@@ -230,7 +230,7 @@ a, a:hover {
 	height: 0;
 	border: 0.313em solid transparent; /* 5 */
 	border-bottom: none;
-	border-top-color: #efa585;
+	border-top-color: #fff;
 	content: '';
 	vertical-align: middle;
 	display: inline-block;
@@ -241,10 +241,10 @@ a, a:hover {
 
 			#nav > ul {
 	height: 3.75em; /* 60 */
-	background-color: #e15a1f;
+	background-color: #0780C0;
 }
 #nav > ul > li {
-	width: 25%;
+	width: 20%;
 	height: 100%;
 	float: left;
 }
@@ -255,15 +255,15 @@ a, a:hover {
 	text-align: center;
 }
 #nav > ul > li:not( :last-child ) > a {
-	border-right: 1px solid #cc470d;
+	border-right: 1px solid #076CC0;
 }
 #nav > ul > li:hover > a, #nav > ul:not( :hover ) > li.active > a {
-	background-color: #cc470d;
+	background-color: #076CC0;
 }
 /* second level */
 
 				#nav li ul {
-	background-color: #cc470d;
+	background-color: #076CC0;
 	display: none;
 	position: absolute;
 	top: 100%;
@@ -278,11 +278,11 @@ a, a:hover {
 }
 #nav li ul a {
 	font-size: 1.25em; /* 20 */
-	border-top: 1px solid #e15a1f;
+	border-top: 1px solid #0758C0;
 	padding: 0.75em; /* 15 (20) */
 }
 #nav li ul li a:hover, #nav li ul:not( :hover ) li.active a {
-	background-color: #e15a1f;
+	background-color: #ED1C24;
 }
  @media only screen and ( max-width: 62.5em ) /* 1000 */ {
 #nav {
@@ -345,7 +345,7 @@ html {
 }
 #nav > ul > li:not( :last-child ) > a {
 	border-right: none;
-	border-bottom: 1px solid #cc470d;
+	border-bottom: 1px solid #076CC0;
 }
 /* second level */
 
