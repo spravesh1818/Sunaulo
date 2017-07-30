@@ -37,7 +37,7 @@
 }
 
 /* For desktop: */
-.col-1 {width: 20.33%; padding-left: 20px; padding-right: 20px;}
+.col-1 {width: 8.33%;}
 .col-2 {width: 33.33%;}
 .col-3 {width: 25%;
          float: right; 
@@ -49,14 +49,10 @@
 .col-8 {width: 75%;
         padding-left: 20px;
                     }
-.col-19 {width:100%;}
+.col-9 {width: 75%;}
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
-.col-13{padding-left:5%;
-text-align: center;}
-.col-14{padding-left: 15%;}
-.col-15{padding-top: 35px;}
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
