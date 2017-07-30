@@ -3,16 +3,14 @@
 <nav id="nav" role="navigation"> <a href="#nav" title="Show navigation">Show navigation</a> <a href="#" title="Hide navigation">Hide navigation</a>
       <ul class="clearfix">
     <li><a href="{{ route('home') }}">गृह पृष्ठ</a></li>
+    <li><a>ताजा खबर</a></li>
     
-    <li> <a href=""><span>समाचार</span></a>
+    <li> <a href=""><span>मनोरंजन</span></a>
           <ul>
-        <li><a href="">स्वास्थ्य</a></li>
-        <li><a href="">खुल्दुली</a></li>
-        <li><a href="">बेन्ग्य</a></li>
-        <li><a href="">संसार</a></li>
+        <li><a href="">हाजिरी जवाफ</a></li>
       </ul>
         </li>
-    <li> <a href=""><span>कोटी / वर्ग</span></a>
+    <li> <a href=""><span>बिषयगत प्रस्तुति</span></a>
       <ul id="output">
       </ul>
         </li>
