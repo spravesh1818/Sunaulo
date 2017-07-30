@@ -14,9 +14,11 @@
 							<li class="detail views"></li>
 							<li class="detail comments"><a href="#comments_list" class="scroll_to_comments" title="6 Comments"></a></li>
 						</ul>
+						@if(!empty($article->image))
+						<a>
 							<img src='{{asset('uploads/'.$article->image)}}' alt='img'>
 						</a>
-						
+						@endif
 						<div class="post_content page_margin_top_section clearfix">
 							
 							<div class="col-14">
