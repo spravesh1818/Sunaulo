@@ -18,8 +18,12 @@ class PageController extends Controller
 			array_push($random,$cat->title);
 		}
 		shuffle($random);
-		$article=articles::orderBy('id','desc')->limit(4)->get();
-		return view('index')->withArticles($article)->withCategory($random[0]);
+		$article=articles::all()->where('category','!=','khulduli');
+		$articles=$article->sortByDesc('created_at');
+		foreach ($articles as $article) {
+			echo "<br>".$article->title;	
+		}
+		//return view('index')->withArticles($articles)->withCategory($random[0]);
 	}
 
 	public function show($id){
