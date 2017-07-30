@@ -47,7 +47,7 @@
 									@endif
 
 									</a>
-									<div class="details">
+									<div class="details" style="margin-left: 0px;">
 										<h5><span><a title="{{$article->author}}" href="">{{$article->author}}</a></span></h5>
 										<h6>EDITOR</h6>
 									</div>
