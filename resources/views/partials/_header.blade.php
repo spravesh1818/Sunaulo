@@ -1,6 +1,8 @@
 <body class="">
 		<div class="site_container">
 			
+			
+			@include('partials._topbar')
 			@include('partials._navbar')
 
 
