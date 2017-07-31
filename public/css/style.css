@@ -279,8 +279,10 @@ h1, h2, h3, h4, h5, h6
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
 {
-	color: #25282A;
+	color: #0047BD;
 }
+h2 a:hover {color: #009543;}
+
 .footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6,
 .footer h1 a, .footer h2 a, .footer h3 a, .footer h4 a, .footer h5 a, .footer h6 a
 {
@@ -322,6 +324,19 @@ h6
 	border-left: 3px solid #ED1C24;
 	padding: 8px 15px 11px;
 }
+
+.box_header_title
+{
+	background: #FFF;
+	border-bottom: 1px solid #ED1C24;
+	padding: 8px 15px 11px;
+}
+.footer .box_header_title
+{
+	background: #42494F;
+	border-color: #858D94;
+}
+
 .footer .box_header
 {
 	background: #42494F;
@@ -409,6 +424,7 @@ h6
 .header_top_bar .caroufredsel_wrapper_vertical_carousel
 {
 	height: 46px !important;
+	z-index : 1;
 }
 /* --- header top bar styles --- */
 /* - style 2 & 3 & 4 - */
@@ -569,7 +585,8 @@ h6
 }
 .small.header_container
 {
-	padding-bottom: 0px;
+	border-bottom: 1px solid #0A41C8;
+	
 }
 .small .header
 {
@@ -587,7 +604,7 @@ h6
 }
 .small .header .logo
 {
-	float: left;
+	float: center;
 }
 .small .header .placeholder
 {
@@ -1369,11 +1386,11 @@ a.slider_control:hover
 {
 	float: left;
 	clear: both;
-	margin-top: 50px;
+	margin-top: 20px;
 }
 .post:first-child
 {
-	margin-top: 30px;
+	margin-top: 10px;
 }
 .post img
 {
