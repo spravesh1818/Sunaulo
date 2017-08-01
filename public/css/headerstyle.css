@@ -188,7 +188,7 @@ body {
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 	background-color: #f7efeb;
-	padding: 1.25em; /* 20 */
+	padding: 0em; /* 20 */
 }
 body, a, a:hover {
 	color: #111;
