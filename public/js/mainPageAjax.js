@@ -3,21 +3,6 @@ $(document).ready(function (){
 
 	$.ajax({
 		type:'GET',
-		url:'/fetchcategories',
-		success:function(data){
-			var response=JSON.parse(data);
-			$.each(response, function () {
-				$('#output').append('<li><a href="">'+this.title+'</a></li>');
-			});
-		},
-		error:function(){
-			alert('error saving order');
-		}
-	});
-
-
-	$.ajax({
-		type:'GET',
 		url:'/fetchspecial',
 		success:function(data){
 			var response=JSON.parse(data);
