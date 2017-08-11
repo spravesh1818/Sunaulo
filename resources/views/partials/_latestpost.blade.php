@@ -33,7 +33,7 @@
 								</li>
 							</ul><br><br><br><br><br><br><br><br><br><br>
 							<p>
-<!--Contents-->{!!substr($article->content,0,500)!!}</p>
+<!--Contents-->{!!substr($article->content,0,300)!!}...</p>
 							<a class="read_more" href="{{ route('view',$article->id) }}" title="Read more"><span class="arrow"></span><span>
 <!--Full width Page-->थप</span></a>
 						</li>
@@ -51,7 +51,7 @@
 					@endphp
 <!-- First Latest Post-->@foreach($articles as $article)
 						@if($j<2)
-						@if($article->id%2!=1)
+						@if($article->id%2==0)
 <!-- First Latest Post--><li class="post">
 							@if(!empty($article->image))
 							<a href="{{ route('view',$article->id) }}" title={{$article->title}}>
@@ -63,9 +63,9 @@
 							</a>
 							@endif
 							<h2 class="with_number">
-								<a href="{{ route('view',$article->id) }}" title="{{$article->title}}" style="font-size:10px">
+								<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
 <!--tittle of latest Post-->{{$article->title}}</a>
-								<a class="comments_number" href="" title="{{$article->numberofCOmments}} comments">
+								<a class="comments_number" href="" title="{{$article->numberofComments}} comments">
 <!--Number of Comments-->{{$article->numberofComments}}<span class="arrow_comments"></span></a>
 							</h2>
 							<ul class="post_details">
@@ -76,7 +76,7 @@
 								</li>
 							</ul><br><br><br><br><br><br><br><br><br><br>
 							<p>
-<!--Contents-->{!!substr($article->content,0,500)!!}</p>
+<!--Contents-->{!!substr($article->content,0,350)!!}...</p>
 							<a class="read_more" href="{{ route('view',$article->id) }}" title="Read more"><span class="arrow"></span><span>
 <!--Full width Page-->थप</span></a>
 						</li>
