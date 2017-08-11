@@ -47,10 +47,10 @@
 
 					<ul class="col-4">
 					@php
-						$i=0;
+						$j=0;
 					@endphp
 <!-- First Latest Post-->@foreach($articles as $article)
-						@if($i<2)
+						@if($j<2)
 						@if($article->id%2==0)
 <!-- First Latest Post--><li class="post">
 							@if(!empty($article->image))
@@ -81,12 +81,14 @@
 <!--Full width Page-->थप</span></a>
 						</li>
 						@php
-							$i=$i+1;
+							$j=$j+1;
 						@endphp
 						@endif
 						@endif
 						@endforeach
 					</ul>
+
+				
 
 				</div>
 				</div>
