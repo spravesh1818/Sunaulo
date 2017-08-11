@@ -30,7 +30,7 @@
 								<li class="date">
 <!--Posted Date-->{{date('F d, Y', strtotime($article->updated_at))}}
 								</li>
-							</ul><br><br><br><br><br><br><br><br><br><br>
+							</ul><br><br><br><br><br><br><br><br><br><br><br><br><br>
 							<p>
 <!--Contents-->{!!substr($article->content,0,500)!!}</p>
 							<a class="read_more" href="{{ route('view',$article->id) }}" title="Read more"><span class="arrow"></span><span>
