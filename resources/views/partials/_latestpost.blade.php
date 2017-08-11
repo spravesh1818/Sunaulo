@@ -2,7 +2,11 @@
 				<h4 class="box_header">ताजा खबर </h4>
 				<div class="row">
 					<ul class="col-4">
+					@php
+						$i=0;
+					@endphp
 					@foreach($articles as $article)
+					@if($i<2)
 					@if($article->id%2==0)
 <!-- First Latest Post--><li class="post">
 							@if(!empty($article->image))
@@ -32,14 +36,22 @@
 							<a class="read_more" href="{{ route('view',$article->id) }}" title="Read more"><span class="arrow"></span><span>
 <!--Full width Page-->थप</span></a>
 						</li>
+						@php
+							$i=$i+1;
+						@endphp
+						@endif
 						@endif
 						@endforeach
 <!--Remove from Here-->	
 <!-- Upto Here-->
 					</ul>
 					<ul class="col-4">
+					@php
+						$j=0;
+					@endphp
 <!-- First Latest Post-->@foreach($articles as $article)
-					@if($article->id%2==1)
+						@if($j<2)
+						@if($article->id%2==1)
 <!-- First Latest Post--><li class="post">
 							@if(!empty($article->image))
 							<a href="{{ route('view',$article->id) }}" title={{$article->title}}>
@@ -62,12 +74,16 @@
 								<li class="date">
 <!--Posted Date-->{{date('F d, Y', strtotime($article->updated_at))}}
 								</li>
-							</ul><br><br><br><br><br><br><br><br><br>
+							</ul><br><br><br><br><br><br><br><br><br><br>
 							<p>
 <!--Contents-->{!!substr($article->content,0,500)!!}</p>
 							<a class="read_more" href="{{ route('view',$article->id) }}" title="Read more"><span class="arrow"></span><span>
 <!--Full width Page-->थप</span></a>
 						</li>
+						@php
+							$j=$j+1;
+						@endphp
+						@endif
 						@endif
 						@endforeach
 					</ul>
