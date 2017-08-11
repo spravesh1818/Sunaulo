@@ -16,6 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <link rel="stylesheet" href={{asset('css/preeti.css')}}>
   <link rel="stylesheet" href={{asset('css/style1.css')}}>
+  @yield('stylesheets')
 
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -233,6 +234,19 @@ desired effect
           </ul>
         </li>
 
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-tag"></i> <span>Tags</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href={{route('tag.index')}}>View</a></li>
+            <li><a href={{route('tag.create')}}>Add</a></li>
+          </ul>
+        </li>
+
         <li class="treeview">
           <a href="#"><i class="fa fa-folder-o"></i> <span>Categories</span>
             <span class="pull-right-container">
@@ -304,6 +318,7 @@ desired effect
 <script src={{ URL::asset('js/preeti.js') }}></script>
 <script src={{ URL::asset('js/bootstrap.min.js') }}></script>
 <script src={{ URL::asset('js/app.min.js') }}></script>
+@yield('scripts')
 
 
 </body>

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Session;
 use Image;
 use App\comment;
+use App\Tag;
 
 class ArticlesController extends Controller
 {
@@ -36,7 +37,8 @@ class ArticlesController extends Controller
     public function create()
     {
         $category=category::all();
-        return view('admin_view.content_add')->withCategories($category);
+        $tags=Tag::all();
+        return view('admin_view.content_add')->withCategories($category)->withTags($tags);
     }
 
     /**
@@ -91,6 +93,9 @@ class ArticlesController extends Controller
 
 
             $article->save();
+            $article->tags()->sync($request->tags,false);
+
+
             Session::flash('success','The article was successfully created');
             return redirect()->route('content.index');
     }

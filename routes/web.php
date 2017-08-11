@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/','PageController@home')->name('home');
 Route::get('/test','PageController@special')->name('khulduli');
 Route::get('/categories/{category}','PageController@categorywise')->name('category');
@@ -36,6 +35,16 @@ Route::group(['prefix'=>'/dashboard'],function(){
 	Route::get('/content/{content}/edit','ArticlesController@edit')->name('content.edit');
 	Route::put('/content/{content}','ArticlesController@update')->name('content.update');
 	Route::delete('/content/{content}','ArticlesController@destroy')->name('content.destroy');
+
+
+	#tag routes
+	Route::get('/tag','TagController@index')->name('tag.index');
+	Route::get('tag/create','TagController@create')->name('tag.create');
+	Route::post('/tag','TagController@store')->name('tag.store');
+	Route::get('/tag/{tag}','TagController@show')->name('tag.show');
+	Route::get('/tag/{tag}/edit','TagController@edit')->name('tag.edit');
+	Route::put('/tag/{tag}','TagController@update')->name('tag.update');
+	Route::delete('/tag/{tag}','TagController@destroy')->name('tag.destroy');
 
 
 	#quiz routes
@@ -73,16 +82,6 @@ Route::group(['prefix'=>'/dashboard'],function(){
     Route::get('/user/{user}/edit','UserController@edit')->name('user.edit');
     Route::put('/user/{user}','UserController@update')->name('user.update');
     Route::delete('/user/{user}','UserController@destroy')->name('user.destroy');
-	
-	
-
-
-});
-
-Route::get("/single",function(){
-
-	return view('single');
-
 });
 
 

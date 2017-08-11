@@ -97,13 +97,15 @@
 				</div>
 				<div class="row page_margin_top">
 					<ul class="taxonomies tags left clearfix">
+						@foreach($article->tags as $tag)
 						<li>
-							<a href="#" title="People">PEOPLE</a>
+							{{$tag->name}}
 						</li>
+						@endforeach
 					</ul>
 					<ul class="taxonomies categories right clearfix">
 						<li>
-							<a href="indexdced.html?page=category&amp;cat=health" title="HEALTH">{{$article->category}}</a>
+							<a href="" title="HEALTH">{{$article->category}}</a>
 						</li>
 					</ul>
 				</div>

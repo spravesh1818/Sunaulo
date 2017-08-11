@@ -6,6 +6,9 @@ Add Content
 @section('main_header')
 Add Content
 @endsection
+@section('stylesheets')
+<link rel="stylesheet" href={{asset('css/select2.min.css')}}>
+@endsection
 
 @section('destination')
 Add Content
@@ -34,6 +37,13 @@ Add Content
 		<option>{{$category->title}}</option>
 		@endforeach
 	</select><br>
+	<label>Tags</label><br>
+	<select name="tags[]" class="form-control select2-multi" multiple="multiple" style="width:200px">
+		@foreach ($tags as $tag)
+		<option value="{{$tag->id}}">{{$tag->name}}</option>
+		@endforeach
+	</select><br>
+
 	<input type="text" name="author" style="display:none;" value={{auth()->user()->name}}>
 	{{Form::label('image','Upload article display picture')}}
 	{{Form::file('image',array('class'=>'form-control','accept'=>'image/*','style'=>'margin-bottom:20px;'))}}
@@ -80,8 +90,13 @@ CKEDITOR.replace( 'content', {
 		}
 	</script>
 
+	
 
+@endsection
 
-
-
+@section('scripts')
+<script src={{ URL::asset('js/select2.min.js') }}></script>
+<script type="text/javascript">
+		$(".select2-multi").select2();
+</script>
 @endsection
