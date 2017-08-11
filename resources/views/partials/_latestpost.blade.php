@@ -51,7 +51,7 @@
 					@endphp
 <!-- First Latest Post-->@foreach($articles as $article)
 						@if($j<2)
-						@if($article->id%2==0)
+						@if($article->id%2==1)
 <!-- First Latest Post--><li class="post">
 							@if(!empty($article->image))
 							<a href="{{ route('view',$article->id) }}" title={{$article->title}}>
