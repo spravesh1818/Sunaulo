@@ -58,10 +58,12 @@
 						@php
 							$sorted=$articles;
 							$sorted=$sorted->sortByDesc('numberofComments');
+							$i=0;
 						@endphp
 						
 							
 							@foreach($sorted as $article)
+							@if($i<5)
 							<li class="post">
 							@if(!empty($article->image))
 								<a href={{route('view',$article->id)}} title={{$article->title}}>
@@ -79,6 +81,10 @@
 									</ul>
 								</div>
 							</li>
+							@php
+								$i=$i+1;
+							@endphp
+							@endif
 							@endforeach
 							
 						</ul>
