@@ -6,7 +6,7 @@
   @foreach($articles as $article)
   @if($i<=2) 
   <h2 class="box_header_title">
-  <a href="{{ route('view',$article->id) }}" title="{{$article->id}}">{{$article->title}}</a> </h2>
+  <a href="{{ route('view',$article->id) }}" title="{{$article->title}}">{{$article->title}}</a> </h2>
   @endif  
   @php
     $i=$i+1;
