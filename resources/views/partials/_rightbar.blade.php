@@ -44,6 +44,10 @@
 									</ul>
 								</div>
 							</li>
+							@php
+								$i=$i+1;
+							@endphp
+							@endif
 							@endforeach
 						</ul>
 						<a class="more page_margin_top" href="#">SHOW MORE</a>
@@ -75,7 +79,6 @@
 									</ul>
 								</div>
 							</li>
-							@endif
 							@endforeach
 							
 						</ul>
