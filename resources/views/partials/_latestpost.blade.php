@@ -5,9 +5,9 @@
 					@php
 						$i=0;
 					@endphp
-					@foreach($articles as $article)
-					@if($i<2)
-					@if($article->id%2==0)
+<!-- First Latest Post-->@foreach($articles as $article)
+						@if($i<2)
+						@if($article->id%2==0)
 <!-- First Latest Post--><li class="post">
 							@if(!empty($article->image))
 							<a href="{{ route('view',$article->id) }}" title={{$article->title}}>
@@ -42,8 +42,6 @@
 						@endif
 						@endif
 						@endforeach
-<!--Remove from Here-->	
-<!-- Upto Here-->
 					</ul>
 					<ul class="col-4">
 					@php
