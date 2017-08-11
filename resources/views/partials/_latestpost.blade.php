@@ -22,7 +22,7 @@
 							<h2 class="with_number">
 								<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
 <!--tittle of latest Post-->{{$article->title}}</a>
-								<a class="comments_number" href="" title="{{$article->numberofCOmments}} comments">
+								<a class="comments_number" href="" title="{{$article->numberofComments}} comments">
 <!--Number of Comments-->{{$article->numberofComments}}<span class="arrow_comments"></span></a>
 							</h2>
 							<ul class="post_details">
@@ -63,7 +63,7 @@
 							</a>
 							@endif
 							<h2 class="with_number">
-								<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
+								<a href="{{ route('view',$article->id) }}" title="{{$article->title}}" style="font-size:35px">
 <!--tittle of latest Post-->{{$article->title}}</a>
 								<a class="comments_number" href="" title="{{$article->numberofComments}} comments">
 <!--Number of Comments-->{{$article->numberofComments}}<span class="arrow_comments"></span></a>
