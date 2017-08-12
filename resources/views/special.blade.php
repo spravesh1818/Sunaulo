@@ -46,7 +46,7 @@
 					@endforeach
 					<br>
 					<br>
-					<div style="margin-left:300px"><span class="arrow"></span><span>{{$articles->links()}}</span></div><br><br>
+					<div style="margin-left:30%"><span class="arrow"></span><span>{{$articles->links()}}</span></div><br><br>
 
 				<div class="row page_margin_top">
 					<div class="share_box clearfix">
