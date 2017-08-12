@@ -7,6 +7,10 @@ Edit Content
 Edit Content
 @endsection
 
+@section('stylesheets')
+<link rel="stylesheet" href={{asset('css/select2.min.css')}}>
+@endsection
+
 @section('destination')
 Edit content
 @endsection
@@ -32,6 +36,10 @@ Edit content
 		<option>{{$category->title}}</option>
 		@endforeach
 	</select><br>
+
+	{{Form::select('tags[]',$tags,null,['class'=>'form-control select2-multi','multiple'=>'multiple'])}}
+	<br>
+	<br>
 	{{Form::label('image','Upload article display picture')}}
 	{{Form::file('image',array('class'=>'form-control','style'=>'margin-bottom:20px;'))}}
 
@@ -56,4 +64,13 @@ Edit content
 	{{Form::submit('Submit',array('class'=>'btn btn-success','style'=>'width:200px;margin-top:20px;'))}}
 	{!!Form::close()!!}
 @endsection
+
+@section('scripts')
+<script src={{ URL::asset('js/select2.min.js') }}></script>
+<script type="text/javascript">
+		$(".select2-multi").select2();
+</script>
+
+@endsection
+
 

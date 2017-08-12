@@ -127,8 +127,14 @@ class ArticlesController extends Controller
         $edit=articles::find($id);
         $category=category::all();
 
+        $tags=Tag::all();
+        $tags2=array();
+        foreach ($tags as $tag) {
+            $tags2[$tag->id]=$tag->name;
+        }
+
         //return the view and pass in the variable created
-        return view('admin_view.edit')->withArticles($edit)->withCategories($category);
+        return view('admin_view.edit')->withArticles($edit)->withCategories($category)->withTags($tags2);
     }
 
     /**
@@ -166,6 +172,12 @@ class ArticlesController extends Controller
 
     
             $article->save();
+            if(isset($request->tags)){
+            $article->tags()->sync($request->tags);
+            }   
+            else{
+                $article->tags()->sync(array());
+            }
             Session::flash('success','The article was successfully updated');
         //redirect with flash data to content.show
             return redirect()->route('content.index');
