@@ -192,6 +192,7 @@ class ArticlesController extends Controller
     public function destroy($id)
     {
         $article=articles::find($id);
+        $article->tags()->detach();
         $comments=comment::all()->where('article_id',$id);
         foreach ($comments as $comment) {
             $comment->delete();
