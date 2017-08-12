@@ -10,7 +10,8 @@
 			<div class="header_container small">
 				<div class="header clearfix" >
 					<div class="logo">
-						<h1><a href="index9ba3.html?page=home" title=""><img src="{{ asset('images/solid.png') }}" height="81px;" align="Center" /> </a></h1>
+					<br>
+						<h1 style="text-align: center;">सहि उमेर सहि कदम</h1>
 						</div>
 					
 					
