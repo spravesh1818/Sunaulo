@@ -36,6 +36,7 @@
 		<link rel="stylesheet" href={{asset('css/wow.css')}}>
 		<link rel="stylesheet" href={{asset('css/footS.css')}}>
 		<link rel="stylesheet" href={{asset('css/topbutton.css')}}>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery-1.12.4.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('jquery-migrate-1.4.1.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery.ba-bbq.min.js')}}></script>
@@ -54,35 +55,5 @@
 		<script type="text/javascript" src={{ URL::asset('js/main.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/odometer.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/topbutton.js')}}></script>
-		<script type="text/javascript">
-			$(document).ready(function (){
-					console.log("ready");
-					$.ajax({
-						type:'GET',
-						url:'/fetchspecial',
-						success:function(data){
-							var response=JSON.parse(data);
-							if(Object.keys(response).length==0){
-								$('#special').append('<li class="post"><div class="post_content"><h5><a>No khulduli right now</a></h5></div></li>');
-				  					iterator+=1;
-							}
-							else{
-							var iterator=0;
-							$.each(response, function () {
-								if(iterator==4)
-									return false;
-								else
-									$('#special').append('<li class="post"><div class="post_content"><h5><a href="/test">'+this.title+'</a></h5></div></li>');
-				  					iterator+=1;
-							});}
-
-							
-						},
-						error:function(){
-							alert('khulduli ayena');
-						}
-					});
-
-				});	
-		</script>
+		<script type="text/javascript" src={{ URL::asset('js/mainPageAjax.js')}}></script>
 	</head>
