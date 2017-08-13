@@ -17,7 +17,7 @@
 
 
 <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
-<link href={{ URL::asset('css/font-awesome.css')}} rel="stylesheet">
+
 
 <div class="w3-col l7 m6 s4 w3-dark-grey w3-center">© Copyright</div>
   <div class="w3-col l7 m3 s4 w3-dark-grey w3-center">Developed By</div>
