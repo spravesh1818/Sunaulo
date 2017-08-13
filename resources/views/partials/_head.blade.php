@@ -53,7 +53,6 @@
 		<script type="text/javascript" src={{ URL::asset('js/jquery.prettyPhoto.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery.qtip.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery.blockUI.js')}}></script>
-		<script type="text/javascript" src={{ URL::asset('js/googlemap.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/main.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/odometer.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/topbutton.js')}}></script>
