@@ -18,7 +18,7 @@ class PageController extends Controller
 			array_push($random,$cat->title);
 		}
 		shuffle($random);
-		$article=articles::all()->where('category','!=','khulduli');
+		$article=articles::all()->where('category','!=','जिज्ञासा र खुल्दुली');
 		$articles=$article->sortByDesc('created_at');
 		
 		return view('index')->withArticles($articles)->withCategory($random[0]);
@@ -39,7 +39,7 @@ class PageController extends Controller
         $comment=comment::all()->where('article_id',$id);
         $categories=category::all();
 
-        $articles=articles::all()->where('category','!=','khulduli');
+        $articles=articles::all()->where('category','!=','जिज्ञासा र खुल्दुली');
 		$articles=$articles->sortByDesc('created_at');
         
        return view('single')->withArticle($article)->withContent($content)->withComment($comment)->withCategories($categories)->withAuthor($author)->withArticles($articles);
@@ -55,7 +55,7 @@ class PageController extends Controller
 	public function special(){
 		$categories=category::all();
 		//print_r($categories[0]->title);
-		$articles=articles::where('category','khulduli')->simplePaginate(1);
+		$articles=articles::where('category','जिज्ञासा र खुल्दुली')->simplePaginate(1);
 		return view('special')->withArticles($articles)->withCategories($categories);
 	}
 
@@ -109,7 +109,7 @@ class PageController extends Controller
 	}
 
 	public function fetchspecial(){
-		$articles=articles::all()->where('category','khulduli')->toJson();
+		$articles=articles::all()->where('category','जिज्ञासा र खुल्दुली')->toJson();
 		return response()->json($articles);
 	}
 
