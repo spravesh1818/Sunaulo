@@ -2,13 +2,16 @@
 <html>
 	
 <head>
-		<title>SahiUmerSahiKadam</title>
+		<title>सहि उमेर सहि कदम </title>
 		<!--meta-->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.2" />
-		<meta name="format-detection" content="telephone=no" />
-		<meta name="keywords" content="Medic, Medical Center" />
-		<meta name="description" content="Responsive Medical Health Template" />
+		<meta name="keywords" content="sahi umer, sahi kadam" />
+		<meta name="keywords" content="khulduli,sex query, child  marriage" />
+		<meta name="keywords" content="sahi umer sahi kadam ,sahiumersahikadam" />
+		<meta name="description" content="सहि उमेर सहि कदम" />
+
+		<meta name="description" content="सहि उमेर सहि कदम" />
 		<!--style-->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>

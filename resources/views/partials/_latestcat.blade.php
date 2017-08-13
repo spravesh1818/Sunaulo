@@ -48,7 +48,7 @@
 						$i=0;
 					@endphp
 						@foreach($articles as $article)
-							@if($i<4)
+							@if($i<5)
 								@if($article->category===$category )
 									<li class="post">
 									@if(!empty($article->image))
