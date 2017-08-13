@@ -54,9 +54,7 @@
 										{{date('F d, Y', strtotime($article->updated_at))}}
 									</li>
 								</ul>
-								
-
-								<br><br><br><br><br>
+								<br><br><br><br><br><br><br><br>
 								<p>{!!substr($article->content,0,400)!!}</p>
 								<a class="read_more" href="{{ route('view',$article->id) }}" title="Read more"><span class="arrow"></span><span>READ MORE</span></a>
 							</div>
