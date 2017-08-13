@@ -12,7 +12,7 @@ use App\quiz;
 class PageController extends Controller
 {
 	public function home(){
-		$category=category::all();
+		$category=category::all()->where('title','!=','जिज्ञासा र खुल्दुली');
 		$random=array();;
 		foreach ($category as $cat) {
 			array_push($random,$cat->title);
@@ -21,7 +21,7 @@ class PageController extends Controller
 		$article=articles::all()->where('category','!=','जिज्ञासा र खुल्दुली');
 		$articles=$article->sortByDesc('created_at');
 		
-		return view('index')->withArticles($articles)->withCategory($random[0]);
+		return view('index')->withArticles($articles)->withCategory($random[0])->withCategories($category);
 	}
 
 	public function show($id){

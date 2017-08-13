@@ -6,14 +6,17 @@
     <li><a>ताजा खबर</a></li>
     
     <li> <a href=""><span>मनोरंजन</span></a>
-          <ul>
+        <ul>
         <li><a href="">हाजिरी जवाफ</a></li>
-      </ul>
+        </ul>
         </li>
     <li> <a href=""><span>बिषयगत प्रस्तुति</span></a>
-      <ul id="output">
+      <ul>
+        @foreach($categories as $category)
+        <li><a href="{{ route('category',$category->id) }}">{{$category->title}}</a></li>
+        @endforeach
       </ul>
-        </li>
+    </li>
     <li><a href="">हाम्रोबारे</a></li>
   </ul>
 </nav>

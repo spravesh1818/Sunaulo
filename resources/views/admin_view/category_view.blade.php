@@ -22,7 +22,7 @@ Add Category
 			<th>Created At</th>
 			<th>Actions</th>
 		</tr>
-
+		
 		@foreach ($categories as $category)
 		<tr>
 			<th>{{$category->id}}</th>

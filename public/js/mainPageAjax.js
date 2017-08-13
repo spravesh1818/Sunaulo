@@ -29,6 +29,3 @@ $(document).ready(function (){
 
 });
 
-$("#post_comment").on("click", function(){
-    $(this).hide();
-});
