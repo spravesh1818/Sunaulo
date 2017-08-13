@@ -6,10 +6,9 @@
 		<!--meta-->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.2" />
-		<meta name="keywords" content="sahi umer, sahi kadam" />
-		<meta name="keywords" content="khulduli,sex query, child  marriage" />
-		<meta name="keywords" content="sahi umer sahi kadam ,sahiumersahikadam" />
-		<meta name="description" content="सहि उमेर सहि कदम" />
+		<meta name="keywords" content="sahi umer, sahi kadam,khulduli,sex query, child  marriage,sahi umer sahi kadam ,sahiumersahikadam, sexuality,teenage" />
+		<meta name="keywords" content="सहि उमेर सहि कदम, सहि उमेर,सहि कदम, यौनिकता,जिज्ञासा, खुल्दुली, समाज,  संस्कृति, यौन तथा प्रजनन् स्वास्थ्य , यौन व्यवहार, हिंसा, जीवन उपयोगी सीप"/>
+		
 
 		<meta name="description" content="सहि उमेर सहि कदम" />
 		<!--style-->
