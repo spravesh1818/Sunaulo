@@ -4,7 +4,7 @@
 <div class="page">
 	<div class="page_header clearfix page_margin_top">
 		<div class="page_header_left">
-			<h1 class="page_title">{{$articles[0]->category}}</h1>
+			<h1 class="page_title"></h1>
 		</div>
 		<div class="page_header_right">
 			<ul class="bread_crumb">
@@ -54,9 +54,7 @@
 										{{date('F d, Y', strtotime($article->updated_at))}}
 									</li>
 								</ul>
-								
-
-								<br><br><br><br><br>
+								<br><br><br><br><br><br><br><br><br><br>
 								<p>{!!substr($article->content,0,400)!!}</p>
 								<a class="read_more" href="{{ route('view',$article->id) }}" title="Read more"><span class="arrow"></span><span>READ MORE</span></a>
 							</div>

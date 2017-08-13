@@ -25,7 +25,9 @@ View Content
 			<th>Date of Post</th>
 			<th>Actions</th>
 		</tr>
-
+		@php
+			$articles=$articles->sortByDesc('created_at');
+		@endphp
 
 		@foreach ($articles as $article)
 		<tr>

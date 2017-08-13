@@ -131,26 +131,28 @@
 				<div class="row page_margin_top_section">
 					<h4 class="box_header">Leave a Comment</h4>
 					<p class="padding_top_30">Your email address will not be published. Required fields are marked with *</p>
-					<form class="comment_form margin_top_15" id="comment_form" method="post" action={{ route('comment.post') }}>
-					{{csrf_field()}}
+					<form class="comment_form margin_top_15" id="comment_form">
 						<div class="column column_1_3" style="float: left;">
-							<input class="text_input" name="name" type="text" value="Your Name *" placeholder="Your Name *">
+							<input class="text_input" id="name" name="name" type="text" value="Your Name *" placeholder="Your Name *">
 						</div>
 						<div class="column column_1_3">
-						<input class="text_input" name="email" type="text" value="Your Email *" placeholder="Your Email *" required>
+						<input class="text_input" name="email" id="email" type="text" value="Your Email *" placeholder="Your Email *" required>
 						</div>
 						
 						
-							<textarea name="comment" placeholder="Comment *"  required></textarea>
+							<textarea name="comment" id="comment" placeholder="Comment *"  required></textarea>
+
+
 							<select name='article_id' style="display:none;">
 									<option>{{$article->id}}</option>
 							</select>
 						
 						<div>
-							<input type="submit" value="POST COMMENT" class="more active" style="float: left;">
-							<a href="#cancel" id="cancel_comment" title="Cancel reply">Cancel reply</a>
+							<button class="more active" id="post_comment" style="float: left;">POST COMMENT</button>
 						</div>
+						
 					</form>
+					<br>
 				</div>
 				<div class="row page_margin_top_section">
 					<h4 class="box_header">
@@ -176,4 +178,11 @@
 					@endforeach
 				</div>
 			</div>
+
+			<script type="text/javascript">
+				$("#post_comment").on("click", function(){
+    				var text=$('#email').val();
+    				console.log(text);
+				});
+			</script>
 			@include('partials._rightbar')

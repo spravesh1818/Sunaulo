@@ -26,7 +26,7 @@ View Tags
 		@foreach ($tags as $tag)
 		<tr>
 			<th>{{$tag->id}}</th>
-			<td>{{$tag->name}}</td>
+			<td><a href="{{ route('tag.show',$tag->id) }}">{{$tag->name}}</a></td>
 			<td>{{date('F d, Y', strtotime($tag->created_at))}}</td>
 			<td><a href='{{route('tag.edit',$tag->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
 				{!!Form::open(['route'=>['tag.destroy',$tag->id],'method'=>'delete'])!!}

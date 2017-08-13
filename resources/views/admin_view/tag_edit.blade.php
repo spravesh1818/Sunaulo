@@ -1,14 +1,14 @@
 @extends('admin_view.starter')
 @section('title')
-Add New Tag
+Edit Tag
 @endsection
 
 @section('main_header')
-Add New Tag
+Edit Tag
 @endsection
 
 @section('destination')
-Add Tag
+Edit Tag
 @endsection
 
 
@@ -25,13 +25,12 @@ Add Tag
 		</ul>
 	@endif
 
-			{!! Form::open(['route' => 'tag.store','files'=>true,'style'=>'margin-left:100px;fontsize:35px;margin-top:20px;width:700px;']) !!}	
+			{!!Form::model($tag,['route'=>['tag.update',$tag->id],'method'=>'PUT','files'=>true,'style'=>'margin-left:100px;fontsize:35px;margin-top:20px;width:700px;'])!!}
 			{{Form::text('name',null,array('class'=>'form-control','id'=>'title','placeholder'=>'Tag Name
 ','style'=>'font-size:25px;'))}}<br>
 
 			{{Form::submit('Submit',array('class'=>'btn btn-success','style'=>'width:200px;margin-top:20px;'))}}
 			{!! Form::close() !!}
-				
 			</table>
 		</div>
 @endsection

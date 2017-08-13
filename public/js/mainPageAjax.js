@@ -1,6 +1,6 @@
 
 $(document).ready(function (){
-
+	console.log("ready");
 	$.ajax({
 		type:'GET',
 		url:'/fetchspecial',
@@ -27,8 +27,5 @@ $(document).ready(function (){
 		}
 	});
 
-
-
-
-
 });
+
