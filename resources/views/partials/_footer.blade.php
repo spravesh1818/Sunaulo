@@ -10,7 +10,7 @@
   <div class="w3-col l7 m3 s4 w3-dark-grey w3-center">@include('partials._socialicon')</div>
   <br><br><br> 
 
-
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <div class="w3-col l7 m6 s4 w3-dark-grey w3-center">© Copyright</div>
   <div class="w3-col l7 m3 s4 w3-dark-grey w3-center">Developed By</div>
