@@ -11,7 +11,7 @@ $(window).scroll(function() {
   }
   if ($(window).scrollTop() + $(window).height() > $(document).height() - $("#test").height()) {
     $('#return-to-top').css("right", "20px"); // make it related
-    $('#return-to-top').css("bottom", "140px"); // 100 px, height of #return-to-top
+    $('#return-to-top').css("bottom", "140px"); // 140 px, height of #return-to-top
   }
 
 });
