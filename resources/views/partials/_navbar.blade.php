@@ -10,7 +10,7 @@
         <li><a href="">हाजिरी जवाफ</a></li>
         </ul>
         </li>
-    <li> <a href=""><span>बिषयगत प्रस्तुति</span></a>
+    <li style="z-index:99;"> <a href=""><span>बिषयगत प्रस्तुति</span></a>
       <ul>
         @foreach($categories as $category)
         <li><a href="{{ route('category',$category->id) }}">{{$category->title}}</a></li>
