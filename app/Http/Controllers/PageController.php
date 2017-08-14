@@ -27,7 +27,7 @@ class PageController extends Controller
 	public function show($id){
 		$article=articles::find($id);
 		$user=User::all()->where('name',$article->author);
-		dd($author);
+		dd($user);
 		/*foreach($user as $user)
 			$author=$user;
 			echo $author;
