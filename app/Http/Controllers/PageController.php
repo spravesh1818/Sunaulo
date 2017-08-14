@@ -26,11 +26,10 @@ class PageController extends Controller
 
 	public function show($id){
 		$article=articles::find($id);
-		$user=User::all()->where('name',$article->author);
+		$users=User::all()->where('name',$article->author);
 		$author;
-		foreach($user as $user)
+		foreach($users as $user)
 			$author=$user;
-
 		$count=$article->mostRead;
 		$count++;
 		$article->mostRead=$count;
