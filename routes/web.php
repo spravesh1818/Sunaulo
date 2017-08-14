@@ -11,11 +11,13 @@
 |
 */
 Route::get('/','PageController@home')->name('home');
+Route::get('/loadComments/{comment}','PageController@loadComments')->name('loadComments');
 Route::get('/test','PageController@special')->name('khulduli');
 Route::get('/categories/{category}','PageController@categorywise')->name('category');
 Route::get('/allpost','PageController@allpost')->name('all');
 Route::get('/article/{content}','PageController@show')->name('view');
 Route::post('/comment','PageController@comment')->name('comment.post');
+
 
 Route::get('/login','loginController@login')->name('login');
 
