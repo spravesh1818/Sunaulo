@@ -1,13 +1,20 @@
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+$(window).scroll(function() {
+  if ($(this).scrollTop()) {
+    $("#return-to-top").fadeIn();
+  } else {
+    $("#return-to-top").fadeOut();
+  }
+  if ($(window).scrollTop() + $(window).height() < $(document).height() - $("#test").height()) {
+    $('#return-to-top').css("position", "fixed"); //resetting it
+    $('#return-to-top').css("bottom", "0"); //resetting it
+  }
+  if ($(window).scrollTop() + $(window).height() > $(document).height() - $("#test").height()) {
+    $('#return-to-top').css("right", "20px"); // make it related
+    $('#return-to-top').css("bottom", "140px"); // 100 px, height of #return-to-top
+  }
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("return-to-top").style.display = "block";
-    } else {
-        document.getElementById("return-to-top").style.display = "none";
-    }
-}
+});
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
