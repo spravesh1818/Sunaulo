@@ -7,6 +7,15 @@ function scrollFunction() {
     } else {
         document.getElementById("myBtn").style.display = "none";
     }
+
+    if($(window).scrollTop() + $(window).height() < $(document).height() - $("#footer").height()) {
+        $('#myBtn').css("position","fixed");    //resetting it
+        $('#myBtn').css("bottom","0"); //resetting it
+}
+        if($(window).scrollTop() + $(window).height() > $(document).height() - $("#footer").height()) {
+        $('#myBtn').css("right","20px"); // make it related
+        $('#myBtn').css("bottom","140px"); // 60 px, height of #toTop
+ }
 }
 
 // When the user clicks on the button, scroll to the top of the document
