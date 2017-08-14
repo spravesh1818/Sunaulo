@@ -12,11 +12,11 @@
 <!-- First Latest Post--><li class="post">
 							@if(!empty($article->image))
 							<a href="{{ route('view',$article->id) }}" title={{$article->title}}>
-<!-- Image of latest Post--><img src='{{ asset('uploads/'.$article->image) }}' alt='img'>
+<!-- Image of latest Post--><img style="pointer-events: none; cursor: default;" src='{{ asset('uploads/'.$article->image) }}' alt='img'>
 							</a>
 							@else
 							<a href="{{ route('view',$article->id) }}" title={{$article->title}}>
-<!-- Image of latest Post--><img src='images/slider/image_02.jpg' alt='img'>
+<!-- Image of latest Post--><img style="pointer-events: none; cursor: default;" src='images/slider/image_02.jpg' alt='img'>
 							</a>
 							@endif
 							<h2 class="with_number">
