@@ -29,7 +29,18 @@
 								<li class="category"><a href="" title="{{$article->category}}">
 <!--Category-->{{$article->category}}</a></li>
 								<li class="date">
-<!--Posted Date-->
+<!--Posted Date-->@php
+							$date=$article->updated_at->toDateString();
+							$orderdate = explode('-', $date);
+							$year = (int)$orderdate[0];
+							$month   = (int)$orderdate[1];
+							$day  = (int)$orderdate[2];
+							 echo Bsdate::eng_to_nep($year,$month,$day)['day'].",";
+							 echo Bsdate::eng_to_nep($year,$month,$day)['nmonth']." ";
+							 echo Bsdate::eng_to_nep($year,$month,$day)['num_day'].",";
+							 echo Bsdate::eng_to_nep($year,$month,$day)['year']//For converting AD TO BS
+							
+							@endphp
 								</li>
 							</ul><br><br><br><br><br><br>
 							<p>
