@@ -1,14 +1,14 @@
 @extends('admin_view.starter')
 @section('title')
-Add New Category
+View Category
 @endsection
 
 @section('main_header')
-Add New Category
+View Category
 @endsection
 
 @section('destination')
-Add Category
+View Category
 @endsection
 
 
