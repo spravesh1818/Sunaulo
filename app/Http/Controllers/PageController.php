@@ -27,12 +27,12 @@ class PageController extends Controller
 	public function show($id){
 		$article=articles::find($id);
 		$user=User::all()->where('name',$article->author);
-		$author;
-		foreach($user as $user)
+		dd($author);
+		/*foreach($user as $user)
 			$author=$user;
 			echo $author;
 
-		/*$count=$article->mostRead;
+		$count=$article->mostRead;
 		$count++;
 		$article->mostRead=$count;
 		$article->save();
