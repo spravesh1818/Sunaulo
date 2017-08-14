@@ -30,8 +30,9 @@ class PageController extends Controller
 		$author;
 		foreach($user as $user)
 			$author=$user;
+			echo $author;
 
-		$count=$article->mostRead;
+		/*$count=$article->mostRead;
 		$count++;
 		$article->mostRead=$count;
 		$article->save();
@@ -43,7 +44,7 @@ class PageController extends Controller
         $articles=articles::all()->where('category','!=','जिज्ञासा र खुल्दुली');
 		$articles=$articles->sortByDesc('created_at');
         
-       return view('single')->withArticle($article)->withContent($content)->withComments($comment)->withCategories($categories)->withAuthor($author)->withArticles($articles);
+       return view('single')->withArticle($article)->withContent($content)->withComments($comment)->withCategories($categories)->withAuthor($author)->withArticles($articles);*/
 	}
 
 	public function allpost(){

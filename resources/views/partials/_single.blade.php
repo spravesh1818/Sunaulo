@@ -10,7 +10,22 @@
 					<div class="post single">
 					<ul class="post_details clearfix">
 							<li class="detail category">In <a href="" title="{{$article->category}}">{{$article->category}}</a></li>
-							<li class="detail date">{{date('F d, Y', strtotime($article->updated_at))}}</li>
+							<li class="detail date">
+							@php
+							$date=$article->updated_at->toDateString();
+							$orderdate = explode('-', $date);
+							$year = (int)$orderdate[0];
+							$month   = (int)$orderdate[1];
+							$day  = (int)$orderdate[2];
+							 echo Bsdate::eng_to_nep($year,$month,$day)['day'].",";
+							 echo Bsdate::eng_to_nep($year,$month,$day)['nmonth']." ";
+							 echo Bsdate::eng_to_nep($year,$month,$day)['num_day'].",";
+							 echo Bsdate::eng_to_nep($year,$month,$day)['year']//For converting AD TO BS
+							
+							@endphp
+								
+							
+							</li>
 							<li class="detail author">{{$article->author}}</li>
 							<li class="detail views"></li>
 							<li class="detail comments"><a href="#comments_list" class="scroll_to_comments" title="6 Comments"></a></li>
