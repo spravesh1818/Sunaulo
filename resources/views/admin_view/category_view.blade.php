@@ -28,7 +28,7 @@ Add Category
 			<th>{{$category->id}}</th>
 			<td>{{$category->title}}</td>
 			<td>{{date('F d, Y', strtotime($category->created_at))}}</td>
-			<td><a href='{{route('category.edit',$category->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
+			<td>
 				{!!Form::open(['route'=>['category.destroy',$category->id],'method'=>'delete','onsubmit'=>'return val()'])!!}
 				{{Form::submit('Delete',array('class'=>'btn btn-primary','id'=>'delete'))}}
 				{!!Form::close()!!}</td>
