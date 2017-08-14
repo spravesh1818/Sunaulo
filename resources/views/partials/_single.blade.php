@@ -185,6 +185,7 @@
 			
 			<script type="text/javascript">
 				$(document).ready(function (){
+					console.log('Ajax not working');
 					var thanks=$('#thank_you');
 					thanks.hide();
 					var form=$('#comment_form');
