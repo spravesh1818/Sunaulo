@@ -10,6 +10,7 @@ $(window).scroll(function() {
     $('#return-to-top').css("bottom", "0"); //resetting it
   }
   if ($(window).scrollTop() + $(window).height() > $(document).height() - $("#test").height()) {
+    $('#return-to-top').css("position", "fixed");
     $('#return-to-top').css("right", "20px"); // make it related
     $('#return-to-top').css("bottom", "140px"); // 140 px, height of #return-to-top
   }
