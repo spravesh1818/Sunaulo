@@ -30,7 +30,6 @@ class PageController extends Controller
 		$author;
 		foreach($users as $user)
 			$author=$user;
-			echo $author;
 		$count=$article->mostRead;
 		$count++;
 		$article->mostRead=$count;
