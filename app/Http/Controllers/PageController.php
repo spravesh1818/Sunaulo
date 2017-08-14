@@ -32,7 +32,8 @@ class PageController extends Controller
 			$author=$user;
 			echo $author;
 		dd($author);
-		$count=$article->mostRead;
+
+		/*$count=$article->mostRead;
 		$count++;
 		$article->mostRead=$count;
 		$article->save();
