@@ -1,3 +1,4 @@
+
 <body class="">
 
 <div class="col-12">
@@ -105,7 +106,7 @@
 					</ul>
 					<ul class="taxonomies categories right clearfix">
 						<li>
-							<a href="" title="HEALTH">{{$article->category}}</a>
+							<a href="" title="{{$article->category}}">{{$article->category}}</a>
 						</li>
 					</ul>
 				</div>
@@ -130,8 +131,10 @@
 				</div>-->
 				<div class="row page_margin_top_section">
 					<h4 class="box_header">Leave a Comment</h4>
+					<p class="padding_top_30" id="thank_you">Thank you for commenting on the post</p>
 					<p class="padding_top_30">Your email address will not be published. Required fields are marked with *</p>
-					<form class="comment_form margin_top_15" id="comment_form">
+					<form class="comment_form margin_top_15" id="comment_form"  action='{{ route('comment.post') }}'>
+					{{csrf_field()}}
 						<div class="column column_1_3" style="float: left;">
 							<input class="text_input" id="name" name="name" type="text" value="Your Name *" placeholder="Your Name *">
 						</div>
@@ -143,22 +146,22 @@
 							<textarea name="comment" id="comment" placeholder="Comment *"  required></textarea>
 
 
-							<select name='article_id' style="display:none;">
+							<select name='article_id' id="article_id" style="display:none;">
 									<option>{{$article->id}}</option>
 							</select>
 						
 						<div>
-							<button class="more active" id="post_comment" style="float: left;">POST COMMENT</button>
+							<input type="submit" class="more active" id="post_comment" style="float: left;" value="POST COMMENT">
 						</div>
 						
 					</form>
 					<br>
 				</div>
-				<div class="row page_margin_top_section">
+				<div class="row page_margin_top_section" id="comment_show">
 					<h4 class="box_header">
-					{{count($comment)}}
+					{{count($comments)}}
 					Comments</h4>
-					@foreach($comment as $comment)
+					@foreach($comments as $comment)
 					<ul id="comments_list">
 						<li class="comment clearfix" id="comment-1">
 							<div class="comment_details">
@@ -177,12 +180,40 @@
 					</ul>
 					@endforeach
 				</div>
+				<div>{{$comments->links()}}</div>
 			</div>
-
+			
 			<script type="text/javascript">
-				$("#post_comment").on("click", function(){
-    				var text=$('#email').val();
-    				console.log(text);
+				$(document).ready(function (){
+					var thanks=$('#thank_you');
+					thanks.hide();
+					var form=$('#comment_form');
+					form.submit(function(event)
+					{
+						var name=$('#name').val();
+						var email=$('#email').val();
+						var comment=$('#comment').val();
+						var article_id=$('#article_id').val();
+						var token=$('input[name=_token]').val()
+						$.ajax({
+							type:'POST',
+							url:'/comment',
+							data: {'name':name,'email':email,'comment':comment,'_token':token,'article_id':article_id},
+							success:function(data){
+								//call ajax get request for all the comment
+								$('#comment_form').hide();
+								thanks.show();
+								$('#comment_show').load(location.href+' #comment_show');
+							},
+							error:function(){
+								alert('comment could not be posted');
+							}
+						});
+
+
+						event.preventDefault();
+					});
 				});
+
 			</script>
 			@include('partials._rightbar')

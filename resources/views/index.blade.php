@@ -10,6 +10,7 @@
 <!-- Latest Post From One Category-->
 <script type="text/javascript">
 	$(document).ready(function (){
+		console.log('working');
 	$.ajax({
 		type:'GET',
 		url:'/fetchspecial',

@@ -36,13 +36,14 @@ class PageController extends Controller
 		$article->mostRead=$count;
 		$article->save();
         $content=articles::orderBy('id','desc')->limit(4)->get();
-        $comment=comment::all()->where('article_id',$id);
+        $comment=comment::where('article_id',$id)->orderBy('created_at','desc')->paginate(5);
+
         $categories=category::all();
 
         $articles=articles::all()->where('category','!=','जिज्ञासा र खुल्दुली');
 		$articles=$articles->sortByDesc('created_at');
         
-       return view('single')->withArticle($article)->withContent($content)->withComment($comment)->withCategories($categories)->withAuthor($author)->withArticles($articles);
+       return view('single')->withArticle($article)->withContent($content)->withComments($comment)->withCategories($categories)->withAuthor($author)->withArticles($articles);
 	}
 
 	public function allpost(){
@@ -68,6 +69,14 @@ class PageController extends Controller
 	}
 
 	public function comment(Request $request){
+		//validation
+		$this->validate($request,array(
+          'name'=>'required|max:255',
+            'email'=>'required|max:255',
+            'comment'=>'required',
+            ));
+
+		//create the comment 
 		$comment=new comment;
 		$comment->name=$request->name;
 		$comment->email=$request->email;
@@ -75,20 +84,12 @@ class PageController extends Controller
 		$comment->comment=$request->comment;
 		$comment->save();
 
-		$categories=category::all();
-
+		//increase the number of comments field in articles
 		$comment_count=articles::find($request->article_id);
 		$count=$comment_count->numberofComments;
 		$count++;
 		$comment_count->numberofComments=$count;
 		$comment_count->save();
-
-
-		$view=comment::all()->where('article_id',$request->article_id);
-		$article=articles::find($comment->article_id);
-        $content=articles::orderBy('id','desc')->limit(4)->get();
-        return view('single')->withArticles($article)->withContent($content)->withComment($view)->withCategories($categories);
-
 	}
 	public function quiz(){
 		$quizzes=quizC::orderBy('id','desc')->get();
@@ -111,6 +112,12 @@ class PageController extends Controller
 	public function fetchspecial(){
 		$articles=articles::all()->where('category','जिज्ञासा र खुल्दुली')->toJson();
 		return response()->json($articles);
+	}
+
+	public function loadComments($id){
+		$comments=comment::all()->where('article_id',$id)->toJson();
+		$comments=$comments->sortByDesc($comments);
+		return response()->json($comments);
 	}
 
 }
