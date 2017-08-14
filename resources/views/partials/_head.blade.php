@@ -35,9 +35,9 @@
 		<link rel="stylesheet" href={{asset('css/new.css')}}>
 		<link rel="stylesheet" href={{asset('css/wow.css')}}>
 		<link rel="stylesheet" href={{asset('css/footS.css')}}>
-		<link rel="stylesheet" href={{asset('css/topbutton.css')}}>
+		
 		<link href={{ URL::asset('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css')}} rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
 		<script type="text/javascript" src={{ URL::asset('js/jquery-1.12.4.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('jquery-migrate-1.4.1.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery.ba-bbq.min.js')}}></script>
@@ -54,7 +54,5 @@
 		<script type="text/javascript" src={{ URL::asset('js/jquery.blockUI.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/main.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/odometer.min.js')}}></script>
-		<script type="text/javascript" src={{ URL::asset('js/topbutton.js')}}></script>
 		
-
 	</head>
