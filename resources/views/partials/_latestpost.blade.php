@@ -45,7 +45,7 @@
 								<li class="category"><a href="" title="{{$article->category->title}}">
 <!--Category-->{{$article->category->title}}</a></li>
 								<li class="date">
-<!--Posted Date-->
+<!--Posted Date-->					{{$article->updated_at}}
 								</li>
 							</ul><br><br><br><br><br><br>
 							<p>
@@ -105,7 +105,7 @@
 								<li class="category"><a href="" title="{{$article->category->title}}">
 <!--Category-->{{$article->category->title}}</a></li>
 								<li class="date">
-<!--Posted Date-->
+<!--Posted Date-->				{{$article->updated_at}}
 								</li>
 							</ul><br><br><br><br><br><br>
 							<p>
