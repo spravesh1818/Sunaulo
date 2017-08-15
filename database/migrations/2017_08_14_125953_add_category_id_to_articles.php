@@ -15,10 +15,8 @@ class AddCategoryIdToArticles extends Migration
     {
         Schema::table('articles', function (Blueprint $table) {
             $table->integer('category_id')->nullable()->usigned();
-            $table->dropColumn('category');
             $table->integer('author_id')->nullable()->usigned();
-            $table->dropColumn('author');
-            $table->dropColumn('keywords');
+            
         });
     }
 

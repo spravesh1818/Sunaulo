@@ -16,10 +16,7 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id')->primary;
             $table->string('title');
-            $table->string('category')->default('programs');
-            $table->string('keywords')->default("No keywords");
             $table->text('content');
-            $table->string('author')->default("Pravesh Chapagain");
             $table->timestamps();
         });
     }
