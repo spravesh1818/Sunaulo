@@ -30,7 +30,8 @@
   		<link rel="stylesheet" href={{ URL::asset('css/headerstyle.css')}}>
 				<!--<link rel="stylesheet" type="text/css" href="style/dark_skin.css">-->
 		<!--<link rel="stylesheet" type="text/css" href="style/high_contrast_skin.css">-->
-		<link rel="shortcut icon" href={{ URL::asset('images/solid.png')}}>
+		<link rel="shortcut icon" href={{ URL::asset('images/footprints.png')}}>
+
 		<link rel="stylesheet" href={{asset('css/preeti.css')}}>
 		<link rel="stylesheet" href={{asset('css/new.css')}}>
 		<link rel="stylesheet" href={{asset('css/wow.css')}}>
@@ -38,7 +39,7 @@
 
 		<link rel="stylesheet" href={{asset('css/topbutton.css')}}>
 		
-		<link href={{ URL::asset('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css')}} rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 		<script type="text/javascript" src={{ URL::asset('js/topbutton.js')}}></script>
 		
