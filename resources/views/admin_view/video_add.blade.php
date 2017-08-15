@@ -1,17 +1,17 @@
 @extends('admin_view.starter')
 @section('title')
-Add Content
+Add Video
 @endsection
 
 @section('main_header')
-Add Content
+Add Video
 @endsection
 @section('stylesheets')
 <link rel="stylesheet" href={{asset('css/select2.min.css')}}>
 @endsection
 
 @section('destination')
-Add Content
+Add Video
 @endsection
 
 @section('content')
@@ -44,9 +44,8 @@ Add Content
 	</select><br>
 
 	<input type="text" name="author_id" style="display:none;" value={{auth()->user()->id}}>
-	{{Form::label('image','Upload article display picture')}}
-	{{Form::file('image',array('class'=>'form-control','accept'=>'image/*','style'=>'margin-bottom:20px;'))}}
-
+	{{Form::label('video_url','Insert youtube video URL')}}
+	{{Form::text('video_url',null,array('class'=>'form-control','id'=>'video_url','placeholder'=>'video URL'))}}<br>
 
 	{{Form::textArea('content',null,array('class'=>'form-control ckeditor','id'=>'content','placeholder'=>'Text','id'=>'content','style'=>'width:200px;margin-top:20px;margin-left:100px;','required'))}}
 	<script>

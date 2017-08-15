@@ -32,6 +32,7 @@ Route::group(['prefix'=>'/dashboard'],function(){
 	Route::get('','ArticlesController@index')->name('dashboard');
 	Route::get('/content','ArticlesController@index')->name('content.index');
 	Route::get('content/create','ArticlesController@create')->name('content.create');
+	Route::get('content/vcreate','ArticlesController@vcreate')->name('video.create');
 	Route::post('/content','ArticlesController@store')->name('content.store');
 	Route::get('/content/{content}','ArticlesController@show')->name('content.show');
 	Route::get('/content/{content}/edit','ArticlesController@edit')->name('content.edit');

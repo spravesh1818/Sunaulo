@@ -12,7 +12,7 @@
 				<div class="row">
 					<div class="post single">
 					<ul class="post_details clearfix">
-							<li class="detail category">In <a href="" title="{{$article->category}}">{{$article->category}}</a></li>
+							<li class="detail category">In <a href="" title="{{$article->category->title}}">{{$article->category->title}}</a></li>
 							<li class="detail date">{{date('F d, Y', strtotime($article->updated_at))}}</li>
 							<li class="detail author">{{$article->author}}</li>
 							<li class="detail views"></li>

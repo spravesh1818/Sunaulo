@@ -6,6 +6,20 @@
   @foreach($articles as $article)
   @if($i<=2) 
   <h2 class="box_header_title">
+  @if(!empty($article->video_url))
+  @php
+    $url = $article->video_url;
+      preg_match(
+              '/[\\?\\&]v=([^\\?\\&]+)/',
+              $url,
+              $matches
+          );
+      $id = $matches[1];
+       
+      
+      echo '<iframe width="1280" height="720" src="https://www.youtube.com/embed/' . $id . '"frameborder="0" allowfullscreen class="vid1"></iframe>';
+  @endphp
+  @endif<br>
   <a href="{{ route('view',$article->id) }}" title="{{$article->title}}">{{$article->title}}</a> </h2>
   @endif  
   @php

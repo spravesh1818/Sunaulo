@@ -49,7 +49,7 @@
 									<a class="comments_number" href="" title="{{$article->numberofComments}} comments">{{$article->numberofComments}}<span class="arrow_comments"></span></a>
 								</h2>
 								<ul class="post_details">
-									<li class="category"><a title="{{$article->category}}">{{$article->category}}</a></li>
+									<li class="category"><a title="{{$article->category->title}}">{{$article->category->title}}</a></li>
 									<li class="date">
 										{{date('F d, Y', strtotime($article->updated_at))}}
 									</li>

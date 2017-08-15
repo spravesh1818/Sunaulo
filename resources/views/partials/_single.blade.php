@@ -9,13 +9,13 @@
 				<div class="row">
 					<div class="post single">
 					<ul class="post_details clearfix">
-							<li class="detail category">In <a href="" title="{{$article->category}}">{{$article->category}}</a></li>
+							<li class="detail category">In <a href="" title="{{$article->category->title}}">{{$article->category->title}}</a></li>
 							<li class="detail date">
 							
 								
 							
 							</li>
-							<li class="detail author">{{$article->author}}</li>
+							<li class="detail author">{{$article->author->name}}</li>
 							<li class="detail views"></li>
 							<li class="detail comments"><a href="#comments_list" class="scroll_to_comments" title="6 Comments"></a></li>
 						</ul>
@@ -23,6 +23,21 @@
 						<a>
 							<img src='{{asset('uploads/'.$article->image)}}' alt='img'>
 						</a>
+						@elseif(!empty($article->video_url))
+							<a href="{{ route('view',$article->id) }}">
+									@php
+								    $url = $article->video_url;
+								      preg_match(
+								              '/[\\?\\&]v=([^\\?\\&]+)/',
+								              $url,
+								              $matches
+								          );
+								      $id = $matches[1];
+								      echo '<iframe width="1280" height="720" src="https://www.youtube.com/embed/' . $id . '"frameborder="0" allowfullscreen class="vid1"></iframe>';
+  									@endphp
+
+							</a>
+
 						@endif
 						<div class="post_content page_margin_top_section clearfix">
 							
@@ -44,16 +59,16 @@
 							<div class="author_box animated_element" style="padding-top: 35px;">
 							
 								<div class="author">
-									<a title="{{$article->author}}" href="index27b5.html?page=author" class="thumb">
-									@if(!empty($author->usr_avatar))
-										<img alt="img" src={{ asset('uploads/'.$author->usr_avatar) }} style="width:100px;height:100px">
+									<a title="{{$article->author->name}}" href="index27b5.html?page=author" class="thumb">
+									@if(!empty($article->author->usr_avatar))
+										<img alt="img" src={{ asset('uploads/'.$article->author->usr_avatar) }} style="width:100px;height:100px">
 									@else
 									<img alt="img" src={{asset('images/noprofile.png')}} style="width:100px;height:100px">
 									@endif
 
 									</a>
 									<div class="details" style="margin-left: 0px;">
-										<h5><span><a title="{{$article->author}}" href="">{{$article->author}}</a></span></h5>
+										<h5><span><a title="{{$article->author->name}}" href="">{{$article->author->name}}</a></span></h5>
 										<h6>EDITOR</h6>
 									</div>
 								</div>
@@ -110,7 +125,9 @@
 					</ul>
 					<ul class="taxonomies categories right clearfix">
 						<li>
-							<a href="" title="{{$article->category}}">{{$article->category}}</a>
+							<a href="{{ route('category',$article->category->id) }}">
+							{{$article->category->title}}
+							</a>
 						</li>
 					</ul>
 				</div>

@@ -41,6 +41,15 @@ class ArticlesController extends Controller
         return view('admin_view.content_add')->withCategories($category)->withTags($tags);
     }
 
+
+    public function vcreate()
+    {
+
+        $category=category::all();
+        $tags=Tag::all();
+        return view('admin_view.video_add')->withCategories($category)->withTags($tags);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -52,18 +61,24 @@ class ArticlesController extends Controller
         //validate first
         $this->validate($request,array(
           'title'=>'required|max:255',
-            'category'=>'required|max:255',
+            'author_id'=>'required|integer',
+            'category_id'=>'required|integer',
             'content'=>'required',
             'image'=>'image',
             ));
         //complete the request
             $article=new articles;
+            if(!empty($request->video_url)){
+              $article->video_url=$request->video_url;
+            }
+
+            echo $article->video_url;
             $article->title=$request->title;
             $article->content=$request->content;
-            $article->category=$request->category;
+            $article->category_id=$request->category_id;
             $article->mostRead=0;
             $article->numberofComments=0;
-            $article->author=$request->author;
+            $article->author_id=$request->author_id;
 
             //save our image
             if($request->hasFile('image')){
@@ -96,7 +111,7 @@ class ArticlesController extends Controller
             $article->tags()->sync($request->tags,false);
 
 
-            Session::flash('success','The article was successfully created');
+            Session::flash('success','The video post was successfully created');
             return redirect()->route('content.index');
     }
 
@@ -126,6 +141,10 @@ class ArticlesController extends Controller
         //find the post in the database and save it as a variable
         $edit=articles::find($id);
         $category=category::all();
+        $cats=array();
+        foreach ($category as $category){
+            $cats[$category->id]=$category->title;
+        }
 
         $tags=Tag::all();
         $tags2=array();
@@ -134,7 +153,7 @@ class ArticlesController extends Controller
         }
 
         //return the view and pass in the variable created
-        return view('admin_view.edit')->withArticles($edit)->withCategories($category)->withTags($tags2);
+        return view('admin_view.edit')->withArticles($edit)->withCategories($cats)->withTags($tags2);
     }
 
     /**
@@ -149,7 +168,7 @@ class ArticlesController extends Controller
         //validate the data
         $this->validate($request,array(
           'title'=>'required|max:255',
-            'category'=>'required|max:255',
+            'category_id'=>'required|integer',
             'content'=>'required',
             'image'=>'image',
             ));
@@ -158,7 +177,8 @@ class ArticlesController extends Controller
             $article=articles::find($id);
             $article->title=$request->input('title');
             $article->content=$request->input('content');
-            $article->category=$request->input('category');
+            $article->category_id=$request->input('category_id');
+            $article->author_id=$request->input('author_id');
             if($request->hasFile('image')){
                 $image=$request->file('image');
                 $filename=time().'.'.$image->getClientOriginalExtension();

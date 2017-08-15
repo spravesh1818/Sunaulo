@@ -26,10 +26,6 @@ class PageController extends Controller
 
 	public function show($id){
 		$article=articles::find($id);
-		$users=User::all()->where('name',$article->author);
-		$author;
-		foreach($users as $user)
-			$author=$user;
 		$count=$article->mostRead;
 		$count++;
 		$article->mostRead=$count;
@@ -42,7 +38,7 @@ class PageController extends Controller
         $articles=articles::all()->where('category','!=','जिज्ञासा र खुल्दुली');
 		$articles=$articles->sortByDesc('created_at');
         
-       return view('single')->withArticle($article)->withContent($content)->withComments($comment)->withCategories($categories)->withAuthor($author)->withArticles($articles);
+       return view('single')->withArticle($article)->withContent($content)->withComments($comment)->withCategories($categories)->withArticles($articles);
 	}
 
 	public function allpost(){
@@ -60,10 +56,9 @@ class PageController extends Controller
 	}
 
 	public function categorywise($id){
-		$category=category::find($id);
 		$categories=category::all();
 		//print_r($categories[0]->title);
-		$articles=articles::where('category',$category->title)->paginate(5);
+		$articles=articles::where('category_id',$id)->paginate(5);
 		return view('allpost')->withArticles($articles)->withCategories($categories);
 	}
 
