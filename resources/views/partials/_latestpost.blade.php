@@ -15,8 +15,6 @@
 <!-- Image of latest Post--><img style="pointer-events: none; cursor: default;" src='{{ asset('uploads/'.$article->image) }}' alt='img'>
 							</a>
 							@elseif(!empty($article->video_url))
-							<a title={{$article->video_url}}>{{$article->video_url}}</a>
-							@elseif(!empty($article->video_url))
 							<a href="{{ route('view',$article->id) }}">
 									@php
 								    $url = $article->video_url;
