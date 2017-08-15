@@ -59,5 +59,20 @@
 		<script type="text/javascript" src={{ URL::asset('js/jquery.blockUI.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/main.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/odometer.min.js')}}></script>
+
+		<style type="text/css">
+			.vid1 {width:100%; height: 400px;}
+			.vid2 {width: 100%; height: 400%;}
+			@media only screen and (max-width: 768px) {
+			    /* For mobile phones: */
+			    [class*="col-"] {
+			        width: 100%;
+			    }
+			    .vid1{
+			        width: 100%; height: 200px;
+
+			    }
+			}
+		</style>
 		
 	</head>
