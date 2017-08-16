@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class articles extends Model
 {
     
-	public function category(){
+	public function categories(){
 		return $this->belongsTo('App\category','category_id');
 	}
 
