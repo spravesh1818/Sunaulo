@@ -5,20 +5,8 @@
 	<div>Posted by:{{$questions->name}}</div>
 </div><br><br>
 
-<div id="reply_box"  class="container">
-<form action="{{ route('reply.post') }}" method="post" id="reply_form">
-	{{csrf_field()}}
-	<input type="text" id="name" name="name" class="form-control" placeholder="name" /><br><br>
-	<input type="email" id="email" name="email" class="form-control" placeholder="email" /><br><br>
-	<textarea id="reply" name="reply" class="form-control" placeholder="Write something.." style="height:100px"></textarea>
-	<select style="display:none;" id="question_id">
-		<option value="{{$questions->id}}"></option>
-	</select>
-	<br><br>
-	<input type="submit" value="Submit Reply" class="btn btn-success"/>
-</form>
-</div><br><br>
-<h2 class="container">Replies  <small>{{count($replies)}} replies</small></h2>
+
+<h2 class="container" id="reply_label">Replies  <small>{{count($replies)}} replies</small></h2>
 <hr>
 <div class="container" id="reply_show">
 @foreach($replies as $reply)
@@ -28,6 +16,22 @@
 </ul>
 @endforeach
 <div class="paginate">{{$replies->links()}}</div>
+</div><br><br>
+
+
+
+<div id="reply_box"  class="container">
+<form action="{{ route('reply.post') }}" method="post" id="reply_form">
+    {{csrf_field()}}
+    <input type="text" id="name" name="name" class="form-control" placeholder="name" /><br><br>
+    <input type="email" id="email" name="email" class="form-control" placeholder="email" /><br><br>
+    <textarea id="reply" name="reply" class="form-control" placeholder="Write something.." style="height:100px"></textarea>
+    <select style="display:none;" id="question_id">
+        <option value="{{$questions->id}}"></option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit Reply" class="btn btn-success"/>
+</form>
 </div>
 
 
@@ -55,6 +59,7 @@
                                 console.log(data);
                                 $('#reply_box').hide();
                                 $('#reply_show').load(location.href+' #reply_show');
+                                $('#reply_label').load(location.href+' #reply_label');
                             },
                             error:function(){
                                 alert('comment could not be posted');
