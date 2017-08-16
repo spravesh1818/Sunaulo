@@ -10,12 +10,12 @@
 					<ul class="social_icons clearfix dark">
 					
 						<li>
-							<a target="_blank" href="" class="social_icon facebook" title="facebook">
+							<a target="_blank" href="https://www.facebook.com/Sahi-Umer-Sahi-Kadam-1374142792703076/?ref=all_category_pyml_rhc" class="social_icon facebook" title="facebook">
 								&nbsp;
 							</a>
 						</li>
 						<li>
-							<a target="_blank" href="" class="social_icon twitter" title="twitter">
+							<a target="_blank" href="https://www.youtube.com/channel/UCW9gL5pzC-Zt-KTk4eqr-Pg/featured" class="social_icon youtube" title="youtube">
 								&nbsp;
 							</a>
 						</li>
