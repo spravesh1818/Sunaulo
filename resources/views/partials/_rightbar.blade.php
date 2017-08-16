@@ -39,8 +39,8 @@
 									<h5><a href={{ route('view',$article->id )}} title="{{$article->title}}">
 <!--tittle-->						{{$article->title}}</a></h5>
 									<ul class="post_details simple">
-										<li class="category"><a href="" title={{$article->category->title}}>
-<!--category-->							{{$article->category->title}}</a></li>
+										<li class="category"><a href="" >
+<!--category-->							Wow</a></li>
 									</ul>
 								</div>
 							</li>
@@ -76,8 +76,8 @@
 									<h5><a href={{ route('view',$article->id )}} title="{{$article->title}}">
 <!--tittle-->						{{$article->title}}</a></h5>
 									<ul class="post_details simple">
-										<li class="category"><a href="" title={{$article->category->title}}>
-<!--category-->							{{$article->category->title}}</a></li>
+										<li class="category"><a href="" >
+<!--category-->							Wow</a></li>
 									</ul>
 								</div>
 							</li>
