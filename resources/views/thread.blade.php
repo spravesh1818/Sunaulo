@@ -1,4 +1,5 @@
 @include('partials._head')
+@include('partials._bootstrap')
 @include('partials._header')
 <div style="text-align:center;background:#b3ffb3;"  class="container">
 	<h1>{{$questions->question}}</h1>
