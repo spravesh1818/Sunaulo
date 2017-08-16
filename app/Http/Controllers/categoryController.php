@@ -91,9 +91,8 @@ class categoryController extends Controller
      */
     public function destroy($id)
     {
-
         $category=category::find($id);
-        $articles=articles::all()->where('category_id',$category->id);
+        $articles=articles::all()->where('category_id',$id);
         foreach ($articles as $article) {
             $article->delete();
         }
