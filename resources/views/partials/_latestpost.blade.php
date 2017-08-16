@@ -47,9 +47,11 @@
 								<li class="date">
 <!--Posted Date-->					{{$article->updated_at}}
 								</li>
-							</ul><br><br><br><br><br><br>
-							<p>
+							
+							<li><p>
 <!--Contents-->{!!substr($article->content,0,300)!!}...</p>
+							</li>
+							</ul>
 							<a class="read_more" href="{{ route('view',$article->id) }}" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>
 <!--Full width Page-->पुरा पढ्नुहोस</span></a>
 						</li>
@@ -107,9 +109,11 @@
 								<li class="date">
 <!--Posted Date-->					{{$article->updated_at}}
 								</li>
-							</ul><br><br><br><br><br><br>
+							<li>
 							<p>
 <!--Contents-->{!!substr($article->content,0,350)!!}...</p>
+							</li>
+							</ul>	
 							<a class="read_more" href="{{ route('view',$article->id) }}" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>
 <!--Full width Page-->पुरा पढ्नुहोस</span></a>
 						</li>
