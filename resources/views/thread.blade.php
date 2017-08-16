@@ -12,8 +12,8 @@
 <div class="container" id="reply_show">
 @foreach($replies as $reply)
 <ul class="list-group">
-	<li class="list-group-item">Name:{{$reply->name}}</li>
-	<li class="list-group-item">Reply:{{$reply->reply}}</li>
+	<li class="list-group-item">Name :  {{$reply->name}}</li>
+	<li class="list-group-item">Reply :  {{$reply->reply}}</li>
 </ul>
 @endforeach
 <div class="paginate">{{$replies->links()}}</div>

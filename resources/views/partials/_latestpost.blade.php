@@ -50,8 +50,8 @@
 							</ul><br><br><br><br><br><br>
 							<p>
 <!--Contents-->{!!substr($article->content,0,300)!!}...</p>
-							<a class="read_more" href="{{ route('view',$article->id) }}" title="Read more"><span class="arrow"></span><span>
-<!--Full width Page-->थप</span></a>
+							<a class="read_more" href="{{ route('view',$article->id) }}" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>
+<!--Full width Page-->पुरा पढ्नुहोस</span></a>
 						</li>
 						@php
 							$j=$j+1;
@@ -110,8 +110,8 @@
 							</ul><br><br><br><br><br><br>
 							<p>
 <!--Contents-->{!!substr($article->content,0,350)!!}...</p>
-							<a class="read_more" href="{{ route('view',$article->id) }}" title="Read more"><span class="arrow"></span><span>
-<!--Full width Page-->थप</span></a>
+							<a class="read_more" href="{{ route('view',$article->id) }}" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>
+<!--Full width Page-->पुरा पढ्नुहोस</span></a>
 						</li>
 						@php
 							$j=$j+1;

@@ -193,9 +193,7 @@
 								<p>
 								{{$comment->comment}}
 								</p>
-								<a class="read_more" href="#comment_form" title="Reply">
-									<span class="arrow"></span><span>REPLY</span>
-								</a>
+								
 							</div>
 						</li>
 					</ul>
