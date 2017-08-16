@@ -7,7 +7,7 @@
 			<h1 class="page_title"></h1>
 		</div>
 		@foreach($articles as $article)
-		<h2>Articles from {{$article->category->title}}</h2>
+		<h2>{{$article->category->title}}का प्रस्तुतीहरु </h2>
 		@break;
 		@endforeach
 	</div>
