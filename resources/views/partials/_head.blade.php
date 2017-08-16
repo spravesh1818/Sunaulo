@@ -18,6 +18,7 @@
 		<link rel="stylesheet" type="text/css" href={{ URL::asset('css/superfish.css')}}>
 		<link rel="stylesheet" type="text/css" href={{ URL::asset('css/prettyPhoto.css')}}>
 		<link rel="stylesheet" type="text/css" href={{ URL::asset('css/jquery.qtip.css')}}>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href={{ URL::asset('css/style.css')}}>
 		<link rel="stylesheet" type="text/css" href={{ URL::asset('css/menu_styles.css')}}>
 		<link rel="stylesheet" type="text/css" href={{ URL::asset('css/animations.css')}}>
@@ -54,6 +55,7 @@
 		<script type="text/javascript" src={{ URL::asset('js/jquery.sliderControl.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery.timeago.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery.hint.js')}}></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery.prettyPhoto.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery.qtip.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery.blockUI.js')}}></script>

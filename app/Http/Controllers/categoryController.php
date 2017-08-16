@@ -93,7 +93,7 @@ class categoryController extends Controller
     {
 
         $category=category::find($id);
-        $articles=articles::all()->where('category',$category->title);
+        $articles=articles::all()->where('category_id',$category->id);
         foreach ($articles as $article) {
             $article->delete();
         }
