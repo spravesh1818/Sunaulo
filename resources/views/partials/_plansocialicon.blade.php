@@ -11,7 +11,7 @@
 									</a>
 								</li>
 								<li>
-									<a title="" href="https://www.youtube.com/user/PlanNepal class="social_icon youtube">
+									<a title="" href="https://www.youtube.com/user/PlanNepal"class="social_icon youtube">
 										&nbsp;
 									</a>
 								</li>
