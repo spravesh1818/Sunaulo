@@ -32,7 +32,7 @@ View Content
 		<tr>
 			<th>{{$article->id}}</th>
 			<td>{{$article->title}}</td>
-			<td>{{$article->category->title}}</td>
+			<td>{{$article->category_id}}</td>
 			<td>{!!substr($article->content,0,10)!!}...</td>
 			<td>{{$article->author->name}}</td>
 			<td>{{date('F d, Y', strtotime($article->created_at))}}</td>
