@@ -1,6 +1,5 @@
 @include('partials._head')
 @include('partials._bootstrap')
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 @include('partials._header')
 <div style="text-align:center;background:#b3ffb3;"  class="container">
 	<h1>{{$questions->question}}</h1>
@@ -16,8 +15,6 @@
 	<li class="list-group-item">Name :  {{$reply->name}}</li>
 	<li class="list-group-item">Reply :  {{$reply->reply}}</li>
 </ul>
-<br><br>
-
 @endforeach
 <div class="paginate">{{$replies->links()}}</div>
 </div><br><br>
@@ -50,13 +47,8 @@
                         event.preventDefault();
                         $.ajax({
                             type:'POST',
-<<<<<<< HEAD
                             url:'/reply',
                             data: {'name':name,'email':email,'reply':reply,'question_id':question_id,'_token':token},
-=======
-                            url:'127.0.0.1:8000/reply',
-                            data: {'name':name,'question_id':question_id,'email':email,'reply':reply,'_token':token},
->>>>>>> eb732a9e9313994629e8b017f6dcad63dbaf1721
                             success:function(data){
                                 //call ajax get request for all the comment
                                 console.log(data);
