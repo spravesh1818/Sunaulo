@@ -64,7 +64,7 @@
 							
 						</div>
 						<footer>
-						<a href="#banner" class="button alt">Back</a>
+						<a href="#{{$question->id+1}}" class="button alt">Next</a>
 						</footer>
 					</article>
 				</div>
