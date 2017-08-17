@@ -32,6 +32,8 @@
 				</div>
 				<a href="#{{$questions[0]->id}}" class="more">Start</a>
 			</section>
+
+
 		<form method='post' id="question_form" action="{{ route('check') }}">
 		{{csrf_field()}}
 		@php
@@ -53,7 +55,7 @@
 							array_push($shuffle,$question->option1);
 							array_push($shuffle,$question->option2);
 							array_push($shuffle,$question->option3);
-							shuffle($shuffle)
+							shuffle($shuffle);
 						@endphp
 
 						<div class="content">
@@ -83,24 +85,18 @@
 				<div class="inner">
 					<article class="box">
 						<header>
-							<h2>Submit your Answers</h2>
+							<h2>Submit the Post</h2>
 						</header>
-						<div class="result_box">
+						<div class="content">
+						<input type="submit" name="Submit" value="Submit">
 						</div>
 						<footer>
-						<input type="text"  style="display:none" name="totalItems" value={{$i-2}}>
-						<input type="submit" class="button alt" name="submit" value="Submit">
 						</footer>
 					</article>
 				</div>
 			</section>
 		</form>
 
-		<!-- Two -->
-			
-		<!-- Footer -->
-
-		<!-- Scripts -->
 			<script src={{ URL::asset('js/jquery.min.js')}}></script>
 			<script src={{ URL::asset('js/jquery.scrolly.min.js')}}></script>
 			<script src={{ URL::asset('js/jquery.scrollex.min.js')}}></script>

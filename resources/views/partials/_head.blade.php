@@ -43,8 +43,7 @@
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 		<script type="text/javascript" src={{ URL::asset('js/topbutton.js')}}></script>
-		
-		<script type="text/javascript" src={{ URL::asset('js/jquery-1.12.4.min.js')}}></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript" src={{ URL::asset('jquery-migrate-1.4.1.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery.ba-bbq.min.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/jquery-ui-1.11.1.custom.min.js')}}></script>
