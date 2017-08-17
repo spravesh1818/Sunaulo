@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\category;
 use App\articles;
+use App\comment;
 
 class categoryController extends Controller
 {
