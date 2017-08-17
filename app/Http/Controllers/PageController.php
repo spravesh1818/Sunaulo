@@ -16,15 +16,15 @@ class PageController extends Controller
 {
 	public function home(){
 		$category=category::all()->where('title','!=','जिज्ञासा र खुल्दुली');
-		$random=array();;
-		foreach ($category as $cat) {
-			array_push($random,$cat->title);
+		$categories=category::all();
+		$id=array();
+		foreach ($category as $category) {
+			$id[0]=$category->id;
 		}
-		shuffle($random);
-		$article=articles::all()->where('category','!=','जिज्ञासा र खुल्दुली');
-		$articles=$article->sortByDesc('created_at');
+		$articles=articles::all()->where('category_id',$id[0]);
+		$articles=$articles->sortByDesc('created_at');
 		
-		return view('index')->withArticles($articles)->withCategory($random[0])->withCategories($category);
+		return view('index')->withArticles($articles)->withCategories($categories);
 	}
 
 	public function show($id){
