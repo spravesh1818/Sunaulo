@@ -27,7 +27,7 @@
 			<section id="banner" class="bg-img" data-bg="banner.jpg">
 				<div class="inner">
 					<header>
-						<h1>This is a Quiz</h1>
+						<h1>The Answers</h1>
 					</header>
 				</div>
 				<a href="#{{$questions[0]->id}}" class="more">Start</a>
@@ -44,24 +44,10 @@
 					<article class="box">
 						<header>
 							<h2>{{$question->question}}</h2>
-						</header>
-
-						<input type="text" name="answer{{$i}}" value={{$question->answer}} style="display:none"><br>
-						@php
-							$shuffle=[];
-							array_push($shuffle,$question->answer);
-							array_push($shuffle,$question->option1);
-							array_push($shuffle,$question->option2);
-							array_push($shuffle,$question->option3);
-							shuffle($shuffle)
-						@endphp
-
+						</header>						
 						<div class="content">
-  							<input type="radio" name="choice{{$i}}" value={{$shuffle[0]}}>{{$shuffle[0]}}<br>
-  							<input type="radio" name="choice{{$i}}" value={{$shuffle[1]}}>{{$shuffle[1]}}<br>
-  							<input type="radio" name="choice{{$i}}" value="{{$shuffle[2]}}"> {{$shuffle[2]}}<br>
-  							<input type="radio" name="choice{{$i}}" value="{{$shuffle[3]}}">{{$shuffle[3]}}
-							
+							<label id="answer">Correct Answer:{{$question->answer}}</label>
+  							<label id="description">{{$question->description}}</label>
 						</div>
 						<footer>
 						<a href="#banner" class="button alt">Back</a>
@@ -78,23 +64,16 @@
 				<div class="inner">
 					<article class="box">
 						<header>
-							<h2>Submit your Answers</h2>
+							<h2>Close quiz</h2>
 						</header>
 						<div class="result_box">
 						</div>
 						<footer>
-						<input type="text"  style="display:none" name="totalItems" value={{$i-2}}>
-						<input type="submit" name="submit" value="Submit">
+						<a href="{{ route('home') }}">Close quiz</a>
 						</footer>
 					</article>
 				</div>
-				
 			</section>
-
-
-
-
-			
 		</form>
 
 		<!-- Two -->

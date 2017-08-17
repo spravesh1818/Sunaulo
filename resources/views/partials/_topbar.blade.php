@@ -1,8 +1,9 @@
 <div class="header_top_bar_container  clearfix style_2 border">
 			
 				<div class="header_top_bar">
-					<form class="search">
-						<input type="text" name="s" placeholder="Search..." value="Search..." class="search_input hint">
+					<form class="search" method="post" action="{{ route('search') }}">
+					{{csrf_field()}}
+						<input type="text" name="keyword" placeholder="Search..." value="Search..." class="search_input hint">
 						<input type="submit" class="search_submit" value="">
 						<input type="hidden" name="page" value="search">
 					</form>

@@ -10,7 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/post','PageController@check')->name('check');
+Route::get('/solution','PageController@solution')->name('quiz.solution');
 Route::get('/questionThread/{question}','questionController@openThread')->name('question.thread');
+
+Route::post('/search','PageController@search')->name('search');
+
 Route::post('/reply','questionController@reply')->name('reply.post');
 Route::post('/questionP','questionController@insertQuestion')->name('postQuestion');
 Route::get('/ask','questionController@show')->name('askQuestion');

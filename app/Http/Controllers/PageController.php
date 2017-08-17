@@ -9,6 +9,9 @@ use App\User;
 use App\comment;
 use App\quizC;
 use App\quiz;
+use App\Tag;
+
+
 class PageController extends Controller
 {
 	public function home(){
@@ -98,10 +101,21 @@ class PageController extends Controller
 		return view('partials._quiz')->withQuestions($questions);
 	}
 
-	public function fetchcategories(){
-		$articles=category::all()->toJson();
-		return response()->json($articles);
+	public function solution(){
+		$quizzes=quizC::orderBy('id','desc')->get();
+		$quiz=$quizzes[0];
+		$questionNums=unserialize($quiz->questions);
+		$questions=[];
+		foreach ($questionNums as $question)
+		{
+			$details=quiz::find($question);
+			array_push($questions, $details);
+		}
+		return view('quizSolution')->withQuestions($questions);
 	}
+
+
+	
 
 	public function fetchspecial(){
 		$articles=articles::all()->where('category','जिज्ञासा र खुल्दुली')->toJson();
@@ -113,5 +127,36 @@ class PageController extends Controller
 		$comments=$comments->sortByDesc($comments);
 		return response()->json($comments);
 	}
+
+	public function search(Request $request){
+		$category=category::all()->where('title','!=','जिज्ञासा र खुल्दुली');
+		$articles=articles::all()->where('category','जिज्ञासा र खुल्दुली');
+		$keyword= $request->keyword;
+		$tag=Tag::where('name','like','%'.$keyword.'%')->get();
+		return view('search')->withCategories($category)->withArticles($articles)->withTags($tag);
+	}
+
+	public function check(Request $request){
+		$i=$request->totalItems+2;
+		$j=2;
+		$points=0;
+
+		while($j<$i){
+			$sel=(string)$j;
+			$choice="choice".$sel;
+			$answer="answer".$sel;
+			if($request->$choice===$request->$answer){
+				echo "correct";
+				echo "<br>";
+				$points++;
+			}
+			
+
+			$j=$j+1;
+		}
+
+		return view('result')->withPoints($points);
+	}
+
 
 }
