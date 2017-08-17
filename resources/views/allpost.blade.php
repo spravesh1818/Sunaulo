@@ -35,7 +35,7 @@
 							<div class="post_content">
 								<h2 class="with_number">
 									<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">{{$article->title}}</a>
-									<a class="comments_number" href="" title="{{$article->numberofComments}} comments">{{$article->numberofComments}}<span class="arrow_comments"></span></a>
+									<a class="comments_number" href="{{ route('view',$article->id) }}" title="{{$article->numberofComments}} comments">{{$article->numberofComments}}<span class="arrow_comments"></span></a>
 								</h2>
 								<ul class="post_details">
 									<li class="category"><a title="{{$article->category->title}}">{{$article->category->title}}</a></li>
