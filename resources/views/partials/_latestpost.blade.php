@@ -42,7 +42,7 @@
 <!--Number of Comments-->{{$article->numberofComments}}<span class="arrow_comments"></span></a>
 							</h2>
 							<ul class="post_details">
-								<li class="category"><a href="" title="{{$article->category->title}}">
+								<li class="category"><a href="{{ route('category',$article->category->id) }}" title="{{$article->category->title}}">
 <!--Category-->{{$article->category->title}}</a></li>
 								<li class="date">
 <!--Posted Date-->					{{$article->updated_at}}
@@ -104,7 +104,7 @@
 <!--Number of Comments-->{{$article->numberofComments}}<span class="arrow_comments"></span></a>
 							</h2>
 							<ul class="post_details">
-								<li class="category"><a href="" title="{{$article->category->title}}">
+								<li class="category"><a href="{{ route('category',$article->category->id) }}" title="{{$article->category->title}}">
 <!--Category-->{{$article->category->title}}</a></li>
 								<li class="date">
 <!--Posted Date-->					{{$article->updated_at}}
