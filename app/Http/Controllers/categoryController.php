@@ -94,6 +94,7 @@ class categoryController extends Controller
         $category=category::find($id);
         $articles=articles::all()->where('category_id',$id);
         foreach ($articles as $article) {
+            $article->tags()->detach();
             $article->delete();
         }
         $category->delete();
