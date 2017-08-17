@@ -50,7 +50,7 @@
 							@endif
 							@endforeach
 						</ul>
-						<a class="more page_margin_top" href="#">थप </a>
+						<a class="more page_margin_top" style="font-size: 16px" href="#">थप प्रस्तुती</a>
 					</div>
 <!-- Most Commented Post-->
 					<div id="sidebar-most-commented">
@@ -88,7 +88,7 @@
 							@endforeach
 							
 						</ul>
-						<a class="more page_margin_top" href="#">थप </a>
+						<a class="more page_margin_top" style="font-size: 16px" href="#">थप प्रस्तुती</a>
 					</div>
 					</div>
 </div>
