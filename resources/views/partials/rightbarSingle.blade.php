@@ -31,7 +31,7 @@
 							</li>
 							@endforeach
 						</ul>
-						<a class="more page_margin_top" href="">थप</a>
+						<a class="more page_margin_top" style="font-size: 16px" href="#">थप प्रस्तुती</a>
 					</div>
 					<div id="sidebar-most-commented">
 						<ul class="blog rating page_margin_top clearfix">
@@ -50,6 +50,6 @@
 							</li>
 							@endforeach
 						</ul>
-						<a class="more page_margin_top" href="#">थप </a>
+						<a class="more page_margin_top" style="font-size: 16px" href="#">थप प्रस्तुती</a>
 					</div>
 				</div>
