@@ -95,7 +95,13 @@ class categoryController extends Controller
         $articles=articles::all()->where('category_id',$id);
         foreach ($articles as $article) {
             $article->tags()->detach();
-            $article->delete();
+            $comments=comment::all()->where('article_id',$article->id);
+        foreach ($comments as $comment) {
+            $comment->delete();
+        }
+        
+        \Storage::delete($article->image);
+        $article->delete();
         }
         $category->delete();
         return redirect()->route('category.index');
