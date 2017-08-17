@@ -118,7 +118,12 @@ class PageController extends Controller
 	
 
 	public function fetchspecial(){
-		$articles=articles::all()->where('category','जिज्ञासा र खुल्दुली')->toJson();
+		$category=category::all()->where('title','जिज्ञासा र खुल्दुली');
+		$id=array();
+		foreach ($category as $category) {
+			$id[0]=$category->id;
+		}
+		$articles=articles::all()->where('category_id',$id[0])->toJson();
 		return response()->json($articles);
 	}
 
@@ -130,7 +135,11 @@ class PageController extends Controller
 
 	public function search(Request $request){
 		$category=category::all()->where('title','!=','जिज्ञासा र खुल्दुली');
-		$articles=articles::all()->where('category','जिज्ञासा र खुल्दुली');
+		$id=array();
+		foreach ($category as $category) {
+			$id[0]=$category->id;
+		}
+		$articles=articles::all()->where('category_id',$id[0]);
 		$keyword= $request->keyword;
 		$tag=Tag::where('name','like','%'.$keyword.'%')->get();
 		return view('search')->withCategories($category)->withArticles($articles)->withTags($tag);
