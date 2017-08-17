@@ -82,8 +82,8 @@ function hideDiv() {
 <h1><strong>Recently Asked Questions</strong></h1>
 @foreach($questions as $question)
 <div class="contentbox">
-<h2>{{$question->name}}</h2>
-<h3>{{$question->question}}</h3>
+<h2 style="color:#0047BD;">{{$question->question}}</h2>
+<h4>{{$question->name}}</h4>
 <a href="{{ route('question.thread',$question->id) }}">Open Discussion</a>
 </div>
 @endforeach

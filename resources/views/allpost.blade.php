@@ -6,21 +6,10 @@
 		<div class="page_header_left">
 			<h1 class="page_title"></h1>
 		</div>
-		<div class="page_header_right">
-			<ul class="bread_crumb">
-				<li>
-					<a title="Home" href="">
-						Home
-					</a>
-				</li>
-				<li class="separator icon_small_arrow right_gray">
-					&nbsp;
-				</li>
-				<li>
-					Blog
-				</li>
-			</ul>
-		</div>
+		@foreach($articles as $article)
+		<h2>{{$article->category->title}}का प्रस्तुतीहरु </h2>
+		@break;
+		@endforeach
 	</div>
 	<div class="page_layout clearfix">
 		<div class="divider_block clearfix">
@@ -53,10 +42,10 @@
 									<li class="date">
 										{{date('F d, Y', strtotime($article->updated_at))}}
 									</li>
-								</ul>
-								<br><br><br><br><br><br><br><br><br><br>
-								<p>{!!substr($article->content,0,400)!!}</p>
-								<a class="read_more" href="{{ route('view',$article->id) }}" title="Read more"><span class="arrow"></span><span>READ MORE</span></a>
+								
+								
+								<li><p>{!!substr($article->content,0,400)!!}</p></li></ul>
+								<a class="read_more" href="{{ route('view',$article->id) }}" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>पुरा पढ्नुहोस</span></a>
 							</div>
 						</li>
 						@endforeach

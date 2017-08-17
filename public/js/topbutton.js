@@ -10,7 +10,7 @@ function scrollFunction() {
 
     if($(window).scrollTop() + $(window).height() < $(document).height() - $("#footer").height()) {
         $('#myBtn').css("position","fixed");    //resetting it
-        $('#myBtn').css("bottom","0"); //resetting it
+        $('#myBtn').css("bottom","10px"); //resetting it
 }
         if($(window).scrollTop() + $(window).height() > $(document).height() - $("#footer").height()) {
         $('#myBtn').css("right","20px"); // make it related

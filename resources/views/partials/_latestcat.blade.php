@@ -32,8 +32,8 @@
 							<p>
 <!--Contents-->{!!substr($article->content,0,500)!!}...</p>
 				<br><br>
-							<a class="read_more" href="{{ route('view',$selected[0]->id) }}" title="Read more"><span class="arrow"></span><span>
-<!--Full width Page-->थप</span></a>
+							<a class="read_more" href="{{ route('view',$selected[0]->id) }}" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>
+<!--Full width Page-->पुरा पढ्नुहोस</span></a>
 						</li>
 <!-- End of Post-->
 <!--Remove from Here-->

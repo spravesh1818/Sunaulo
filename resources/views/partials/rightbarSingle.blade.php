@@ -3,13 +3,13 @@
 					<ul class="tabs_navigation clearfix">
 						<li>
 							<a href="#sidebar-most-read" title="">
-								Most Read
+								धेरै पढ़ीएको
 							</a>
 							<span></span>
 						</li>
 						<li>
 							<a href="#sidebar-most-commented" title="">
-								Commented
+								प्रतिक्रिया
 							</a>
 							<span></span>
 						</li>
@@ -31,7 +31,7 @@
 							</li>
 							@endforeach
 						</ul>
-						<a class="more page_margin_top" href="">SHOW MORE</a>
+						<a class="more page_margin_top" href="">थप</a>
 					</div>
 					<div id="sidebar-most-commented">
 						<ul class="blog rating page_margin_top clearfix">
@@ -50,6 +50,6 @@
 							</li>
 							@endforeach
 						</ul>
-						<a class="more page_margin_top" href="#">SHOW MORE</a>
+						<a class="more page_margin_top" href="#">थप </a>
 					</div>
 				</div>
