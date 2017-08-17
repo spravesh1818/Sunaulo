@@ -74,7 +74,12 @@
 				$i++;	
 			@endphp
 			@endforeach
-			<section id="{{count($questions)+1}}" class="wrapper post bg-img" data-bg="banner{{$i}}.jpg">
+
+			@php
+				$final_section=end($questions);
+			@endphp
+
+			<section id="{{$final_section->id+1}}" class="wrapper post bg-img" data-bg="banner{{$i}}.jpg">
 				<div class="inner">
 					<article class="box">
 						<header>
@@ -88,13 +93,7 @@
 						</footer>
 					</article>
 				</div>
-				
 			</section>
-
-
-
-
-			
 		</form>
 
 		<!-- Two -->
