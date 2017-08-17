@@ -31,6 +31,7 @@ Edit content
 	{!!Form::model($articles,['route'=>['content.update',$articles->id],'method'=>'PUT','files'=>true,'style'=>'margin-left:100px;fontsize:35px;margin-top:20px;width:700px;'])!!}
 	{{Form::text('title',null,array('class'=>'form-control','placeholder'=>'Title','style'=>'width:200px;margin-top:20px','required'))}}<br>
 	
+
 	{{Form::select('category_id',$categories,null,['class'=>'form-control'])}}<br>
 
 	{{Form::select('tags[]',$tags,null,['class'=>'form-control select2-multi','multiple'=>'multiple'])}}

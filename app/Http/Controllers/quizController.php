@@ -111,7 +111,8 @@ class quizController extends Controller
     public function createq()
     {   
         $quiz=quiz::all();
-        return view('admin_view.quiz_addQ')->withQuiz($quiz);
+        $quizzes=quizC::all();
+        return view('admin_view.quiz_addQ')->withQuiz($quiz)->withQuizzes($quizzes);
     }
 
     
@@ -179,9 +180,9 @@ class quizController extends Controller
 
     public function destroyq($id)
     {
-        $quiz=quiz::find($id);
+        $quiz=quizC::find($id);
         $quiz->delete();
-        Session::flash('success',"The question was successfully deleted");
+        Session::flash('success',"The quiz was successfully deleted");
         return redirect()->route('quiz.index');
     }
 }

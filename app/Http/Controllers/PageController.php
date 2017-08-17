@@ -159,4 +159,20 @@ class PageController extends Controller
 	}
 
 
+	public function sortMR(){
+		$categories=category::all();
+		//print_r($categories[0]->title);
+		$articles=articles::orderBy('mostRead','desc')->paginate(5);
+		return view('allpost')->withArticles($articles)->withCategories($categories);
+	}
+
+	public function sortNC()
+	{
+		$categories=category::all();
+		//print_r($categories[0]->title);
+		$articles=articles::orderBy('numberofComments','desc')->paginate(5);
+		return view('allpost')->withArticles($articles)->withCategories($categories);
+	}
+
+
 }

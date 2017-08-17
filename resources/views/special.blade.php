@@ -94,7 +94,7 @@
 					</ul>
 					<ul class="taxonomies categories right clearfix">
 						<li>
-							<a href="indexdced.html?page=category&amp;cat=health" title="HEALTH">{{$article->category}}</a>
+							<a href="" title="HEALTH">{{$article->category}}</a>
 						</li>
 					</ul>
 				</div>

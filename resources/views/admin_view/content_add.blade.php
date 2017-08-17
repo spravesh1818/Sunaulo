@@ -30,6 +30,8 @@ Add Content
 	
 	{!! Form::open(['route' => 'content.store','files'=>true,'style'=>'margin-left:100px;fontsize:35px;margin-top:20px;width:700px;']) !!}	
 	{{Form::text('title',null,array('class'=>'form-control','id'=>'title','placeholder'=>'Title'))}}<br>
+
+
 	<select name="category_id" class="form-control" style="width:200px">
 		<option value="" disabled selected>Select your option</option>
 		@foreach ($categories as $category)

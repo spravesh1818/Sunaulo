@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/numberOfComments','PageController@sortNC')->name('sortNC');
+Route::get('/mostRead','PageController@sortMR')->name('sortMR');
 Route::post('/post','PageController@check')->name('check');
 Route::get('/solution','PageController@solution')->name('quiz.solution');
 Route::get('/questionThread/{question}','questionController@openThread')->name('question.thread');
