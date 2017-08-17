@@ -1,5 +1,6 @@
 @include('partials._head')
 @include('partials._bootstrap')
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 @include('partials._header')
 <div style="text-align:center;background:#b3ffb3;"  class="container">
 	<h1>{{$questions->question}}</h1>
