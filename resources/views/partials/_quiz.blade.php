@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Sunaulo Bhawisya</title>
+		<title>सहि उमेर सहि कदम</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" type="text/css" href={{ URL::asset('css/reset.css')}}>
@@ -11,7 +11,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html">Pop Quiz <span>by Sahi Umer Sahi Kadam</span></a></div>
+				<div class="logo"><a href="index.html">Pop Quiz <span>by सहि उमेर सहि कदम</span></a></div>
 				
 			</header>
 
@@ -84,7 +84,7 @@
 						</div>
 						<footer>
 						<input type="text"  style="display:none" name="totalItems" value={{$i-2}}>
-						<input type="submit" name="submit" value="Submit">
+						<input type="submit" class="button alt" name="submit" value="Submit">
 						</footer>
 					</article>
 				</div>
