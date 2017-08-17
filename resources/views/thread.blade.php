@@ -15,6 +15,8 @@
 	<li class="list-group-item">Name :  {{$reply->name}}</li>
 	<li class="list-group-item">Reply :  {{$reply->reply}}</li>
 </ul>
+<br><br>
+
 @endforeach
 <div class="paginate">{{$replies->links()}}</div>
 </div><br><br>
@@ -54,7 +56,7 @@
 
                         $.ajax({
                             type:'POST',
-                            url:'/reply',
+                            url:'127.0.0.1:8000/reply',
                             data: {'name':name,'question_id':question_id,'email':email,'reply':reply,'_token':token},
                             success:function(data){
                                 console.log(data);
