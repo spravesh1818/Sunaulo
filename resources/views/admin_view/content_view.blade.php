@@ -19,7 +19,6 @@ View Content
 			<th>#</th>
 			<th>Title</th>
 			<th>Category</th>
-			<th>Content</th>
 			<th>Author</th>
 			<th>Date of Post</th>
 			<th>Actions</th>
@@ -33,7 +32,6 @@ View Content
 			<th>{{$article->id}}</th>
 			<td>{{$article->title}}</td>
 			<td>{{$article->category->title}}</td>
-			<td>{!!substr($article->content,0,10)!!}...</td>
 			<td>{{$article->author->name}}</td>
 			<td>{{date('F d, Y', strtotime($article->created_at))}}</td>
 			<td><a href='{{route('content.edit',$article->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
