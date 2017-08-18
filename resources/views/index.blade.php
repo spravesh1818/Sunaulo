@@ -25,8 +25,8 @@
 			$.each(response, function () {
 				if(iterator==4)
 					return false;
-				else
-					$('#special').append('<li class="post"><div class="post_content"><h5><a href="/test">'+this.title+'</a></h5></div></li>');
+				else{
+					$('#special').append('<li class="post"><div class="post_content"><h5><a href="/test">'+this.title+'</a></h5></div></li>');}
   					iterator+=1;
 			});}
 

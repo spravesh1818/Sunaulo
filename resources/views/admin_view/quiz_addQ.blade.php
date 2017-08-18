@@ -37,8 +37,6 @@ Add Quizzes
 			<th>Option 3</th>
 			<th>Description</th>
 		</tr>
-
-
         	<input type="text" name="quizname"class='form-control' placeholder="quizname">
 
         	@foreach($quiz as $quiz)
@@ -52,12 +50,7 @@ Add Quizzes
 			<td>{!!substr($quiz->description,0,10)!!}</td>
 		</tr>
 		@endforeach
-	</table>
-
-
-
-
-       
+	</table> 
       </div>
       <div class="modal-footer">
       	<input type="submit" name="submit" value="Submit" class="btn btn-success">
@@ -65,8 +58,37 @@ Add Quizzes
       </div>
        </form>
     </div>
-
+    <!--Modal-->
   </div>
+    </div>
+<div class='container'>
+  <table class='table'>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Date of Post</th>
+      <th>Actions</th>
+    </tr>
+    @php
+      $quizzes=$quizzes->sortByDesc('created_at');
+    @endphp
+
+    @foreach ($quizzes as $quiz)
+    <tr>
+      <th>{{$quiz->id}}</th>
+      <td>{{$quiz->quizName}}</td>
+      <td>{{date('F d, Y', strtotime($quiz->created_at))}}</td>
+      <td>
+        {!!Form::open(['route'=>['quiz.destroyq',$quiz->id],'method'=>'delete'])!!}
+        {{Form::submit('Delete',array('class'=>'btn btn-primary'))}}
+        {!!Form::close()!!}</td>
+    </tr>
+    @endforeach
+  </table>
 </div>
+
+</div>
+
+
 
 @endsection

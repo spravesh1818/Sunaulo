@@ -16,15 +16,15 @@ class PageController extends Controller
 {
 	public function home(){
 		$category=category::all()->where('title','!=','जिज्ञासा र खुल्दुली');
-		$random=array();;
-		foreach ($category as $cat) {
-			array_push($random,$cat->title);
+		$categories=category::all();
+		$id=array();
+		foreach ($category as $category) {
+			$id[0]=$category->id;
 		}
-		shuffle($random);
-		$article=articles::all()->where('category','!=','जिज्ञासा र खुल्दुली');
-		$articles=$article->sortByDesc('created_at');
+		$articles=articles::all()->where('category_id',$id[0]);
+		$articles=$articles->sortByDesc('created_at');
 		
-		return view('index')->withArticles($articles)->withCategory($random[0])->withCategories($category);
+		return view('index')->withArticles($articles)->withCategories($categories);
 	}
 
 	public function show($id){
@@ -52,9 +52,12 @@ class PageController extends Controller
 	}
 
 	public function special(){
-		$categories=category::all();
-		//print_r($categories[0]->title);
-		$articles=articles::where('category','जिज्ञासा र खुल्दुली')->simplePaginate(1);
+		$categories=category::all()->where('title','जिज्ञासा र खुल्दुली');
+		$id=array();
+		foreach ($categories as $category) {
+			$id[0]=$category->id;
+		}
+		$articles=articles::where('category_id',$id[0])->simplePaginate(1);
 		return view('special')->withArticles($articles)->withCategories($categories);
 	}
 
@@ -118,7 +121,12 @@ class PageController extends Controller
 	
 
 	public function fetchspecial(){
-		$articles=articles::all()->where('category','जिज्ञासा र खुल्दुली')->toJson();
+		$category=category::all()->where('title','जिज्ञासा र खुल्दुली');
+		$id=array();
+		foreach ($category as $category) {
+			$id[0]=$category->id;
+		}
+		$articles=articles::all()->where('category_id',$id[0])->toJson();
 		return response()->json($articles);
 	}
 
@@ -130,7 +138,11 @@ class PageController extends Controller
 
 	public function search(Request $request){
 		$category=category::all()->where('title','!=','जिज्ञासा र खुल्दुली');
-		$articles=articles::all()->where('category','जिज्ञासा र खुल्दुली');
+		$id=array();
+		foreach ($category as $category) {
+			$id[0]=$category->id;
+		}
+		$articles=articles::all()->where('category_id',$id[0]);
 		$keyword= $request->keyword;
 		$tag=Tag::where('name','like','%'.$keyword.'%')->get();
 		return view('search')->withCategories($category)->withArticles($articles)->withTags($tag);
@@ -156,6 +168,22 @@ class PageController extends Controller
 		}
 
 		return view('result')->withPoints($points);
+	}
+
+
+	public function sortMR(){
+		$categories=category::all();
+		//print_r($categories[0]->title);
+		$articles=articles::orderBy('mostRead','desc')->paginate(5);
+		return view('allpost')->withArticles($articles)->withCategories($categories);
+	}
+
+	public function sortNC()
+	{
+		$categories=category::all();
+		//print_r($categories[0]->title);
+		$articles=articles::orderBy('numberofComments','desc')->paginate(5);
+		return view('allpost')->withArticles($articles)->withCategories($categories);
 	}
 
 

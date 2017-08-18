@@ -234,7 +234,6 @@ desired effect
           </ul>
         </li>
 
-
           <li class="treeview">
           <a href="#"><i class="fa fa-book"></i> <span>Video Post</span>
             <span class="pull-right-container">

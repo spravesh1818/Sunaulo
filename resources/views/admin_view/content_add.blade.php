@@ -30,6 +30,7 @@ Add Content
 	
 	{!! Form::open(['route' => 'content.store','files'=>true,'style'=>'margin-left:100px;fontsize:35px;margin-top:20px;width:700px;']) !!}	
 	{{Form::text('title',null,array('class'=>'form-control','id'=>'title','placeholder'=>'Title'))}}<br>
+
 	<select name="category_id" class="form-control" style="width:200px">
 		<option value="" disabled selected>Select your option</option>
 		@foreach ($categories as $category)
@@ -42,13 +43,17 @@ Add Content
 		<option value="{{$tag->id}}">{{$tag->name}}</option>
 		@endforeach
 	</select><br>
-
+	<br>
+	<input type="checkbox"   name="editors_choice" value=1>Editor's Choice Article<br>
+	<br>
 	<input type="text" name="author_id" style="display:none;" value={{auth()->user()->id}}>
 	{{Form::label('image','Upload article display picture')}}
 	{{Form::file('image',array('class'=>'form-control','accept'=>'image/*','style'=>'margin-bottom:20px;'))}}
 
 
 	{{Form::textArea('content',null,array('class'=>'form-control ckeditor','id'=>'content','placeholder'=>'Text','id'=>'content','style'=>'width:200px;margin-top:20px;margin-left:100px;','required'))}}
+
+
 	<script>
 		CKEDITOR.on( 'instanceReady', function( ev ) {
      ev.editor.setData('<span style="font-size:18px;">&shy;</span>');});

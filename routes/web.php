@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/numberOfComments','PageController@sortNC')->name('sortNC');
+Route::get('/mostRead','PageController@sortMR')->name('sortMR');
 Route::post('/post','PageController@check')->name('check');
 Route::get('/solution','PageController@solution')->name('quiz.solution');
 Route::get('/questionThread/{question}','questionController@openThread')->name('question.thread');
@@ -57,6 +60,9 @@ Route::group(['prefix'=>'/dashboard'],function(){
 	Route::get('/tag/{tag}/edit','TagController@edit')->name('tag.edit');
 	Route::put('/tag/{tag}','TagController@update')->name('tag.update');
 	Route::delete('/tag/{tag}','TagController@destroy')->name('tag.destroy');
+
+
+
 
 
 	#quiz routes

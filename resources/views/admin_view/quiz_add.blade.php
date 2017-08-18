@@ -47,13 +47,13 @@ Add Question
 				</fieldset>
 				<br>
 				<fieldset>
-					<label name='option2' class="form-control">Answer</label>
+					<label name='option2' class="form-control">Option 2</label>
 					<input type="text" name='option2' class="form-control">
 
 				</fieldset>
 				<br>
 				<fieldset>
-					<label name='option2' class="form-control">Answer</label>
+					<label name='option2' class="form-control">Option 3</label>
 					<input type="text" name='option3' class="form-control">
 
 				</fieldset>

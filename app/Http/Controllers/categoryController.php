@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\category;
 use App\articles;
+use App\comment;
 
 class categoryController extends Controller
 {
@@ -94,7 +95,14 @@ class categoryController extends Controller
         $category=category::find($id);
         $articles=articles::all()->where('category_id',$id);
         foreach ($articles as $article) {
-            $article->delete();
+            $article->tags()->detach();
+            $comments=comment::all()->where('article_id',$article->id);
+        foreach ($comments as $comment) {
+            $comment->delete();
+        }
+        
+        \Storage::delete($article->image);
+        $article->delete();
         }
         $category->delete();
         return redirect()->route('category.index');

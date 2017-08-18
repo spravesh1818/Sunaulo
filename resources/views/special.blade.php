@@ -14,7 +14,7 @@
 					<ul class="post_details clearfix">
 							<li class="detail category">In <a href="" title="{{$article->category->title}}">{{$article->category->title}}</a></li>
 							<li class="detail date">{{date('F d, Y', strtotime($article->updated_at))}}</li>
-							<li class="detail author">{{$article->author}}</li>
+							<li class="detail author">{{$article->author->name}}</li>
 							<li class="detail views"></li>
 							<li class="detail comments"><a href="#comments_list" class="scroll_to_comments" title="6 Comments"></a></li>
 						</ul>
@@ -35,7 +35,7 @@
 									
 									<p>{!!$article->content!!}</p>
 									
-									<a title="{{$article->numberofComments}} Comments" href="indexb878.html?page=post" class="read_more page_margin_top scroll_to_comments"><span class="arrow"></span><span>{{$article->numberofComments}} COMMENTS</span></a>
+									<a title="{{$article->numberofComments}} Comments" href=""><span class="arrow"></span><span>{{$article->numberofComments}} COMMENTS</span></a>
 								</div>
 								</div>
 			
@@ -89,12 +89,12 @@
 				<div class="row page_margin_top">
 					<ul class="taxonomies tags left clearfix">
 						<li>
-							<a href="#" title="People">PEOPLE</a>
+							<a href="#" title="">PEOPLE</a>
 						</li>
 					</ul>
 					<ul class="taxonomies categories right clearfix">
 						<li>
-							<a href="indexdced.html?page=category&amp;cat=health" title="HEALTH">{{$article->category}}</a>
+							<a href="" title="">{{$article->category->name}}</a>
 						</li>
 					</ul>
 				</div>

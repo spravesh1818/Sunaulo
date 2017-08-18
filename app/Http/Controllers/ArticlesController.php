@@ -71,8 +71,11 @@ class ArticlesController extends Controller
             if(!empty($request->video_url)){
               $article->video_url=$request->video_url;
             }
-
-            echo $article->video_url;
+            if(!empty($request->editors_choice)){
+              $article->editors_choice=$request->editors_choice;
+            }else{
+              $article->editors_choice=0;
+            }
             $article->title=$request->title;
             $article->content=$request->content;
             $article->category_id=$request->category_id;
@@ -176,6 +179,14 @@ class ArticlesController extends Controller
         //save the database
             $article=articles::find($id);
             $article->title=$request->input('title');
+
+
+            if(!empty($request->editors_choice)){
+              $article->editors_choice=$request->editors_choice;
+            }else{
+              $article->editors_choice=0;
+            }
+
             $article->content=$request->input('content');
             $article->category_id=$request->input('category_id');
             $article->author_id=$request->input('author_id');
