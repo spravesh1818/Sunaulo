@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Sunaulo Bhawisya</title>
+		<title>सहि उमेर सहि कदम</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" type="text/css" href={{ URL::asset('css/reset.css')}}>
@@ -11,7 +11,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html">Pop Quiz <span>by Sahi Umer Sahi Kadam</span></a></div>
+				<div class="logo"><a href="index.html">हाजिरी जवाफ <span>by सहि उमेर सहि कदम</span></a></div>
 				
 			</header>
 
@@ -27,7 +27,7 @@
 			<section id="banner" class="bg-img" data-bg="banner.jpg">
 				<div class="inner">
 					<header>
-						<h1>The Answers</h1>
+						<h1> उत्तरहरु </h1>
 					</header>
 				</div>
 				<a href="#{{$questions[0]->id}}" class="more">Start</a>
@@ -46,7 +46,7 @@
 							<h2>{{$question->question}}</h2>
 						</header>						
 						<div class="content">
-							<label id="answer">Correct Answer:{{$question->answer}}</label>
+							<label id="answer">सहि उत्तर : {{$question->answer}}</label>
   							<label id="description">{{$question->description}}</label>
 						</div>
 						<footer>

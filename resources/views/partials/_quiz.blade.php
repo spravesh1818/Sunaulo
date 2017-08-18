@@ -11,7 +11,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html">Pop Quiz <span>by सहि उमेर सहि कदम</span></a></div>
+				<div class="logo"><a href="index.html">हाजिरी जवाफ <span>by सहि उमेर सहि कदम</span></a></div>
 				
 			</header>
 
@@ -27,7 +27,7 @@
 			<section id="banner" class="bg-img" data-bg="banner.jpg">
 				<div class="inner">
 					<header>
-						<h1>This is a Quiz</h1>
+						<h1> हाजिरी जवाफ </h1>
 					</header>
 				</div>
 				<a href="#{{$questions[0]->id}}" class="more">Start</a>
@@ -85,7 +85,7 @@
 				<div class="inner">
 					<article class="box">
 						<header>
-							<h2>Submit the Post</h2>
+							<h2> उत्तर पेश गर्नुहोस </h2>
 						</header>
 						<div class="content">
 						<input type="submit" name="Submit" value="Submit">
