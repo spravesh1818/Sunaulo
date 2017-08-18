@@ -146,7 +146,7 @@ class PageController extends Controller
 		$articles=articles::all()->where('category_id',$id[0]);
 		$keyword= $request->keyword;
 		$tag=Tag::where('name','like','%'.$keyword.'%')->get();
-		return view('search')->withCategories($categories)->withArticles($articles)->withTags($tag);
+		return view('search')->withCategories($categories)->withArticles($articles)->withTags($tag)->withQuery($keyword);
 	}
 
 	public function check(Request $request){
