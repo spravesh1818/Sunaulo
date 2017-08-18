@@ -1,5 +1,4 @@
 @include('partials._head')
-@include('partials._bootstrap')
 @include('partials._header')
 <div class="page">
 	<div class="page_header clearfix page_margin_top">
@@ -7,10 +6,7 @@
 			<h1 class="page_title"></h1>
 		</div>
 	
-	@foreach($tags as $tag)
-	<h1>Results for {{$tag->name}}</h1>
-	@break;
-	@endforeach()
+	<h1>Results for "{{$query}}"</h1>
 
 	
 <div class="page_layout clearfix">
