@@ -61,8 +61,15 @@ Route::group(['prefix'=>'/dashboard'],function(){
 	Route::put('/tag/{tag}','TagController@update')->name('tag.update');
 	Route::delete('/tag/{tag}','TagController@destroy')->name('tag.destroy');
 
+	//viewing the comments,questions,replies
+	Route::get('/review/question','review@question')->name('question.review');
+	Route::get('/review/comment','review@comment')->name('comment.review');
+	Route::get('/review/replies','review@reply')->name('reply.review');
 
-
+	//deleting routes
+	Route::delete('/review/question/{question}','review@questiondel')->name('question.delete');
+	Route::delete('/review/comment/{comment}','review@commentdel')->name('comment.delete');
+	Route::delete('/review/replies/{replies}','review@replydel')->name('reply.delete');
 
 
 	#quiz routes

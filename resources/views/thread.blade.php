@@ -1,5 +1,4 @@
 @include('partials._head')
-@include('partials._bootstrap')
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 @include('partials._header')
 <div style="text-align:center;background:#b3ffb3;"  class="container">
@@ -55,6 +54,7 @@
                                 console.log(data);
                                 $('#reply_form').hide();
                                 $('#reply_show').load(location.href+' #reply_show');
+                                $('#reply_label').load(location.href+' #reply_label');
                             },
                             error:function(){
                                 alert('comment could not be posted');
