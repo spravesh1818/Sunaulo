@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEditorsTable extends Migration
+class AddEditorChoiceColumn extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateEditorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('editors', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('article_id');
-            $table->timestamps();
+        Schema::table('articles', function (Blueprint $table) {
+            $table->boolean('editors_choice')->nullable();
         });
     }
 
@@ -27,6 +25,8 @@ class CreateEditorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('editors');
+        Schema::table('articles', function (Blueprint $table) {
+            $table->dropColumn('editors_choice');
+        });
     }
 }

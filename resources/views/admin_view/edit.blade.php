@@ -31,18 +31,21 @@ Edit content
 	{!!Form::model($articles,['route'=>['content.update',$articles->id],'method'=>'PUT','files'=>true,'style'=>'margin-left:100px;fontsize:35px;margin-top:20px;width:700px;'])!!}
 	{{Form::text('title',null,array('class'=>'form-control','placeholder'=>'Title','style'=>'width:200px;margin-top:20px','required'))}}<br>
 	
-
 	{{Form::select('category_id',$categories,null,['class'=>'form-control'])}}<br>
 
 	{{Form::select('tags[]',$tags,null,['class'=>'form-control select2-multi','multiple'=>'multiple'])}}
 	<br>
 	<br>
+	<input type="checkbox"   name="editors_choice" value=1>Editor's Choice Article<br><br>
 	{{Form::label('image','Upload article display picture')}}
 	{{Form::file('image',array('class'=>'form-control','style'=>'margin-bottom:20px;'))}}
 
 	<input type="text" name="author_id" style="display:none;" value={{auth()->user()->id}}>
 
 	{{Form::textarea('content',null,array('class'=>'form-control','placeholder'=>'Text','style'=>'width:200px;margin-top:20px;margin-left:100px;','required'))}}
+
+
+
 	
 	<script>
 	CKEDITOR.addCss( "@font-face {" +

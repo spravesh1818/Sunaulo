@@ -62,6 +62,9 @@ Route::group(['prefix'=>'/dashboard'],function(){
 	Route::delete('/tag/{tag}','TagController@destroy')->name('tag.destroy');
 
 
+
+
+
 	#quiz routes
 	Route::get('/quiz','quizController@index')->name('quiz.index');
 	Route::get('/quiz/create','quizController@create')->name('quiz.create');
