@@ -51,19 +51,19 @@ input[type=submit]:hover {
     margin: 10px;
 }
 </style>
-<input type="button" class="button"  value="Ask Question" onclick="showDiv()" style="margin-left:20px"/>
+<input type="button" class="button"  value="प्रश्‍न सोध्नुहोस" onclick="showDiv()" style="margin-left:20px"/>
 <div id="welcomeDiv"  style="display:none;" class="answer_list"  style="margin-left:20px">
-<input class="button" type="button"  value="Asked Question" onclick="hideDiv()" style="margin-left:20px" />
+<input class="button" type="button"  value="सोधिएका प्रश्‍नहरु" onclick="hideDiv()" style="margin-left:20px" />
 <div class="container" style="margin-left:20px">
   <form method="post" id="question_form" action="{{ route('postQuestion') }}" >
   {{csrf_field()}}
-    <label for="fname">Full Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <label for="fname">पुरा नाम</label>
+    <input type="text" id="fname" name="firstname" placeholder="नाम..">
 
-    <label for="subject">Write Your Question</label>
-    <textarea id="question" name="question" placeholder="Write something.." style="height:200px"></textarea>
+    <label for="subject">तपाईको प्रश्‍न सोध्नुहोस</label>
+    <textarea id="question" name="question" placeholder="तपाईको प्रश्‍न लेख्नुहोस.." style="height:200px"></textarea>
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="पेश गर्नुहोस">
 
   </form>
 </div>
@@ -79,12 +79,12 @@ function hideDiv() {
 }
 </script>
 <div id="show_questions" style="margin-left:20px">
-<h1><strong>Recently Asked Questions</strong></h1>
+<h1><strong>हालसालै सोधिएका प्रश्‍नहरु </strong></h1>
 @foreach($questions as $question)
 <div class="contentbox">
-<h2 style="color:#0047BD;">{{$question->question}}</h2>
+<h2 style="color:#0047BD;"><a href="{{ route('question.thread',$question->id) }}">{{$question->question}}</a></h2>
 <h4>{{$question->name}}</h4>
-<a href="{{ route('question.thread',$question->id) }}">Open Discussion</a>
+<a href="{{ route('question.thread',$question->id) }}">छलफल गर्नुहोस </a>
 </div>
 @endforeach
 </div>

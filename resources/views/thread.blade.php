@@ -7,13 +7,13 @@
 </div><br><br>
 
 
-<h2 class="container" id="reply_label">Replies : <small>{{count($replies)}} replies</small></h2>
+<h2 class="container" id="reply_label">प्रतिक्रियाहरु  : <small>{{count($replies)}} </small></h2>
 <hr>
 <div class="container" id="reply_show">
 @foreach($replies as $reply)
 <ul class="list-group">
-	<li class="list-group-item">Name :  {{$reply->name}}</li>
-	<li class="list-group-item">Reply :  {{$reply->reply}}</li>
+	<li class="list-group-item">नाम        :    {{$reply->name}}</li>
+	<li class="list-group-item">प्रतिक्रिया :    {{$reply->reply}}</li>
 </ul>
 <br><br><br>
 
@@ -26,14 +26,14 @@
 <div id="reply_box"  class="container">
 <form action="{{ route('reply.post') }}" method="post" id="reply_form">
     {{csrf_field()}}
-    <input type="text" id="name" name="name" class="form-control" placeholder="name" /><br><br>
-    <input type="email" id="email" name="email" class="form-control" placeholder="email" /><br><br>
-    <textarea id="reply" name="reply" class="form-control" placeholder="Write something.." style="height:100px"></textarea>
+    <input type="text" id="name" name="name" class="form-control" placeholder="नाम.." /><br><br>
+    <input type="text" id="email" name="इमेल (गोप्य राखिनेछ)" class="form-control" placeholder="email" /><br><br>
+    <textarea id="reply" name="reply" class="form-control" placeholder="प्रतिक्रिया लेख्नुहोस.." style="height:100px"></textarea>
     <select style="display:none;" id="question_id">
         <option value="{{$questions->id}}"></option>
     </select>
     <br><br>
-    <input type="submit" value="Submit Reply" class="btn btn-success"/>
+    <input type="submit" value="पेश गर्नुहोस" class="btn btn-success"/>
 </form>
 </div>
 
