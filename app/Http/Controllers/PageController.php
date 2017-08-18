@@ -138,6 +138,7 @@ class PageController extends Controller
 
 	public function search(Request $request){
 		$category=category::all()->where('title','!=','जिज्ञासा र खुल्दुली');
+		$categories=category::all();
 		$id=array();
 		foreach ($category as $category) {
 			$id[0]=$category->id;
@@ -145,7 +146,7 @@ class PageController extends Controller
 		$articles=articles::all()->where('category_id',$id[0]);
 		$keyword= $request->keyword;
 		$tag=Tag::where('name','like','%'.$keyword.'%')->get();
-		return view('search')->withCategories($category)->withArticles($articles)->withTags($tag);
+		return view('search')->withCategories($categories)->withArticles($articles)->withTags($tag);
 	}
 
 	public function check(Request $request){
