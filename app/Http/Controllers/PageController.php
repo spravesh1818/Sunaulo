@@ -21,7 +21,7 @@ class PageController extends Controller
 		foreach ($category as $category) {
 			$id[0]=$category->id;
 		}
-		$articles=articles::all();
+		$articles=articles::all()->where('category_id',$id[0]);
 		$articles=$articles->sortByDesc('created_at');
 		
 		return view('index')->withArticles($articles)->withCategories($categories);
