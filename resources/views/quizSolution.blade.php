@@ -24,7 +24,7 @@
 			to the full filename of your image. This is used in each section to set
 			the background image.
 		-->
-			<section id="banner" class="bg-img" data-bg="banner.jpg">
+			<section id="banner" class="bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<header>
 						<h1> उत्तरहरु </h1>
@@ -39,7 +39,7 @@
 		@endphp
 		<!-- One -->
 		@foreach($questions as $question)
-			<section id="{{$question->id}}" class="wrapper post bg-img" data-bg="banner{{$i}}.jpg">
+			<section id="{{$question->id}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
@@ -60,7 +60,7 @@
 				$i++;	
 			@endphp
 			@endforeach
-			<section id="{{count($questions)+1}}" class="wrapper post bg-img" data-bg="banner{{$i}}.jpg">
+			<section id="{{count($questions)+1}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
