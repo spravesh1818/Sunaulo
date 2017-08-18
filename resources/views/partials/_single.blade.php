@@ -51,7 +51,7 @@
 									
 									<p>{!!$article->content!!}</p>
 									
-									<a title="{{$article->numberofComments}} Comments" href="indexb878.html?page=post" class="read_more page_margin_top scroll_to_comments"><span class="arrow"></span><span>{{$article->numberofComments}} COMMENTS</span></a>
+									<a title="{{$article->numberofComments}} Comments" href="indexb878.html?page=post" class="read_more page_margin_top scroll_to_comments"><span class="arrow"></span><span>{{$article->numberofComments}} प्रतिक्रिया</span></a>
 								</div>
 								</div>
 							
@@ -81,34 +81,24 @@
 					<div class="share_box clearfix">
 						<label>Share:</label>
 						<ul class="social_icons clearfix">
+						@php
+							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+							@endphp
 							<li>
-								<a target="_blank" title="" href="http://facebook.com/sunaulobhabisya" class="social_icon facebook">
+								<a target="_blank" title="share on facebook" href="https://www.facebook.com/sharer/sharer.php?u={{$uri}}" class="social_icon facebook">
 									&nbsp;
 								</a>
 							</li>
 							<li>
-								<a target="_blank" title="" href="https://twitter.com/sunaulobhabisya" class="social_icon twitter">
-									&nbsp;
-								</a>
-							</li>
-							<li>
-								<a title="" href="mailto:" class="social_icon mail">
-									&nbsp;
-								</a>
-							</li>
-							<li>
-								<a title="" href="#" class="social_icon skype">
+								<a target="_blank" title="sahre on twitter" href="https://twitter.com/home?status={{$uri}}" class="social_icon twitter">
 									&nbsp;
 								</a>
 							</li>
 							
+							
+							
 							<li>
-								<a title="" href="#" class="social_icon instagram">
-									&nbsp;
-								</a>
-							</li>
-							<li>
-								<a title="" href="#" class="social_icon pinterest">
+								<a title="sahre on pinterest" href="https://pinterest.com/pin/create/button/?url=&media={{$uri}}&description=" class="social_icon pinterest">
 									&nbsp;
 								</a>
 							</li>
@@ -151,20 +141,20 @@
 					</div>
 				</div>-->
 				<div class="row page_margin_top_section">
-					<h4 class="box_header">Leave a Comment</h4>
-					<p class="padding_top_30" id="thank_you">Thank you for commenting on the post</p>
-					<p class="padding_top_30">Your email address will not be published. Required fields are marked with *</p>
+					<h4 class="box_header">प्रतिक्रिया दिनुहोस</h4>
+					<p class="padding_top_30" id="thank_you">प्रतिक्रिया दिनुभएकोमा धन्यवाद |</p>
+					<p class="padding_top_30">तपाईको इमेल गोप्य राखिनेछ !!</p>
 					<form class="comment_form margin_top_15" id="comment_form"  action='{{ route('comment.post') }}'>
 					{{csrf_field()}}
 						<div class="column column_1_3" style="float: left;">
-							<input class="text_input" id="name" name="name" type="text" value="Your Name *" placeholder="Your Name *">
+							<input class="text_input" id="name" name="name" type="text"  placeholder="नाम (अनिवार्य)">
 						</div>
 						<div class="column column_1_3">
-						<input class="text_input" name="email" id="email" type="text" value="Your Email *" placeholder="Your Email *" required>
+						<input class="text_input" name="email" id="email" type="text" placeholder="इमेल (अनिवार्य)" required>
 						</div>
 						
 						
-							<textarea name="comment" id="comment" placeholder="Comment *"  required></textarea>
+							<textarea name="comment" id="comment" placeholder="प्रतिक्रिया दिनुहोस"  required></textarea>
 
 
 							<select name='article_id' id="article_id" style="display:none;">
@@ -172,7 +162,7 @@
 							</select>
 						
 						<div>
-							<input type="submit" class="more active" id="post_comment" style="float: left;" value="POST COMMENT">
+							<input type="submit" class="more active" id="post_comment" style="float: left;" value="पेश गर्नुहोस">
 						</div>
 						
 					</form>

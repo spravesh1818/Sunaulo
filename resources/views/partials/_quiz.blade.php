@@ -11,7 +11,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html">Pop Quiz <span>by सहि उमेर सहि कदम</span></a></div>
+				<div class="logo"><a href="index.html">हाजिरी जवाफ <span>by सहि उमेर सहि कदम</span></a></div>
 				
 			</header>
 
@@ -24,10 +24,10 @@
 			to the full filename of your image. This is used in each section to set
 			the background image.
 		-->
-			<section id="banner" class="bg-img" data-bg="banner.jpg">
+			<section id="banner" class="bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<header>
-						<h1>This is a Quiz</h1>
+						<h1> हाजिरी जवाफ </h1>
 					</header>
 				</div>
 				<a href="#{{$questions[0]->id}}" class="more">Start</a>
@@ -41,7 +41,7 @@
 		@endphp
 		<!-- One -->
 		@foreach($questions as $question)
-			<section id="{{$question->id}}" class="wrapper post bg-img" data-bg="banner{{$i}}.jpg">
+			<section id="{{$question->id}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
@@ -81,11 +81,11 @@
 				$final_section=end($questions);
 			@endphp
 
-			<section id="{{$final_section->id+1}}" class="wrapper post bg-img" data-bg="banner{{$i}}.jpg">
+			<section id="{{$final_section->id+1}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
-							<h2>Submit the Post</h2>
+							<h2> उत्तर पेश गर्नुहोस </h2>
 						</header>
 						<div class="content">
 						<input type="submit" name="Submit" value="Submit">

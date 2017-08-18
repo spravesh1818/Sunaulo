@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Sunaulo Bhawisya</title>
+		<title>सहि उमेर सहि कदम</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" type="text/css" href={{ URL::asset('css/reset.css')}}>
@@ -11,7 +11,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html">Pop Quiz <span>by Sahi Umer Sahi Kadam</span></a></div>
+				<div class="logo"><a href="index.html">हाजिरी जवाफ <span>by सहि उमेर सहि कदम</span></a></div>
 				
 			</header>
 
@@ -24,10 +24,10 @@
 			to the full filename of your image. This is used in each section to set
 			the background image.
 		-->
-			<section id="banner" class="bg-img" data-bg="banner.jpg">
+			<section id="banner" class="bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<header>
-						<h1>The Answers</h1>
+						<h1> उत्तरहरु </h1>
 					</header>
 				</div>
 				<a href="#{{$questions[0]->id}}" class="more">Start</a>
@@ -39,14 +39,14 @@
 		@endphp
 		<!-- One -->
 		@foreach($questions as $question)
-			<section id="{{$question->id}}" class="wrapper post bg-img" data-bg="banner{{$i}}.jpg">
+			<section id="{{$question->id}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
 							<h2>{{$question->question}}</h2>
 						</header>						
 						<div class="content">
-							<label id="answer">Correct Answer:{{$question->answer}}</label>
+							<label id="answer">सहि उत्तर : {{$question->answer}}</label>
   							<label id="description">{{$question->description}}</label>
 						</div>
 						<footer>
@@ -60,7 +60,7 @@
 				$i++;	
 			@endphp
 			@endforeach
-			<section id="{{count($questions)+1}}" class="wrapper post bg-img" data-bg="banner{{$i}}.jpg">
+			<section id="{{count($questions)+1}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
