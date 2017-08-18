@@ -14,7 +14,7 @@
 					<ul class="post_details clearfix">
 							<li class="detail category">In <a href="" title="{{$article->category->title}}">{{$article->category->title}}</a></li>
 							<li class="detail date">{{date('F d, Y', strtotime($article->updated_at))}}</li>
-							<li class="detail author">{{$article->author}}</li>
+							<li class="detail author">{{$article->author->name}}</li>
 							<li class="detail views"></li>
 							<li class="detail comments"><a href="#comments_list" class="scroll_to_comments" title="6 Comments"></a></li>
 						</ul>

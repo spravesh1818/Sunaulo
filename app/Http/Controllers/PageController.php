@@ -52,9 +52,12 @@ class PageController extends Controller
 	}
 
 	public function special(){
-		$categories=category::all();
-		//print_r($categories[0]->title);
-		$articles=articles::where('category','जिज्ञासा र खुल्दुली')->simplePaginate(1);
+		$categories=category::all()->where('title','जिज्ञासा र खुल्दुली');
+		$id=array();
+		foreach ($categories as $category) {
+			$id[0]=$category->id;
+		}
+		$articles=articles::where('category_id',$id[0])->simplePaginate(1);
 		return view('special')->withArticles($articles)->withCategories($categories);
 	}
 
