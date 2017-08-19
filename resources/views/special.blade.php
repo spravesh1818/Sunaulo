@@ -39,11 +39,7 @@
 									<p></p>
 									
 									<p>{!!$article->content!!}</p>
-<<<<<<< HEAD
-									
-									
-=======
->>>>>>> 26bceb81b04c9371daab19601c411965cdf4c1c5
+
 								</div>
 								</div>
 			
@@ -85,7 +81,7 @@
 						</ul>
 					</div>
 				</div>
-<<<<<<< HEAD
+
 				<div class="row page_margin_top">
 					<ul class="taxonomies tags left clearfix">
 						@foreach($article->tags as $tag)
@@ -102,8 +98,7 @@
 						</li>
 					</ul>
 				</div>
-=======
->>>>>>> 26bceb81b04c9371daab19601c411965cdf4c1c5
+
 </div>
 </div>
 </div>
