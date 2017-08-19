@@ -1,3 +1,4 @@
+<div>
 <style>input[type=text], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */  
@@ -68,7 +69,7 @@ input[type=submit]:hover {
   </form>
 </div>
 </div>
-</div>
+
 <script type="text/javascript">
 function showDiv() {
    document.getElementById('welcomeDiv').style.display = "block";
@@ -123,4 +124,4 @@ function hideDiv() {
 
 </script>
 
-
+</div>

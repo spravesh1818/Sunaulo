@@ -22,6 +22,8 @@ Route::post('/search','PageController@search')->name('search');
 Route::post('/reply','questionController@reply')->name('reply.post');
 Route::post('/questionP','questionController@insertQuestion')->name('postQuestion');
 Route::get('/ask','questionController@show')->name('askQuestion');
+Route::get('/about','PageController@about');
+
 Route::get('/','PageController@home')->name('home');
 Route::get('/loadComments/{comment}','PageController@loadComments')->name('loadComments');
 Route::get('/test','PageController@special')->name('khulduli');

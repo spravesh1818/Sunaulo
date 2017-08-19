@@ -39,6 +39,11 @@
 									<p></p>
 									
 									<p>{!!$article->content!!}</p>
+<<<<<<< HEAD
+									
+									
+=======
+>>>>>>> 26bceb81b04c9371daab19601c411965cdf4c1c5
 								</div>
 								</div>
 			
@@ -55,40 +60,50 @@
 					<div class="share_box clearfix">
 						<label>Share:</label>
 						<ul class="social_icons clearfix">
+						@php
+							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+							@endphp
 							<li>
-								<a target="_blank" title="" href="http://facebook.com/sunaulobhabisya" class="social_icon facebook">
+								<a target="_blank" title="share on facebook" href="https://www.facebook.com/sharer/sharer.php?u={{$uri}}" class="social_icon facebook">
 									&nbsp;
 								</a>
 							</li>
 							<li>
-								<a target="_blank" title="" href="https://twitter.com/sunaulobhabisya" class="social_icon twitter">
-									&nbsp;
-								</a>
-							</li>
-							<li>
-								<a title="" href="mailto:" class="social_icon mail">
-									&nbsp;
-								</a>
-							</li>
-							<li>
-								<a title="" href="#" class="social_icon skype">
+								<a target="_blank" title="sahre on twitter" href="https://twitter.com/home?status={{$uri}}" class="social_icon twitter">
 									&nbsp;
 								</a>
 							</li>
 							
+							
+							
 							<li>
-								<a title="" href="#" class="social_icon instagram">
+								<a title="sahre on pinterest" href="https://pinterest.com/pin/create/button/?url=&media={{$uri}}&description=" class="social_icon pinterest">
 									&nbsp;
 								</a>
 							</li>
-							<li>
-								<a title="" href="#" class="social_icon pinterest">
-									&nbsp;
-								</a>
-							</li>
+							
 						</ul>
 					</div>
 				</div>
+<<<<<<< HEAD
+				<div class="row page_margin_top">
+					<ul class="taxonomies tags left clearfix">
+						@foreach($article->tags as $tag)
+						<li>
+							{{$tag->name}}
+						</li>
+						@endforeach
+					</ul>
+					<ul class="taxonomies categories right clearfix">
+						<li>
+							<a href="{{ route('category',$article->category->id) }}">
+							{{$article->category->title}}
+							</a>
+						</li>
+					</ul>
+				</div>
+=======
+>>>>>>> 26bceb81b04c9371daab19601c411965cdf4c1c5
 </div>
 </div>
 </div>
