@@ -26,7 +26,7 @@
 								</li>
 							
 							<li><p>
-<!--Contents-->{!!$article->content!!}</p></li>
+<!--Contents-->{!!substr($article->content,0,300)!!}...</p></li>
 </ul>
 							<a class="read_more" href="" title="Read more"><span class="arrow"></span><span>
 <!--Full width Page-->थप</span></a>
