@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\category;
 use App\articles;
 use App\comment;
+use Session;
 
 class categoryController extends Controller
 {
@@ -69,7 +70,11 @@ class categoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $edit=category::find($id);
+    
+
+        //return the view and pass in the variable created
+        return view('admin_view.category_edit')->withCategory($edit);
     }
 
     /**
@@ -81,7 +86,15 @@ class categoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,array(
+          'title'=>'required|max:255',
+            ));
+        
+        $category=category::find($id);
+        $category->title=$request->title;
+        $category->save();
+        Session::flash('success','The category was updated successfully added');
+        return redirect()->route('category.index');
     }
 
     /**

@@ -1,38 +1,28 @@
 <div class="col-8">
-				<h4 class="box_header">{{$category}} </h4>
+				<h4 class="box_header"></h4>
 				<div class="row">
 					<ul class="col-4">
-					@php
-						$selected=[];
-					@endphp
-					@foreach($articles as $article)
-						@if($article->category===$category)
-							@php
-								array_push($selected,$article);
-							@endphp
-						@endif
-					@endforeach
 <!-- First Latest Post--><li class="post">
-							<a href="{{ route('view',$selected[0]->id) }}" title="{{$selected[0]->title}}">
-<!-- Image of latest Post--><img src='{{asset('uploads/'.$selected[0]->image) }}' alt='img'>
+							<a href="">
+<!-- Image of latest Post--><img src='' alt='img'>
 							</a>
 							<h2 class="with_number">
-								<a href="{{ route('view',$selected[0]->id) }}" title="{{$selected[0]->title}}">
-<!--tittle of latest Post-->{{$selected[0]->title}}</a>
-								<a class="comments_number" href="" title="{{$selected[0]->numberofComments}} comments">
-<!--Number of Comments-->{{$selected[0]->numberofComments}}<span class="arrow_comments"></span></a>
+								<a href="">
+<!--tittle of latest Post--></a>
+								<a class="comments_number" href="" title=" comments">
+<!--Number of Comments--><span class="arrow_comments"></span></a>
 							</h2>
 							<ul class="post_details">
-								<li class="category"><a href="" title="{{$selected[0]->category}}">
-<!--Category-->{{$selected[0]->category}}</a></li>
+								<li class="category"><a href="" title="">
+<!--Category--></a></li>
 								<li class="date">
-<!--Posted Date-->{{date('F d, Y', strtotime($selected[0]->updated_at))}}
+<!--Posted Date-->
 								</li>
 							</ul><br><br><br>
 							<p>
-<!--Contents-->{!!substr($article->content,0,500)!!}...</p>
+<!--Contents--></p>
 				<br><br>
-							<a class="read_more" href="{{ route('view',$selected[0]->id) }}" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>
+							<a class="read_more" href="" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>
 <!--Full width Page-->पुरा पढ्नुहोस</span></a>
 						</li>
 <!-- End of Post-->
@@ -44,47 +34,31 @@
 <!-- First Latest Post-->
 <!-- Small Post-->
 					<ul class="blog small clearfix">
-					@php
-						$i=0;
-					@endphp
-						@foreach($articles as $article)
-							@if($i<5)
-								@if($article->category===$category )
 									<li class="post">
-									@if(!empty($article->image))
-									<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
-<!-- Image-->						<img src='{{ asset('uploads/'.$article->image) }}' 												style="width:100px;height:100px;"alt='img'>
+									
+									<a href="" title="">
+<!-- Image-->						<img src='' 												style="width:100px;height:100px;"alt='img'>
 									</a>
-								@else
-								<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
+								<a href="" title="">
 <!-- Image-->						<img src='{{ asset('images/samples/100x100/image_02.jpg') }}' 										style="width:100px;height:100px;"alt='img'>
 									</a>
-								@endif
+								
 									<div class="post_content">
 										<h5>
-											<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
-<!-- tittle-->							{{$article->title}}</a>
+											<a href="" title="">
+<!-- tittle-->							</a>
 										</h5>
 										<ul class="post_details simple">
-											<li class="category"><a href="" title="{{$article->title}}">
-<!--Category-->							{{$article->category}}</a></li>
+											<li class="category"><a href="" title="">
+<!--Category-->							</a></li>
 											<li class="date">
-<!-- Posted date-->							{{date('F d, Y', strtotime($article->updated_at))}}
+<!-- Posted date-->							
 											</li>
 										</ul>
 						
 <!-- Upto Here-->					</div>
 							</li>
-							@endif
-							@php
-								$i++;
-							@endphp
-							@else
-								@php
-									break;
-								@endphp
-							@endif
-							@endforeach
+							
 					</ul>
 				</div>
 				</div>
