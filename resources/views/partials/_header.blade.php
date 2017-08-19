@@ -14,7 +14,7 @@
 						<div><h1 style="text-align: center; color:#F62459;">सहि <span style="color:#3A539B;">उमेर </span>
 						<span style="color:#F62459;">सहि </span>
 						<span style="color:#3A539B;">कदम </span></h1>
-						<h2 style="text-align: center; color:#CF000F;>right age right decision</h2>
+						<h2 style="text-align: center;"> <span style=" color:#CF000F;">right age right decision</span></h2>
 						</div>
 						</div>
 					
