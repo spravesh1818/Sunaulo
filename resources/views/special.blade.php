@@ -2,7 +2,9 @@
 @include('partials._header')
 
 <body class="">
-
+@php
+	$category_sel=array();
+@endphp
 <div class="col-12">
 		<div class="page_layout page_margin_top clearfix">
 		<hr class="divider page_margin_top">
@@ -11,6 +13,9 @@
 			@foreach($articles as $article)
 				<div class="row">
 					<div class="post single">
+						@php
+							$category_sel[0]=$article->category->name;
+						@endphp
 					<ul class="post_details clearfix">
 							<li class="detail category">In <a href="" title="{{$article->category->title}}">{{$article->category->title}}</a></li>
 							<li class="detail date">{{date('F d, Y', strtotime($article->updated_at))}}</li>
@@ -34,8 +39,11 @@
 									<p></p>
 									
 									<p>{!!$article->content!!}</p>
+<<<<<<< HEAD
 									
 									
+=======
+>>>>>>> 26bceb81b04c9371daab19601c411965cdf4c1c5
 								</div>
 								</div>
 			
@@ -77,6 +85,7 @@
 						</ul>
 					</div>
 				</div>
+<<<<<<< HEAD
 				<div class="row page_margin_top">
 					<ul class="taxonomies tags left clearfix">
 						@foreach($article->tags as $tag)
@@ -93,6 +102,8 @@
 						</li>
 					</ul>
 				</div>
+=======
+>>>>>>> 26bceb81b04c9371daab19601c411965cdf4c1c5
 </div>
 </div>
 </div>

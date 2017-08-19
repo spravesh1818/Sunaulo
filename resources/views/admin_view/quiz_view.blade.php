@@ -36,10 +36,7 @@ View Content
 			<td>{{$quiz->option2}}</td>
 			<td>{{$quiz->option3}}</td>
 			<td>{!!substr($quiz->description,0,10)!!}</td>
-			<td><a href='{{route('quiz.edit',$quiz->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
-				{!!Form::open(['route'=>['quiz.destroy',$quiz->id],'method'=>'delete'])!!}
-				{{Form::submit('Delete',array('class'=>'btn btn-primary'))}}
-				{!!Form::close()!!}</td>
+			<td><a href='{{route('quiz.edit',$quiz->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a></td>
 		</tr>
 		@endforeach
 	</table>

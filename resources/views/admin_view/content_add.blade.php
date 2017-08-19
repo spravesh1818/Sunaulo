@@ -65,6 +65,13 @@ Add Content
   "src: local('Preeti'), url({{ URL::asset('css/myFont.css')}}) format('truetype');" +
 "}" );
 
+  var options = {
+    filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+    filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+    filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+    filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+  };
+
 CKEDITOR.replace( 'content', {
     on: {
         configLoaded: function() {

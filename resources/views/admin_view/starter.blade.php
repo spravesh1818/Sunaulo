@@ -235,7 +235,7 @@ desired effect
         </li>
 
           <li class="treeview">
-          <a href="#"><i class="fa fa-book"></i> <span>Video Post</span>
+          <a href="#"><i class="fa fa-video-camera"></i> <span>Video Post</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
@@ -246,6 +246,18 @@ desired effect
           </ul>
         </li>
 
+        <li class="treeview">
+          <a href="#"><i class="fa fa-star"></i> <span>Review</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href={{route('comment.review')}}>Comments</a></li>
+            <li><a href={{route('question.review')}}>Questions</a></li>
+            <li><a href={{route('reply.review')}}>Replies</a></li>
+          </ul>
+        </li>
 
 
         <li class="treeview">

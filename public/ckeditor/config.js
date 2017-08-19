@@ -31,6 +31,12 @@ CKEDITOR.editorConfig = function( config ) {
 	// not needed in the Standard(s) toolbar.
 	config.removeButtons = 'Underline,Subscript,Superscript';
 
+
+	config.filebrowserImageBrowseUrl= '/laravel-filemanager?type=Images';
+    config.filebrowserImageUploadUrl= '/laravel-filemanager/upload?type=Images&_token=';
+    config.filebrowserBrowseUrl= '/laravel-filemanager?type=Files';
+    config.filebrowserUploadUrl= '/laravel-filemanager/upload?type=Files&_token=';
+
 	// Set the most common block elements.
 	config.format_tags = 'p;h1;h2;h3;pre';
 
