@@ -164,9 +164,9 @@ class PageController extends Controller
 			$sel=(string)$j;
 			$choice="choice".$sel;
 			$answer="answer".$sel;
-			echo $request->choice;
+			echo $request->$choice;
 			echo "<br>";
-			echo $request->answer;
+			echo $request->$answer;
 			echo "<br>";
 			if($request->$choice===$request->$answer){
 				$points++;
