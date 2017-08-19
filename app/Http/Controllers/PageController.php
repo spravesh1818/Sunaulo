@@ -176,7 +176,7 @@ class PageController extends Controller
 			$j=$j+1;
 		}
 		echo $points;
-		//return view('result')->withPoints($points);
+		return view('result')->withPoints($points);
 	}
 
 
