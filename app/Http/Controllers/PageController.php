@@ -21,16 +21,19 @@ class PageController extends Controller
 		return view('partials.about')->withArticles($articles)->withCategories($categories);
 	}
 	public function home(){
-		$category=category::all()->where('title','!=','जिज्ञासा र खुल्दुली');
 		$categories=category::all();
-		$id=array();
-		foreach ($category as $category) {
-			$id[0]=$category->id;
-		}
 		$articles=articles::all();
 		$articles=$articles->sortByDesc('created_at');
-		
-		return view('index')->withArticles($articles)->withCategories($categories);
+		$selected=array();
+		$i=0;
+		foreach ($categories as $category){
+			$selected[$i]=$category->id;
+			$i=$i+1;
+		}
+
+		shuffle($selected);
+		$featured=articles::where('category_id',$selected[0])->limit(4)->get();
+		return view('index')->withArticles($articles)->withCategories($categories)->withFeatured($featured);
 	}
 
 	public function show($id){

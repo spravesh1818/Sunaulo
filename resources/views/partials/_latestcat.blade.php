@@ -1,65 +1,67 @@
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/new.css') }}">
 <div class="col-8">
-				<h4 class="box_header"></h4>
+				<h4 class="box_header">{{$featured[0]->category->title}} </h4>
+				@php
+					$i=0;
+				@endphp
 				<div class="row">
 					<ul class="col-4">
+					@foreach($featured as $article)
+					@if($i==0)
 <!-- First Latest Post--><li class="post">
-							<a href="">
-<!-- Image of latest Post--><img src='' alt='img'>
+							<a href="" title="{{$article->title}}">
+<!-- Image of latest Post--><img src='images/slider/image_02.jpg' alt='img'>
 							</a>
 							<h2 class="with_number">
-								<a href="">
-<!--tittle of latest Post--></a>
-								<a class="comments_number" href="" title=" comments">
-<!--Number of Comments--><span class="arrow_comments"></span></a>
+								<a href="" title="{{$article->title}}">
+<!--tittle of latest Post-->{{$article->title}}</a>
+								<a class="comments_number" href="" title="{{$article->numberofComments}} comments">
+<!--Number of Comments-->{{$article->numberofComments}}<span class="arrow_comments"></span></a>
 							</h2>
 							<ul class="post_details">
-								<li class="category"><a href="" title="">
-<!--Category--></a></li>
+								<li class="category"><a href="" title="{{$article->category->title}}">
+<!--Category-->{{$article->category->title}}</a></li>
 								<li class="date">
-<!--Posted Date-->
+<!--Posted Date-->{{$article->created_at}}
 								</li>
-							</ul><br><br><br>
+							</ul>
 							<p>
-<!--Contents--></p>
-				<br><br>
-							<a class="read_more" href="" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>
-<!--Full width Page-->पुरा पढ्नुहोस</span></a>
+<!--Contents-->{!!$article->content!!}</p>
+							<a class="read_more" href="" title="Read more"><span class="arrow"></span><span>
+<!--Full width Page-->थप</span></a>
 						</li>
 <!-- End of Post-->
 <!--Remove from Here-->
 						
 <!-- Upto Here-->
 					</ul>
+					@else
 					<ul class="col-4">
 <!-- First Latest Post-->
-<!-- Small Post-->
-					<ul class="blog small clearfix">
-									<li class="post">
-									
-									<a href="" title="">
-<!-- Image-->						<img src='' 												style="width:100px;height:100px;"alt='img'>
+<!-- Small Post--><ul class="blog small clearfix">
+								<li class="post">
+									<a href="" title="{{$article->title}}">
+<!-- Image--><img src='images/samples/100x100/image_02.jpg' alt='img'>
 									</a>
-								<a href="" title="">
-<!-- Image-->						<img src='{{ asset('images/samples/100x100/image_02.jpg') }}' 										style="width:100px;height:100px;"alt='img'>
-									</a>
-								
 									<div class="post_content">
 										<h5>
-											<a href="" title="">
-<!-- tittle-->							</a>
+											<a href="" title="{{$article->title}}">
+<!-- tittle-->{{$article->title}}</a>
 										</h5>
 										<ul class="post_details simple">
-											<li class="category"><a href="" title="">
-<!--Category-->							</a></li>
+											<li class="category"><a href="" title="{{$article->category->title}}">
+<!--Category-->{{$article->category->title}}</a></li>
 											<li class="date">
-<!-- Posted date-->							
+<!-- Posted date-->{{$article->created_at}}
 											</li>
 										</ul>
 						
-<!-- Upto Here-->					</div>
-							</li>
-							
+<!-- Upto Here-->
 					</ul>
+					@endif
+					@php
+						$i=$i+1;
+					@endphp
+					@endforeach
 				</div>
 				</div>
-			
