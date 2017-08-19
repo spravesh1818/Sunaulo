@@ -4,6 +4,8 @@
     $i=0;
   @endphp
   @foreach($articles as $article)
+   @if($article->category->title==="जिज्ञासा र खुल्दुली")
+  @else
   @if($i<=2) 
   <h2 class="box_header_title">
   @if(!empty($article->video_url))
@@ -25,6 +27,7 @@
   @php
     $i=$i+1;
   @endphp
+  @endif
   @endforeach
 </div>
 

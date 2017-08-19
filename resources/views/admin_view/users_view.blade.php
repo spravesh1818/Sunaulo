@@ -31,9 +31,7 @@ View Users
 			<td>{{$user->email}}</td>
 			
 			<td><a href={{ route('user.edit',$user->id) }} class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
-				{!!Form::open(['route'=>['user.destroy',$user->id],'method'=>'delete'])!!}
-				{{Form::submit('Delete',array('class'=>'btn btn-primary'))}}
-				{!!Form::close()!!}</td>
+				</td>
 				@endif
 		</tr>
 		@endforeach

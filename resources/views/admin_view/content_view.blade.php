@@ -34,10 +34,16 @@ View Content
 			<td>{{$article->category->title}}</td>
 			<td>{{$article->author->name}}</td>
 			<td>{{date('F d, Y', strtotime($article->created_at))}}</td>
-			<td><a href='{{route('content.edit',$article->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
+			<td>
+			@if($article->author->name===auth()->user()->name)
+			<a href='{{route('content.edit',$article->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
 				{!!Form::open(['route'=>['content.destroy',$article->id],'method'=>'delete'])!!}
 				{{Form::submit('Delete',array('class'=>'btn btn-primary'))}}
-				{!!Form::close()!!}</td>
+				{!!Form::close()!!}
+			@else
+			Not the author
+			@endif
+			</td>
 		</tr>
 		@endforeach
 	</table>

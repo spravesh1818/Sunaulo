@@ -9,6 +9,8 @@
 <!-- First Latest Post-->@foreach($articles as $article)
 						@if($j<2)
 						@if($article->id%2==1)
+						@if($article->category->title==="जिज्ञासा र खुल्दुली")
+						@else
 <!-- First Latest Post--><li class="post">
 							@if(!empty($article->image))
 							<a href="{{ route('view',$article->id) }}" title={{$article->title}}>
@@ -60,6 +62,7 @@
 						@endphp
 						@endif
 						@endif
+						@endif
 						@endforeach
 					</ul>
 
@@ -70,7 +73,8 @@
 <!-- First Latest Post-->@foreach($articles as $article)
 						@if($j<2)
 						@if($article->id%2==0)
-						
+						@if($article->category->title==="जिज्ञासा र खुल्दुली")
+						@else
 <!-- First Latest Post--><li class="post" style="width: 100%;">
 							@if(!empty($article->image))
 							<a href="{{ route('view',$article->id) }}" title={{$article->title}}>
@@ -120,6 +124,7 @@
 						@php
 							$j=$j+1;
 						@endphp
+						@endif
 						@endif
 						@endif
 						@endforeach
