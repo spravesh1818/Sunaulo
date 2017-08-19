@@ -76,7 +76,6 @@ class ArticlesController extends Controller
             }else{
               $article->editors_choice=0;
             }
-            $article->des=$request->des;
             $article->title=$request->title;
             $article->content=$request->content;
             $article->category_id=$request->category_id;

@@ -77,8 +77,8 @@ CKEDITOR.replace( 'content', {
 
 
 
-	{{Form::label('file[]','Upload additional file(pdf,docx)')}}
-	<input type="file" name="file[]" multiple="true">
+	<!--{{Form::label('file[]','Upload additional file(pdf,docx)')}}
+	<input type="file" name="file[]" multiple="true">-->
 
 	{{Form::submit('Submit',array('class'=>'btn btn-success','style'=>'width:200px;margin-top:20px;'))}}
 	{!! Form::close() !!}
