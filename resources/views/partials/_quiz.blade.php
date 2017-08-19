@@ -51,7 +51,7 @@
 							<h2>{{$question->question}}</h2>
 						</header>
 
-						<input type="text" name="answer{{$i}}" value={{$question->answer}} style="display:none"><br>
+						<input type="text" name="answer{{$i}}" value="{{$question->answer}}" style="display:none"><br>
 						@php
 							$shuffle=[];
 							array_push($shuffle,$question->answer);
@@ -62,8 +62,8 @@
 						@endphp
 
 						<div class="content">
-  							<input type="radio" name="choice{{$i}}" value={{$shuffle[0]}}>{{$shuffle[0]}}<br>
-  							<input type="radio" name="choice{{$i}}" value={{$shuffle[1]}}>{{$shuffle[1]}}<br>
+  							<input type="radio" name="choice{{$i}}" value="{{$shuffle[0]}}">{{$shuffle[0]}}<br>
+  							<input type="radio" name="choice{{$i}}" value="{{$shuffle[1]}}">{{$shuffle[1]}}<br>
   							<input type="radio" name="choice{{$i}}" value="{{$shuffle[2]}}"> {{$shuffle[2]}}<br>
   							<input type="radio" name="choice{{$i}}" value="{{$shuffle[3]}}">{{$shuffle[3]}}
 							
