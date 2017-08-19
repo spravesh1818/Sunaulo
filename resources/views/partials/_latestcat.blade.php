@@ -24,9 +24,10 @@
 								<li class="date">
 <!--Posted Date-->{{$article->created_at}}
 								</li>
-							</ul>
-							<p>
-<!--Contents-->{!!$article->content!!}</p>
+							
+							<li><p>
+<!--Contents-->{!!$article->content!!}</p></li>
+</ul>
 							<a class="read_more" href="" title="Read more"><span class="arrow"></span><span>
 <!--Full width Page-->थप</span></a>
 						</li>
@@ -44,24 +45,29 @@
 <!-- Image--><img src='images/samples/100x100/image_02.jpg' alt='img'>
 									</a>
 									<div class="post_content">
-										<h5>
-											<a href="" title="{{$article->title}}">
-<!-- tittle-->{{$article->title}}</a>
-										</h5>
+										
 										<ul class="post_details simple">
-											<li class="category"><a href="" title="{{$article->category->title}}">
+										<li><h5><a href="" title="{{$article->title}}">
+<!-- tittle-->{{$article->title}}</a></h5></li><br>
+											<li><ul><li class="category"><a href="" title="{{$article->category->title}}">
 <!--Category-->{{$article->category->title}}</a></li>
 											<li class="date">
 <!-- Posted date-->{{$article->created_at}}
 											</li>
+											</li>
+											</ul>
 										</ul>
-						
+						</div>
+						</li>
 <!-- Upto Here-->
+					</ul>
 					</ul>
 					@endif
 					@php
 						$i=$i+1;
 					@endphp
 					@endforeach
+
+
 				</div>
 				</div>
