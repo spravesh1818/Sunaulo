@@ -28,7 +28,7 @@
 							</a>
 						@else
 							<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
-								<img src='{{URL::asset('images/samples/330x242/image_13.jpg')}}' alt='img'>
+								<img src='{{URL::asset('images/samples/noimage.jpg')}}' alt='img'>
 							</a>
 						@endif
 							<div class="post_content">

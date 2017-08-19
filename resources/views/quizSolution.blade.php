@@ -50,7 +50,7 @@
   							<label id="description">{{$question->description}}</label>
 						</div>
 						<footer>
-						<a href="#banner" class="button alt">Back</a>
+						<a href="#{{$question->id+1}}" class="button alt">अर्को </a>
 						</footer>
 					</article>
 				</div>
@@ -60,16 +60,21 @@
 				$i++;	
 			@endphp
 			@endforeach
-			<section id="{{count($questions)+1}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
+			
+			@php
+				$final_section=end($questions);
+			@endphp
+
+			<section id="{{$final_section->id+1}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
-							<h2>Close quiz</h2>
+							<h2> बन्द गर्नुहोस </h2>
 						</header>
-						<div class="result_box">
+						<div class="content">
+						<a href="{{ route('home') }}" class="button alt">बन्द</a>
 						</div>
 						<footer>
-						<a href="{{ route('home') }}">Close quiz</a>
 						</footer>
 					</article>
 				</div>

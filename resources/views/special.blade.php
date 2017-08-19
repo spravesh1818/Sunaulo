@@ -35,7 +35,7 @@
 									
 									<p>{!!$article->content!!}</p>
 									
-									<a title="{{$article->numberofComments}} Comments" href=""><span class="arrow"></span><span>{{$article->numberofComments}} COMMENTS</span></a>
+									
 								</div>
 								</div>
 			
@@ -52,49 +52,44 @@
 					<div class="share_box clearfix">
 						<label>Share:</label>
 						<ul class="social_icons clearfix">
+						@php
+							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+							@endphp
 							<li>
-								<a target="_blank" title="" href="http://facebook.com/sunaulobhabisya" class="social_icon facebook">
+								<a target="_blank" title="share on facebook" href="https://www.facebook.com/sharer/sharer.php?u={{$uri}}" class="social_icon facebook">
 									&nbsp;
 								</a>
 							</li>
 							<li>
-								<a target="_blank" title="" href="https://twitter.com/sunaulobhabisya" class="social_icon twitter">
-									&nbsp;
-								</a>
-							</li>
-							<li>
-								<a title="" href="mailto:" class="social_icon mail">
-									&nbsp;
-								</a>
-							</li>
-							<li>
-								<a title="" href="#" class="social_icon skype">
+								<a target="_blank" title="sahre on twitter" href="https://twitter.com/home?status={{$uri}}" class="social_icon twitter">
 									&nbsp;
 								</a>
 							</li>
 							
+							
+							
 							<li>
-								<a title="" href="#" class="social_icon instagram">
+								<a title="sahre on pinterest" href="https://pinterest.com/pin/create/button/?url=&media={{$uri}}&description=" class="social_icon pinterest">
 									&nbsp;
 								</a>
 							</li>
-							<li>
-								<a title="" href="#" class="social_icon pinterest">
-									&nbsp;
-								</a>
-							</li>
+							
 						</ul>
 					</div>
 				</div>
 				<div class="row page_margin_top">
 					<ul class="taxonomies tags left clearfix">
+						@foreach($article->tags as $tag)
 						<li>
-							<a href="#" title="">PEOPLE</a>
+							{{$tag->name}}
 						</li>
+						@endforeach
 					</ul>
 					<ul class="taxonomies categories right clearfix">
 						<li>
-							<a href="" title="">{{$article->category->name}}</a>
+							<a href="{{ route('category',$article->category->id) }}">
+							{{$article->category->title}}
+							</a>
 						</li>
 					</ul>
 				</div>

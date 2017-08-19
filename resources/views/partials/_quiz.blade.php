@@ -29,6 +29,8 @@
 					<header>
 						<h1> हाजिरी जवाफ </h1>
 					</header>
+					
+					
 				</div>
 				<a href="#{{$questions[0]->id}}" class="more">Start</a>
 			</section>
@@ -66,7 +68,7 @@
 							
 						</div>
 						<footer>
-						<a href="#{{$question->id+1}}" class="button alt">Next</a>
+						<a href="#{{$question->id+1}}" class="button alt">अर्को </a>
 						</footer>
 					</article>
 				</div>
@@ -88,7 +90,7 @@
 							<h2> उत्तर पेश गर्नुहोस </h2>
 						</header>
 						<div class="content">
-						<input type="submit" name="Submit" value="Submit">
+						<input type="submit" name="पेश गर्नुहोस" value="Submit">
 						</div>
 						<footer>
 						</footer>

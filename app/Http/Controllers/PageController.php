@@ -14,6 +14,12 @@ use App\Tag;
 
 class PageController extends Controller
 {
+	public function about(){
+		$categories=category::all();
+		$articles=articles::all();
+		$articles=$articles->sortByDesc('created_at');
+		return view('partials.about')->withArticles($articles)->withCategories($categories);
+	}
 	public function home(){
 		$category=category::all()->where('title','!=','जिज्ञासा र खुल्दुली');
 		$categories=category::all();
