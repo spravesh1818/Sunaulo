@@ -7,7 +7,7 @@
 @include('partials._latestpost')
 @include('partials._recommended')
 @include('partials._rightbar')
-@include('partials._latestcat')
+
 
 <!-- Latest Post From One Category-->
 <script type="text/javascript">
