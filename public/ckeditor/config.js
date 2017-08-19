@@ -9,7 +9,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
-	config.extraPlugins='youtube';	
+	config.extraPlugins='youtube,uploadcare';
 	config.toolbarGroups = [
 		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
 		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
@@ -24,7 +24,8 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
 		{ name: 'styles' },
 		{ name: 'colors' },
-		{ name: 'about' }
+		{ name: 'about' },
+		{name:'table'}
 	];
 
 	// Remove some buttons provided by the standard plugins, which are
@@ -33,9 +34,9 @@ CKEDITOR.editorConfig = function( config ) {
 
 
 	config.filebrowserImageBrowseUrl= '/laravel-filemanager?type=Images';
-    config.filebrowserImageUploadUrl= '/laravel-filemanager/upload?type=Images&_token=';
-    config.filebrowserBrowseUrl= '/laravel-filemanager?type=Files';
-    config.filebrowserUploadUrl= '/laravel-filemanager/upload?type=Files&_token=';
+    	config.filebrowserImageUploadUrl= '/laravel-filemanager/upload?type=Images&_token=';
+    	config.filebrowserBrowseUrl= '/laravel-filemanager?type=Files';
+    	config.filebrowserUploadUrl= '/laravel-filemanager/upload?type=Files&_token=';
 
 	// Set the most common block elements.
 	config.format_tags = 'p;h1;h2;h3;pre';

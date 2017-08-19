@@ -50,7 +50,7 @@ Add Content
 	{{Form::label('image','Upload article display picture')}}
 	{{Form::file('image',array('class'=>'form-control','accept'=>'image/*','style'=>'margin-bottom:20px;'))}}
 
-
+	{{Form::label('des','Enter Content In This editor')}}
 	{{Form::textArea('content',null,array('class'=>'form-control ckeditor','id'=>'content','placeholder'=>'Text','id'=>'content','style'=>'width:200px;margin-top:20px;margin-left:100px;','required'))}}
 
 
@@ -65,13 +65,6 @@ Add Content
   "src: local('Preeti'), url({{ URL::asset('css/myFont.css')}}) format('truetype');" +
 "}" );
 
-  var options = {
-    filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-    filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-    filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-    filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
-  };
-
 CKEDITOR.replace( 'content', {
     on: {
         configLoaded: function() {
@@ -79,6 +72,7 @@ CKEDITOR.replace( 'content', {
         }
     }
 } );
+
 	</script>
 
 

@@ -59,12 +59,13 @@ class PageController extends Controller
 
 	public function special(){
 		$categories=category::all()->where('title','जिज्ञासा र खुल्दुली');
+		$nav=category::all();
 		$id=array();
 		foreach ($categories as $category) {
 			$id[0]=$category->id;
 		}
 		$articles=articles::where('category_id',$id[0])->simplePaginate(1);
-		return view('special')->withArticles($articles)->withCategories($categories);
+		return view('special')->withArticles($articles)->withCategories($nav);
 	}
 
 	public function categorywise($id){
@@ -159,11 +160,11 @@ class PageController extends Controller
 		$i=$request->totalItems+2;
 		$j=2;
 		$points=0;
-
 		while($j<$i){
 			$sel=(string)$j;
 			$choice="choice".$sel;
 			$answer="answer".$sel;
+			echo $choice;
 			if($request->$choice===$request->$answer){
 				echo "correct";
 				echo "<br>";
@@ -173,7 +174,7 @@ class PageController extends Controller
 
 			$j=$j+1;
 		}
-
+		echo $points;
 		return view('result')->withPoints($points);
 	}
 
