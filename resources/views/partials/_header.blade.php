@@ -11,7 +11,9 @@
 				<div class="header clearfix" >
 					<div class="logo">
 					<br>
-						<div><h1 style="text-align: center; color:#F62459;">सहि उमेर						<span style="color:#00B16A;">सहि कदम</span></h1>
+						<div><h1 style="text-align: center; color:#F62459;">सहि <span style="color:#00B16A;">उमेर </span>
+						<span style="color:#F62459;">सहि </span>
+						<span style="color:#00B16A;">कदम </span></h1>
 						</div>
 						</div>
 					
