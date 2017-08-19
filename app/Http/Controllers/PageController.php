@@ -164,7 +164,6 @@ class PageController extends Controller
 			$sel=(string)$j;
 			$choice="choice".$sel;
 			$answer="answer".$sel;
-			echo $choice;
 			if($request->$choice===$request->$answer){
 				echo "correct";
 				echo "<br>";
@@ -175,7 +174,7 @@ class PageController extends Controller
 			$j=$j+1;
 		}
 		echo $points;
-		//return view('result')->withPoints($points);
+		return view('result')->withPoints($points);
 	}
 
 
