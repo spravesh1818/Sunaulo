@@ -10,7 +10,7 @@
 					@if($i==0)
 <!-- First Latest Post--><li class="post">
 							<a href="" title="{{$article->title}}">
-<!-- Image of latest Post--><img src='images/slider/image_02.jpg' alt='img'>
+<!-- Image of latest Post--><img src='images/slider/noimage.jpg' alt='img'>
 							</a>
 							<h2 class="with_number">
 								<a href="" title="{{$article->title}}">
