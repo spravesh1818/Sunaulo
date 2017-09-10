@@ -54,4 +54,17 @@
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100;}
+.ccol-4 {width: 50%;}
+.ccol-8{width: 75%;}
+
+
+@media oly screen and (max-width: 768px)
+{
+    [class*="ccol-8"]
+    {
+        width: 100%;
+    }
+    [class=*="ccol-4"]
+    {width: 100%;}
+}
 
