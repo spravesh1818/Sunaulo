@@ -9,6 +9,14 @@ CKEDITOR.editorConfig = function( config ) {
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
+	config.filebrowserImageBrowseUrl='/laravel-filemanager?type=Images';
+	config.filebrowserImageUploadUrl='/laravel-filemanager/upload?type=Images&_token=';
+	config.filebrowserBrowseUrl='/laravel-filemanager?type=Files';
+	config.filebrowserUploadUrl='/laravel-filemanager/upload?type=Files&_token=';
+
+
+
+
 	config.extraPlugins='youtube';
 	config.toolbarGroups = [
 		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
