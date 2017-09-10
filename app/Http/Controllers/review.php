@@ -24,11 +24,7 @@ class review extends Controller
 
     public function comment(){
     	$comment=comment::all();
-        foreach ($comment as $comment) {
-            echo $comment->comment;
-            echo "<br>";
-        }
-        //return view('admin_view.comment_review')->withComments($comment);
+        return view('admin_view.comment_review')->withComments($comment);
 
     }
 
