@@ -10,9 +10,9 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
 	config.filebrowserImageBrowseUrl='/laravel-filemanager?type=Images';
-	config.filebrowserImageUploadUrl='/laravel-filemanager/upload?type=Images&_token=';
-	config.filebrowserBrowseUrl='/laravel-filemanager?type=Files';
-	config.filebrowserUploadUrl='/laravel-filemanager/upload?type=Files&_token=';
+	
+	
+	
 
 
 
