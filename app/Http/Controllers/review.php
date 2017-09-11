@@ -24,7 +24,7 @@ class review extends Controller
 
     public function comment(){
     	$comment=comment::all();
-    	return view('admin_view.comment_review')->withComments($comment);
+        return view('admin_view.comment_review')->withComments($comment);
 
     }
 

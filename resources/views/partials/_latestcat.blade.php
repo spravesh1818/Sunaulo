@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 
 <div class="col-8">
+=======
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/new.css') }}">
+<div class="ccol-8">
+>>>>>>> c1f61a903033116d361777ea3ce12002f8878e40
 				<h4 class="box_header">{{$featured[0]->category->title}} </h4>
 				@php
 					$i=0;
 				@endphp
 				<div class="row">
-					<ul class="col-4">
+					<ul class="ccol-4">
 					@foreach($featured as $article)
 					@if($i==0)
 <!-- First Latest Post--><li class="post">
@@ -37,7 +42,7 @@
 <!-- Upto Here-->
 					</ul>
 					@else
-					<ul class="col-4">
+					<ul class="ccol-4">
 <!-- First Latest Post-->
 <!-- Small Post--><ul class="blog small clearfix">
 								<li class="post">
@@ -71,3 +76,4 @@
 
 				</div>
 				</div>
+				<div>
