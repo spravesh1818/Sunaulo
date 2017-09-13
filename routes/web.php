@@ -18,6 +18,7 @@ Route::get('/solution','PageController@solution')->name('quiz.solution');
 Route::get('/questionThread/{question}','questionController@openThread')->name('question.thread');
 
 Route::post('/search','PageController@search')->name('search');
+Route::get('/gallery/{gallery}','PageController@gallery_view')->name('gal_view');
 
 Route::post('/reply','questionController@reply')->name('reply.post');
 Route::post('/questionP','questionController@insertQuestion')->name('postQuestion');
@@ -27,6 +28,9 @@ Route::get('/about','PageController@about');
 Route::get('/','PageController@home')->name('home');
 Route::get('/loadComments/{comment}','PageController@loadComments')->name('loadComments');
 Route::get('/test','PageController@special')->name('khulduli');
+Route::get('/gallery','PageController@gallery')->name('khulduli');
+Route::get('/infographic','PageController@infographic')->name('khulduli');
+
 Route::get('/categories/{category}','PageController@categorywise')->name('category');
 Route::get('/allpost','PageController@allpost')->name('all');
 Route::get('/article/{content}','PageController@show')->name('view');
@@ -63,6 +67,24 @@ Route::group(['prefix'=>'/dashboard'],function(){
 	Route::put('/tag/{tag}','TagController@update')->name('tag.update');
 	Route::delete('/tag/{tag}','TagController@destroy')->name('tag.destroy');
 
+	//infographics route
+	Route::get('/infographics','infoController@index')->name('info.index');
+	Route::get('infographics/create','infoController@create')->name('info.create');
+	Route::post('/infographics','infoController@store')->name('info.store');
+	Route::get('/infographics/{infographics}','infoController@show')->name('info.show');
+	Route::get('/infographics/{infographics}/edit','infoController@edit')->name('info.edit');
+	Route::put('/infographics/{infographics}','infoController@update')->name('info.update');
+	Route::delete('/infographics/{infographics}','infoController@destroy')->name('info.destroy');
+
+
+	//gallery routes
+	Route::get('/gallery','galleryController@index')->name('gal.index');
+	Route::get('gallery/create','galleryController@create')->name('gal.create');
+	Route::post('/gallery','galleryController@store')->name('gal.store');
+	Route::get('/gallery/{gallery}','galleryController@show')->name('gal.show');
+	Route::get('/gallery/{gallery}/edit','galleryController@edit')->name('gal.edit');
+	Route::put('/gallery/{gallery}','galleryController@update')->name('gal.update');
+	Route::delete('/gallery/{gallery}','galleryController@destroy')->name('gal.destroy');
 	//viewing the comments,questions,replies
 	Route::get('/review/question','review@question')->name('question.review');
 	Route::get('/review/comment','review@comment')->name('comment.review');

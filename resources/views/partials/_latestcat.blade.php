@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/new.css') }}">
 <div class="ccol-8">
 				<h4 class="box_header">{{$featured[0]->category->title}} </h4>
 				@php
