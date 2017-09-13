@@ -6,10 +6,7 @@
 		<div class="page_header_left">
 			<h1 class="page_title"></h1>
 		</div>
-		@foreach($articles as $article)
-		<h2>{{$article->category->title}}का प्रस्तुतीहरु </h2>
-		@break;
-		@endforeach
+		<h2>{{$infographic->title}} का प्रस्तुतीहरु </h2>
 	</div>
 	<div class="page_layout clearfix">
 		<div class="divider_block clearfix">
@@ -21,30 +18,16 @@
 			<div class="column column_2_3">
 				<div class="row">
 					<ul class="blog big">
-						@foreach($articles as $article)
+						@foreach($infographic->info_file as $file)
 						<li class="post">
-						@if(!empty($article->image))
-							<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
-								<img src='{{ asset('uploads/'.$article->image) }}'  alt='img'>
-							</a>
-						@else
-							<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
-								<img src='{{URL::asset('images/samples/noimage.jpg')}}' style="height:342px;width:630px;" alt='img'>
-							</a>
-						@endif
+							<img src="{{ asset('uploads/public/infographics/'.$file->filename) }}"/>
 							<div class="post_content">
-								<a class="read_more" href="{{ route('view',$article->id) }}" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>Download</span></a>
+								<a class="read_more" href="{{ asset('uploads/public/infographics/'.$file->filename) }}" title="पुरा पढ्नुहोस" download><span class="arrow"></span><span>Download</span></a>
 							</div>
 						</li>
 						@endforeach
 					</ul>
 				</div>
-				<ul class="pagination clearfix page_margin_top_section">
-					<li class="selected">
-						{{$articles->links()}}
-					</li>
-					
-				</ul>
 			</div>
 			
 		</div>

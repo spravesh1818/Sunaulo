@@ -27,14 +27,14 @@
 											$first=$file->filename;
 									}
 								@endphp
-								<img src='{{ asset('uploads/public/infographics/'.$first) }}' style="height:242px;width:330px;" alt='img'>
+								<img src='{{ asset('uploads/public/infographics/'.$first) }}' style="height:100%;width:100%px;" alt='img'>
 							</a>
 							<div class="post_content">
 								<h2 class="with_number">
-									<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">{{$article->title}}</a>
+									<a href="{{ route('infographic_view',$article->id) }}" title="{{$article->title}}">{{$article->title}}</a>
 								</h2>
 								<ul class="post_details">
-									<li class="category"><a title="Gallery">Gallery</a></li>
+									<li class="category"><a title="Infographics">Infographics</a></li>
 									<li class="date">
 										{{date('F d, Y', strtotime($article->updated_at))}}
 									</li>

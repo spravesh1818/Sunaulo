@@ -63,6 +63,13 @@ class PageController extends Controller
 		return view('gallery_view')->withCategories($categories)->withArticles($articles)->withGallery($gallery);
 	}
 
+	public function infographic_view($id){
+		$infographic=infographic::find($id);
+		$categories=category::all();
+		$articles=articles::all();
+		return view('partials._infoview')->withCategories($categories)->withArticles($articles)->withInfographic($infographic);
+	}
+
 	public function allpost(){
 		$categories=category::all();
 		//print_r($categories[0]->title);

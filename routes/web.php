@@ -19,6 +19,8 @@ Route::get('/questionThread/{question}','questionController@openThread')->name('
 
 Route::post('/search','PageController@search')->name('search');
 Route::get('/gallery/{gallery}','PageController@gallery_view')->name('gal_view');
+Route::get('/infographic/{infographic}','PageController@infographic_view')->name('infographic_view');
+Route::get('/infographic','PageController@infographic')->name('gal_view');
 
 Route::post('/reply','questionController@reply')->name('reply.post');
 Route::post('/questionP','questionController@insertQuestion')->name('postQuestion');
