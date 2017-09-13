@@ -261,6 +261,33 @@ desired effect
 
 
         <li class="treeview">
+          <a href="#"><i class="fa fa-info"></i> <span>Infographics</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href={{ route('info.create') }}>Add</a></li>
+            <li><a href={{ route('info.index') }}>View</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-file-image-o"></i> <span>Photo Gallery</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href={{ route('gal.create') }}>Create an Album</a></li>
+            <li><a href={{ route('gal.index') }}>View Albums</a></li>
+          </ul>
+        </li>
+
+
+
+
+        <li class="treeview">
           <a href="#"><i class="fa fa-tag"></i> <span>Tags</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>

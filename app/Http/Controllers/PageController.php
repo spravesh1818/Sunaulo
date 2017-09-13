@@ -10,6 +10,10 @@ use App\comment;
 use App\quizC;
 use App\quiz;
 use App\Tag;
+use App\gallery;
+use App\gallery_file;
+use App\infographic;
+use App\info_file;
 
 
 class PageController extends Controller
@@ -52,6 +56,12 @@ class PageController extends Controller
         
        return view('single')->withArticle($article)->withContent($content)->withComments($comment)->withCategories($categories)->withArticles($articles);
 	}
+	public function gallery_view($id){
+		$gallery=gallery::find($id);
+		$categories=category::all();
+		$articles=articles::all();
+		return view('gallery_view')->withCategories($categories)->withArticles($articles)->withGallery($gallery);
+	}
 
 	public function allpost(){
 		$categories=category::all();
@@ -59,6 +69,22 @@ class PageController extends Controller
 		$articles=articles::paginate(5);
 		return view('allpost')->withArticles($articles)->withCategories($categories);
 	}
+
+	public function gallery(){
+		$categories=category::all();
+		//print_r($categories[0]->title);
+		$articles=gallery::paginate(5);
+		return view('gallery')->withArticles($articles)->withCategories($categories);
+	}
+
+	public function infographic(){
+		$categories=category::all();
+		//print_r($categories[0]->title);
+		$articles=infographic::paginate(5);
+		return view('infographics')->withArticles($articles)->withCategories($categories);
+	}
+
+
 
 	public function special(){
 		$categories=category::all()->where('title','जिज्ञासा र खुल्दुली');

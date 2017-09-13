@@ -25,6 +25,9 @@
 		<link rel="stylesheet" type="text/css" href={{ URL::asset('css/responsive.css')}}>
 		<link rel="stylesheet" type="text/css" href={{ URL::asset('css/odometer-theme-default.css')}}>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+		<link rel="stylesheet" href={{ URL::asset('css/venobox.css') }}/>
   <!-- Ionicons -->
   		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
@@ -32,7 +35,6 @@
 				<!--<link rel="stylesheet" type="text/css" href="style/dark_skin.css">-->
 		<!--<link rel="stylesheet" type="text/css" href="style/high_contrast_skin.css">-->
 		<link rel="shortcut icon" href={{ URL::asset('images/footprints.png')}}>
-
 		<link rel="stylesheet" href={{asset('css/preeti.css')}}>
 		<link rel="stylesheet" href={{asset('css/new.css')}}>
 		<link rel="stylesheet" href={{asset('css/wow.css')}}>
@@ -41,7 +43,7 @@
 		<link rel="stylesheet" href={{asset('css/topbutton.css')}}>
 		
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-
+		
 		<script type="text/javascript" src={{ URL::asset('js/topbutton.js')}}></script>
 		
 		<script type="text/javascript" src={{ URL::asset('js/jquery-1.12.4.min.js')}}></script>
@@ -61,7 +63,10 @@
 		<script type="text/javascript" src={{ URL::asset('js/jquery.blockUI.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/main.js')}}></script>
 		<script type="text/javascript" src={{ URL::asset('js/odometer.min.js')}}></script>
-
+		<script type="text/javascript" src={{ URL::asset('js/odometer.min.js')}}></script>
+		<script src={{URL::asset('js/venobox.min.js')}}></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src={{URL::asset('js/lightbox.js')}}></script>
 		<style type="text/css">
 			.vid1 {width:100%; height: 400px;}
 			.vid2 {width: 100%; height: 400%;}

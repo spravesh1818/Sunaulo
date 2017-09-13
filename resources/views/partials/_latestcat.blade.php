@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 <div class="col-8">
 
+=======
+>>>>>>> fe5950536944dca32ae48a0231ce7b3e6fc23f89
 <div class="ccol-8">
 				<h4 class="box_header">{{$featured[0]->category->title}} </h4>
 				@php
