@@ -74,11 +74,21 @@
 						<div class="content">
 						<a href="{{ route('home') }}" class="button alt">बन्द</a>
 						</div>
-						<footer>
-						</footer>
 					</article>
 				</div>
 			</section>
+
+			<section id="{{$final_section->id+2}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2> धन्यवाद </h2>
+						</header>
+						
+					</article>
+				</div>
+			</section>
+
 		</form>
 
 		<!-- Two -->

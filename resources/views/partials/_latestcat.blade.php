@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-
 <div class="col-8">
-=======
-<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/new.css') }}">
+
 <div class="ccol-8">
->>>>>>> c1f61a903033116d361777ea3ce12002f8878e40
 				<h4 class="box_header">{{$featured[0]->category->title}} </h4>
 				@php
 					$i=0;
@@ -76,4 +72,4 @@
 
 				</div>
 				</div>
-				<div>
+				</div>
