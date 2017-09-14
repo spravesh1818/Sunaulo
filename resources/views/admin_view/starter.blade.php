@@ -241,7 +241,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href={{route('content.index')}}>View</a></li>
+            <li><a href={{route('content.vindex')}}>View</a></li>
             <li><a href={{route('video.create')}}>Add</a></li>
           </ul>
         </li>

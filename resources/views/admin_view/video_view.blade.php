@@ -28,7 +28,7 @@ View Content
 		@endphp
 
 		@foreach ($articles as $article)
-		@if($article->video_url=="")
+		@if($article->video_url!="")
 		<tr>
 			<th>{{$article->id}}</th>
 			<td>{{$article->title}}</td>

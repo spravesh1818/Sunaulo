@@ -8,7 +8,6 @@ use App\gallery_file;
 
 class galleryController extends Controller
 {
-    //
     public function __construct(){
         $this->middleware('auth');
     }
@@ -62,7 +61,7 @@ class galleryController extends Controller
                     $file->save();
                 }
             }
-        echo "All done";
+        return redirect()->route('gal.index');
         
     }
 
@@ -105,16 +104,11 @@ class galleryController extends Controller
      */
     public function destroy($id)
     {
-
         $gallery=gallery::find($id);
         foreach ($gallery->gallery_file as $file) {
             \Storage::delete('public/gallery/'.$file->filename);
         }
         $gallery->delete();
-        $gal=gallery::all();
-        return view("admin_view.gallery_view")->withGallery($gal);   
-
-    
-
+        return redirect()->route('gal.index');  
     }
 }

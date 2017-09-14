@@ -62,7 +62,7 @@ class infoController extends Controller
                     $file->save();
                 }
             }
-        echo "All done";
+        return redirect()->route('info.index');  
     }
 
     /**
@@ -112,6 +112,7 @@ class infoController extends Controller
             \Storage::delete('public/'.$file->filename);
         }
         $infographics->delete();
+        return redirect()->route('info.index');
 
     }
 }

@@ -53,6 +53,7 @@ Route::get('/fetchspecial','PageController@fetchspecial')->name('khulduli');
 Route::group(['prefix'=>'/dashboard'],function(){
 	Route::get('','ArticlesController@index')->name('dashboard');
 	Route::get('/content','ArticlesController@index')->name('content.index');
+	Route::get('/content/video','ArticlesController@vindex')->name('content.vindex');
 	Route::get('content/create','ArticlesController@create')->name('content.create');
 	Route::get('content/vcreate','ArticlesController@vcreate')->name('video.create');
 	Route::post('/content','ArticlesController@store')->name('content.store');

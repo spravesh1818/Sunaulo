@@ -29,6 +29,12 @@ class ArticlesController extends Controller
         return view('admin_view.content_view')->withArticles($articles);
     }
 
+    public function vindex()
+    {
+        $articles=articles::all();
+        return view('admin_view.video_view')->withArticles($articles);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
