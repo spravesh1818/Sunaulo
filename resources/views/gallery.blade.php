@@ -22,7 +22,6 @@
 						<li class="post">
 							<a href="" title="">
 								@php
-									
 									foreach ($article->gallery_file as $file) {
 											$first=$file->filename;
 									}
