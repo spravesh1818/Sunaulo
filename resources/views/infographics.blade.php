@@ -18,6 +18,9 @@
 			<div class="column column_2_3">
 				<div class="row">
 					<ul class="blog big">
+					@if(count($articles)==0)
+					<div>No Infographics Present At this moment</div>
+					@else
 						@foreach($articles as $article)
 						<li class="post">
 							<a href="" title="">
@@ -27,11 +30,11 @@
 											$first=$file->filename;
 									}
 								@endphp
-								<img src='{{ asset('uploads/public/infographics/'.$first) }}' style="height:100%;width:100%px;" alt='img'>
+								<img src='{{URL::asset('uploads/public/infographics/'.$first) }}' style="height:100%;width:100%px;" alt='img'>
 							</a>
 							<div class="post_content">
 								<h2 class="with_number">
-									<a href="{{ route('infographic_view',$article->id) }}" title="{{$article->title}}">{{$article->title}}</a>
+									<a href="{{ route('info_view',$article->id) }}" title="{{$article->title}}">{{$article->title}}</a>
 								</h2>
 								<ul class="post_details">
 									<li class="category"><a title="Infographics">Infographics</a></li>
@@ -45,6 +48,7 @@
 							</div>
 						</li>
 						@endforeach
+						@endif
 					</ul>
 				</div>
 				<ul class="pagination clearfix page_margin_top_section">

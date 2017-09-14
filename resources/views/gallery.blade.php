@@ -18,6 +18,9 @@
 			<div class="column column_2_3">
 				<div class="row">
 					<ul class="blog big">
+					@if(count($articles)==0)
+					<div>No Image galleries present</div>
+					@else
 						@foreach($articles as $article)
 						<li class="post">
 							<a href="" title="">
@@ -44,6 +47,7 @@
 							</div>
 						</li>
 						@endforeach
+						@endif
 					</ul>
 				</div>
 				<ul class="pagination clearfix page_margin_top_section">

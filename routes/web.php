@@ -18,9 +18,14 @@ Route::get('/solution','PageController@solution')->name('quiz.solution');
 Route::get('/questionThread/{question}','questionController@openThread')->name('question.thread');
 
 Route::post('/search','PageController@search')->name('search');
+
+//gallery views
+Route::get('/gallery','PageController@gallery')->name('gal');
 Route::get('/gallery/{gallery}','PageController@gallery_view')->name('gal_view');
-Route::get('/infographic/{infographic}','PageController@infographic_view')->name('infographic_view');
-Route::get('/infographic','PageController@infographic')->name('gal_view');
+//infographic views
+Route::get('/infographic','PageController@infographic')->name('info');
+Route::get('/infographic/{infographic}','PageController@infographic_view')->name('info_view');
+
 
 Route::post('/reply','questionController@reply')->name('reply.post');
 Route::post('/questionP','questionController@insertQuestion')->name('postQuestion');
@@ -29,9 +34,6 @@ Route::get('/about','PageController@about');
 
 Route::get('/','PageController@home')->name('home');
 Route::get('/loadComments/{comment}','PageController@loadComments')->name('loadComments');
-Route::get('/test','PageController@special')->name('khulduli');
-Route::get('/gallery','PageController@gallery')->name('khulduli');
-Route::get('/infographic','PageController@infographic')->name('khulduli');
 
 Route::get('/categories/{category}','PageController@categorywise')->name('category');
 Route::get('/allpost','PageController@allpost')->name('all');
