@@ -8,6 +8,7 @@
     <li> <a href=""><span>मनोरंजन</span></a>
         <ul>
         <li><a href="{{ route('quiz')}}">हाजिरी जवाफ</a></li>
+        <li><a href="">फोटो ग्यालेरी</a></li>
         </ul>
         </li>
     <li style="z-index:99;"> <a href=""><span>बिषयगत प्रस्तुति</span></a>
@@ -20,6 +21,7 @@
         @endforeach
       </ul>
     </li>
+    <li><a href="">इन्फोग्रफिक्स</a></li>
     <li><a href="">हाम्रोबारे</a></li>
   </ul>
 </nav>

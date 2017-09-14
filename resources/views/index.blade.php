@@ -11,7 +11,6 @@
 @include('partials._rightbar')
 @include('partials._latestcat')
 
-@include('partials._latestcat')
 
 
 
