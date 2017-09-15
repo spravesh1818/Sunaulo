@@ -44,7 +44,7 @@
 								
 								<br><br>
 								<!--<li><p>{!!substr($article->description,0,400)!!}</p></li></ul>-->
-								<a class="read_more" href="{{ route('view',$article->id) }}" title="पुरा हेर्नुहोस्"><span class="arrow"></span><span>पुरा हेर्नुहोस्</span></a>
+								<a class="read_more" href="{{ route('info_view',$article->id) }}" title="पुरा हेर्नुहोस्"><span class="arrow"></span><span>पुरा हेर्नुहोस्</span></a>
 							</div>
 						</li>
 						@endforeach
