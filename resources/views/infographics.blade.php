@@ -6,7 +6,7 @@
 		<div class="page_header_left">
 			<h1 class="page_title"></h1>
 		</div>
-		<h2>Infographics का प्रस्तुतीहरु </h2>
+		<h2>इन्फोग्रफिक्स  का प्रस्तुतीहरु </h2>
 	</div>
 	<div class="page_layout clearfix">
 		<div class="divider_block clearfix">
@@ -44,7 +44,7 @@
 								
 								<br><br>
 								<!--<li><p>{!!substr($article->description,0,400)!!}</p></li></ul>-->
-								<a class="read_more" href="{{ route('view',$article->id) }}" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>पुरा पढ्नुहोस</span></a>
+								<a class="read_more" href="{{ route('view',$article->id) }}" title="पुरा हेर्नुहोस्"><span class="arrow"></span><span>पुरा हेर्नुहोस्</span></a>
 							</div>
 						</li>
 						@endforeach
