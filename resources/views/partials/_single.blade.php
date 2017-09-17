@@ -15,7 +15,7 @@
 								
 							
 							</li>
-							<li class="detail author">{{$article->author->name}}</li>
+							
 							<li class="detail views"></li>
 							<li class="detail comments"><a href="#comments_list" class="scroll_to_comments" title="6 Comments"></a></li>
 						</ul>
@@ -58,20 +58,7 @@
 							
 							<div class="author_box animated_element" style="padding-top: 35px;">
 							
-								<div class="author">
-									<a title="{{$article->author->name}}" href="index27b5.html?page=author" class="thumb">
-									@if(!empty($article->author->usr_avatar))
-										<img alt="img" src={{ asset('uploads/'.$article->author->usr_avatar) }} style="width:100px;height:100px">
-									@else
-									<img alt="img" src={{asset('images/noprofile.png')}} style="width:100px;height:100px">
-									@endif
-
-									</a>
-									<div class="details" style="margin-left: 0px;">
-										<h5><span><a title="{{$article->author->name}}" href="">{{$article->author->name}}</a></span></h5>
-										<h6>EDITOR</h6>
-									</div>
-								</div>
+								
 								</div>
 							</div>
 						</div>
