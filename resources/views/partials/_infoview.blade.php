@@ -23,6 +23,32 @@
 							<img src="{{ asset('uploads/public/infographics/'.$file->filename) }}"/>
 							<div class="post_content">
 								<a class="read_more" href="{{ asset('uploads/public/infographics/'.$file->filename) }}" title="पुरा पढ्नुहोस" download><span class="arrow"></span><span>Download</span></a>
+								<div class="share_box clearfix">
+						
+						<ul class="social_icons clearfix">
+						@php
+							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+							@endphp
+							<li>
+								<a target="_blank" title="share on facebook" href="https://www.facebook.com/sharer/sharer.php?u={{$uri}}" class="social_icon facebook">
+									&nbsp;
+								</a>
+							</li>
+							<li>
+								<a target="_blank" title="share on twitter" href="https://twitter.com/home?status={{$uri}}" class="social_icon twitter">
+									&nbsp;
+								</a>
+							</li>
+							
+							
+							
+							<li>
+								<a title="share on pinterest" href="https://pinterest.com/pin/create/button/?url=&media={{$uri}}&description=" class="social_icon pinterest">
+									&nbsp;
+								</a>
+							</li>
+						</ul>
+					</div>
 							</div>
 						</li>
 						@endforeach
