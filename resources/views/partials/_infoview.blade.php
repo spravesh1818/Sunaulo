@@ -23,8 +23,17 @@
 							<img src="{{ asset('uploads/public/infographics/'.$file->filename) }}"/>
 							<div class="post_content">
 								<a class="read_more" href="{{ asset('uploads/public/infographics/'.$file->filename) }}" title="पुरा पढ्नुहोस" download><span class="arrow"></span><span>Download</span></a>
-								<div class="share_box clearfix">
-						
+							</div>
+						</li>
+						@endforeach
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		<div class="row page_margin_top">
+					<div class="share_box clearfix">
+						<label>Share:</label>
 						<ul class="social_icons clearfix">
 						@php
 							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
@@ -49,14 +58,7 @@
 							</li>
 						</ul>
 					</div>
-							</div>
-						</li>
-						@endforeach
-					</ul>
 				</div>
-			</div>
-			
-		</div>
 		</div>
 	</div>	
 
