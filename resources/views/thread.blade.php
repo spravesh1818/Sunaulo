@@ -2,18 +2,18 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 @include('partials._header')
 <div style="text-align:center;background:#b3ffb3;"  class="container">
-	<h1>{{$questions->question}}</h1>
+	<h2>{{$questions->question}}</h2>
 	<div>Posted by:{{$questions->name}}</div>
 </div><br><br>
 
 
-<h2 class="container" id="reply_label">Replies  <small>{{count($replies)}} replies</small></h2>
+<h2 class="container" id="reply_label">प्रतिक्रियाहरु  <small>{{count($replies)}} </small></h2>
 <hr>
 <div class="container" id="reply_show">
 @foreach($replies as $reply)
 <ul class="list-group">
-	<li class="list-group-item">Name :  {{$reply->name}}</li>
-	<li class="list-group-item">Reply :  {{$reply->reply}}</li>
+	<li class="list-group-item">     नाम :  {{$reply->name}}</li>
+	<h3><li class="list-group-item">     प्रतिक्रिया :  {{$reply->reply}}</li></h3>
 </ul>
 @endforeach
 <div class="paginate">{{$replies->links()}}</div>
@@ -24,12 +24,12 @@
 <div id="reply_box"  class="container">
 <form action="{{ route('reply.post') }}" method="post" id="reply_form">
     {{csrf_field()}}
-    <input type="text" id="name" name="name" class="form-control" placeholder="name" /><br><br>
-    <input type="email" id="email" name="email" class="form-control" placeholder="email" /><br><br>
-    <textarea id="reply" name="reply" class="form-control" placeholder="Write something.." style="height:100px"></textarea>
+    <input type="text" id="name" name="name" class="form-control" placeholder="नाम" /><br><br>
+    <input type="email" id="email" name="email" class="form-control" placeholder="इमेल" /><br><br>
+    <textarea id="reply" name="reply" class="form-control" placeholder="आफ्नो विचार व्यक्त गर्नुहोस... " style="height:100px"></textarea>
     <input type="text" name="question_id" id="question_id" value="{{$questions->id}}" style="display:none">
     <br><br>
-    <input type="submit" value="Submit Reply" class="btn btn-success"/>
+    <input type="submit" value="पेस गर्नुहोस " class="btn btn-success"/>
 </form>
 </div>
 
