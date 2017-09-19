@@ -6,7 +6,7 @@
 		<div class="page_header_left">
 			<h1 class="page_title"></h1>
 		</div>
-		<h2>Gallery का प्रस्तुतीहरु </h2>
+		<h2> फोटो ग्यालेरी </h2>
 	</div>
 	<div class="page_layout clearfix">
 		<div class="divider_block clearfix">
@@ -36,14 +36,14 @@
 									<a href="{{ route('gal_view',$article->id) }}" title="{{$article->title}}">{{$article->title}}</a>
 								</h2>
 								<ul class="post_details">
-									<li class="category"><a title="Gallery">Gallery</a></li>
+									<li class="category"><a title="Gallery">ग्यालेरी </a></li>
 									<li class="date">
 										{{date('F d, Y', strtotime($article->updated_at))}}
 									</li>
 								
 								<br><br>
 								<li><p>{!!substr($article->description,0,400)!!}</p></li></ul>
-								<a class="read_more" href="{{ route('view',$article->id) }}" title="पुरा पढ्नुहोस"><span class="arrow"></span><span>पुरा पढ्नुहोस</span></a>
+								<a class="read_more" href="{{ route('gal_view',$article->id) }}" title="पुरा हेर्नुहोस्"><span class="arrow"></span><span>पुरा हेर्नुहोस्</span></a>
 							</div>
 						</li>
 						@endforeach
