@@ -18,7 +18,7 @@
 					<li>&nbsp;</li>
 					<li>&nbsp;</li>
 					<li>
-							<a href="https://www.youtube.com/channel/UCW9gL5pzC-Zt-KTk4eqr-Pg/featured" title="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+							<a href="https://www.youtube.com/channel/UClmjixDFRpH6wDTtzNWbx8A" title="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i>
 								&nbsp;
 							</a>
 						</li>
