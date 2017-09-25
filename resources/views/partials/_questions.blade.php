@@ -52,17 +52,17 @@ input[type=submit]:hover {
     margin: 10px;
 }
 </style>
-<input type="button" class="button"  value="प्रश्‍न सोध्नुहोस" onclick="showDiv()" style="margin-left:20px"/>
+<input type="button" class="button"  value="जिज्ञासा माथि छलफल गरौ" onclick="showDiv()" style="margin-left:20px"/>
 <div id="welcomeDiv"  style="display:none;" class="answer_list"  style="margin-left:20px">
-<input class="button" type="button"  value="सोधिएका प्रश्‍नहरु" onclick="hideDiv()" style="margin-left:20px" />
+<input class="button" type="button"  value="सोधिएका जिज्ञासाहरु" onclick="hideDiv()" style="margin-left:20px" />
 <div class="container" style="margin-left:20px">
   <form method="post" id="question_form" action="{{ route('postQuestion') }}" >
   {{csrf_field()}}
     <label for="fname">पुरा नाम</label>
     <input type="text" id="fname" name="firstname" placeholder="नाम..">
 
-    <label for="subject">तपाईको प्रश्‍न सोध्नुहोस</label>
-    <textarea id="question" name="question" placeholder="तपाईको प्रश्‍न लेख्नुहोस.." style="height:200px"></textarea>
+    <label for="subject">तपाईको जिज्ञासा सोध्नुहोस</label>
+    <textarea id="question" name="question" placeholder="तपाईको जिज्ञासा लेख्नुहोस.." style="height:200px"></textarea>
 
     <input type="submit" value="पेश गर्नुहोस">
 

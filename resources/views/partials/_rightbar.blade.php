@@ -3,7 +3,7 @@
 					<ul class="tabs_navigation clearfix">
 						<li>
 							<a href="#sidebar-most-read" title="Most Read">
-<!-- Popular Post-->धेरै पढ़ीएको
+<!-- Popular Post-->धेरै पढिएको
 							</a>
 							<span></span>
 						</li>
