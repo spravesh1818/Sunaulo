@@ -13,7 +13,7 @@
 
 </div>
 		
-@include('partials._rightbar')
+
 
 @include('partials._recent')
 @include('partials._footer')

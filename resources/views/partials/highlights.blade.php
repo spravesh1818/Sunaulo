@@ -33,7 +33,7 @@
 
 <div class="col-3 right" style="padding-top: 10px;">
  <div>
-    <h4 class="box_header"> खुल्दुली </h4>
+    <h4 class="box_header"> जिज्ञासा र खुल्दुली </h4>
     <ul id="special">
     	
 

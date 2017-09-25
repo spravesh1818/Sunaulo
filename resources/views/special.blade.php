@@ -65,7 +65,7 @@
 								</a>
 							</li>
 							<li>
-								<a target="_blank" title="sahre on twitter" href="https://twitter.com/home?status={{$uri}}" class="social_icon twitter">
+								<a target="_blank" title="share on twitter" href="https://twitter.com/home?status={{$uri}}" class="social_icon twitter">
 									&nbsp;
 								</a>
 							</li>
@@ -73,7 +73,7 @@
 							
 							
 							<li>
-								<a title="sahre on pinterest" href="https://pinterest.com/pin/create/button/?url=&media={{$uri}}&description=" class="social_icon pinterest">
+								<a title="share on pinterest" href="https://pinterest.com/pin/create/button/?url=&media={{$uri}}&description=" class="social_icon pinterest">
 									&nbsp;
 								</a>
 							</li>
