@@ -11,7 +11,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html">हाजिरी जवाफ <span>by सहि उमेर सहि कदम</span></a></div>
+				<div class="logo">हाजिरी जवाफ <span>by सहि उमेर सहि कदम</span></div>
 				
 			</header>
 

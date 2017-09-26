@@ -1,6 +1,24 @@
 @include('partials._head')
 @include('partials._header')
 
+<style>
+.button {
+    background-color: #f44336; /* Green */
+    border: none;
+    color: white;
+    width: 200px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+
+<div>
+
 <body class="">
 @php
 	$category_sel=array();
@@ -52,6 +70,14 @@
 					<br>
 					<div style="margin-left:30%"><span class="arrow"></span><span>{{$articles->links()}}</span></div><br><br>
 
+					<br>
+					<div><h4>तपाईको पनि जिज्ञासाहरु भए सोध्नुहोस | हामी जवाफ दिन्छौ | जिज्ञासा पठाउन तल क्लिक गर्नुहोस | </h4>
+					<input class="button" type="button"  value="जिज्ञासा पठाउनुहोस " style="margin-left:20px" />
+					</div>
+					<br>
+
+					
+
 				<div class="row page_margin_top">
 					<div class="share_box clearfix">
 						<label>Share:</label>
@@ -99,6 +125,7 @@
 					</ul>
 				</div>
 
+</div>
 </div>
 </div>
 </div>

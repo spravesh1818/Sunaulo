@@ -11,9 +11,9 @@
 				<div class="header clearfix" >
 					<div class="logo">
 					<br>
-						<div><h1 style="text-align: center; color:#F62459;">सहि <span style="color:#3A539B;">उमेर </span>
-						<span style="color:#F62459;">सहि </span>
-						<span style="color:#3A539B;">कदम </span></h1>
+						<div><h1 style="text-align: center; color:#EF008C;">सहि <span style="color:#0072CE;">उमेर </span>
+						<span style="color:#EF008C;">सहि </span>
+						<span style="color:#0072CE;">कदम </span></h1>
 						<h2 style="text-align: center;"> <span style=" color:#CF000F;">right age right steps</span></h2>
 						</div>
 						</div>
