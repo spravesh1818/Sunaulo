@@ -138,7 +138,7 @@
 <div class="clearfix">
 </div>
 <!--comment div-->
-<div class="row page_margin_top_section">
+<div class="row page_margin_top_section" style="padding-left: 15px;">
 					<h4 class="box_header">प्रतिक्रिया दिनुहोस</h4>
 					<p class="padding_top_30" id="thank_you">प्रतिक्रिया दिनुभएकोमा धन्यवाद |</p>
 					<p class="padding_top_30">तपाईको इमेल गोप्य राखिनेछ !!</p>
@@ -166,7 +166,7 @@
 				</div>
 
 
-				<div class="row page_margin_top_section" id="comment_show">
+				<div class="row page_margin_top_section" id="comment_show" style="padding-left: 15px;">
 					<h4 class="box_header">
 					@php
 						$noc=0;
