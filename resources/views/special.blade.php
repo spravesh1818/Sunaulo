@@ -38,6 +38,9 @@
 							<li class="detail category">In <a href="" title="{{$article->category->title}}">{{$article->category->title}}</a></li>
 							<li class="detail date">{{date('F d, Y', strtotime($article->updated_at))}}</li>
 							<li class="detail author">{{$article->author->name}}</li>
+							@php
+								$check=$article->id;	
+							@endphp
 							<li class="detail views"></li>
 							<li class="detail comments"><a href="#comments_list" class="scroll_to_comments" title="6 Comments"></a></li>
 						</ul>
@@ -129,5 +132,111 @@
 </div>
 </div>
 </div>
+<<<<<<< HEAD
 </div>
+=======
+<div class="clearfix">
+</div>
+<!--comment div-->
+<div class="row page_margin_top_section">
+					<h4 class="box_header">प्रतिक्रिया दिनुहोस</h4>
+					<p class="padding_top_30" id="thank_you">प्रतिक्रिया दिनुभएकोमा धन्यवाद |</p>
+					<p class="padding_top_30">तपाईको इमेल गोप्य राखिनेछ !!</p>
+					<form class="comment_form margin_top_15" id="comment_form"  action='{{ route('comment.post') }}'>
+					{{csrf_field()}}
+						<div class="column column_1_3" style="float: left;">
+							<input class="text_input" id="name" name="name" type="text"  placeholder="नाम (अनिवार्य)">
+						</div>
+						<div class="column column_1_3">
+						<input class="text_input" name="email" id="email" type="text" placeholder="इमेल (अनिवार्य)" required>
+						</div>
+						
+						
+							<textarea name="comment" id="comment" placeholder="प्रतिक्रिया दिनुहोस"  required></textarea>
+							<select name='article_id' id="article_id" style="display:none">
+									<option>{{$article->id}}</option>
+							</select>
+						
+						<div>
+							<input type="submit" class="more active" id="post_comment" style="float: left;" value="पेश गर्नुहोस">
+						</div>
+						
+					</form>
+					<br>
+				</div>
+
+
+				<div class="row page_margin_top_section" id="comment_show">
+					<h4 class="box_header">
+					@php
+						$noc=0;
+					@endphp
+					@foreach($comments as $comment)
+					@if($comment->article_id==$check)
+						@php
+							$noc=$noc+1;								
+						@endphp
+					@endif
+					@endforeach
+					{{$noc}}
+					Comments</h4>
+					@foreach($comments as $comment)
+					@if($comment->article_id==$check)
+					<ul id="comments_list">
+						<li class="comment clearfix" id="comment-1">
+							<div class="comment_details">
+								<div class="posted_by clearfix">
+									<h5><strong><a class="author" href="#" title={{$comment->name}}>{{$comment->name}}</a></strong></h5>
+									<abbr title={{$comment->created_at}} class="timeago">{{$comment->created_at}}</abbr>
+								</div>
+								<p>
+								{{$comment->comment}}
+								</p>
+								
+							</div>
+						</li>
+					</ul>
+					@endif
+					@endforeach
+				</div>
+
+<!--comment div finish-->
+<br>
+<br>
+<script type="text/javascript">
+				$(document).ready(function (){
+					console.log('Ajax not working');
+					var thanks=$('#thank_you');
+					thanks.hide();
+					var form=$('#comment_form');
+					form.submit(function(event)
+					{
+						var name=$('#name').val();
+						var email=$('#email').val();
+						var comment=$('#comment').val();
+						var article_id=$('#article_id').val();
+						var token=$('input[name=_token]').val()
+						$.ajax({
+							type:'POST',
+							url:'/comment',
+							data: {'name':name,'email':email,'comment':comment,'_token':token,'article_id':article_id},
+							success:function(data){
+								//call ajax get request for all the comment
+								$('#comment_form').hide();
+								thanks.show();
+								$('#comment_show').load(location.href+' #comment_show');
+							},
+							error:function(){
+								alert('comment could not be posted');
+							}
+						});
+
+
+						event.preventDefault();
+					});
+				});
+
+			</script>
+
+>>>>>>> 3d5a52b05925d9ab5145427e0cbf7fedfbc7a734
 @include('partials._footer')		

@@ -101,7 +101,8 @@ class PageController extends Controller
 			$id[0]=$category->id;
 		}
 		$articles=articles::where('category_id',$id[0])->simplePaginate(1);
-		return view('special')->withArticles($articles)->withCategories($nav);
+		$comment=comment::all();
+		return view('special')->withArticles($articles)->withCategories($nav)->withComments($comment);
 	}
 
 	public function categorywise($id){
