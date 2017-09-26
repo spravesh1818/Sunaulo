@@ -132,9 +132,9 @@
 </div>
 </div>
 </div>
-<<<<<<< HEAD
+
 </div>
-=======
+
 <div class="clearfix">
 </div>
 <!--comment div-->
@@ -237,6 +237,4 @@
 				});
 
 			</script>
-
->>>>>>> 3d5a52b05925d9ab5145427e0cbf7fedfbc7a734
 @include('partials._footer')		
