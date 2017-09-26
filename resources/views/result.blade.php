@@ -11,7 +11,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html">हाजिरी जवाफ <span>by सहि उमेर सहि कदम</span></a></div>
+				<div class="logo">हाजिरी जवाफ <span>by सहि उमेर सहि कदम</span></div>
 				
 			</header>
 
@@ -24,16 +24,16 @@
 			to the full filename of your image. This is used in each section to set
 			the background image.
 		-->
-			<section id="1" class="wrapper post bg-img" data-bg="banner1.jpg">
+			<section id="1" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
-							<h2> उत्तरहरु </h2>
+							<h1> उत्तरहरु </h1>
 						</header>
-						<div class="result_box">तपाईको {{$points}} वटा उत्तरहरु सहि थियो
+						<div class="result_box"><h2>तपाईको {{$points}} वटा उत्तरहरु सहि थियो</h2>
 						</div>
 						<footer>
-						<a href="{{ route('quiz.solution') }}">उत्तरहरु  हेर्नुहोस</a>
+						<a href="{{ route('quiz.solution') }}"><h3>उत्तरहरु  हेर्नुहोस</h3></a>
 						</footer>
 					</article>
 				</div>

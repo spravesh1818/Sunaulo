@@ -31,6 +31,7 @@
 			@foreach($articles as $article)
 				<div class="row">
 					<div class="post single">
+					
 						@php
 							$category_sel[0]=$article->category->name;
 						@endphp
