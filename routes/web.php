@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/test','PageController@special')->name('khulduli');
 Route::get('/numberOfComments','PageController@sortNC')->name('sortNC');
 Route::get('/mostRead','PageController@sortMR')->name('sortMR');
@@ -47,7 +48,7 @@ Route::post('/login','loginController@verify')->name('login.verify');
 Route::get('/logout','loginController@destroy')->name('logout');
 Route::get('/quiz','PageController@quiz')->name('quiz'); 
 Route::get('/fetchcategories','PageController@fetchcategories')->name('test'); 
-Route::get('/fetchspecial','PageController@fetchspecial')->name('khulduli'); 
+Route::get('/fetchspecial','PageController@fetchspecial'); 
 
 
 Route::group(['prefix'=>'/dashboard'],function(){
