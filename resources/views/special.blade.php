@@ -1,6 +1,24 @@
 @include('partials._head')
 @include('partials._header')
 
+<style>
+.button {
+    background-color: #f44336; /* Green */
+    border: none;
+    color: white;
+    width: 200px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+
+<div>
+
 <body class="">
 @php
 	$category_sel=array();
@@ -55,6 +73,14 @@
 					<br>
 					<div style="margin-left:30%"><span class="arrow"></span><span>{{$articles->links()}}</span></div><br><br>
 
+					<br>
+					<div><h4>तपाईको पनि जिज्ञासाहरु भए सोध्नुहोस | हामी जवाफ दिन्छौ | जिज्ञासा पठाउन तल क्लिक गर्नुहोस | </h4>
+					<input class="button" type="button"  value="जिज्ञासा पठाउनुहोस " style="margin-left:20px" />
+					</div>
+					<br>
+
+					
+
 				<div class="row page_margin_top">
 					<div class="share_box clearfix">
 						<label>Share:</label>
@@ -68,7 +94,7 @@
 								</a>
 							</li>
 							<li>
-								<a target="_blank" title="sahre on twitter" href="https://twitter.com/home?status={{$uri}}" class="social_icon twitter">
+								<a target="_blank" title="share on twitter" href="https://twitter.com/home?status={{$uri}}" class="social_icon twitter">
 									&nbsp;
 								</a>
 							</li>
@@ -76,7 +102,7 @@
 							
 							
 							<li>
-								<a title="sahre on pinterest" href="https://pinterest.com/pin/create/button/?url=&media={{$uri}}&description=" class="social_icon pinterest">
+								<a title="share on pinterest" href="https://pinterest.com/pin/create/button/?url=&media={{$uri}}&description=" class="social_icon pinterest">
 									&nbsp;
 								</a>
 							</li>
@@ -106,10 +132,13 @@
 </div>
 </div>
 </div>
+
+</div>
+
 <div class="clearfix">
 </div>
 <!--comment div-->
-<div class="row page_margin_top_section">
+<div class="row page_margin_top_section" style="padding-left: 15px;">
 					<h4 class="box_header">प्रतिक्रिया दिनुहोस</h4>
 					<p class="padding_top_30" id="thank_you">प्रतिक्रिया दिनुभएकोमा धन्यवाद |</p>
 					<p class="padding_top_30">तपाईको इमेल गोप्य राखिनेछ !!</p>
@@ -137,7 +166,7 @@
 				</div>
 
 
-				<div class="row page_margin_top_section" id="comment_show">
+				<div class="row page_margin_top_section" id="comment_show" style="padding-left: 15px;">
 					<h4 class="box_header">
 					@php
 						$noc=0;
@@ -208,5 +237,4 @@
 				});
 
 			</script>
-
 @include('partials._footer')		
