@@ -25,6 +25,7 @@
 		url:'/fetchspecial',
 		success:function(data){
 			var response=JSON.parse(data);
+		
 			if(Object.keys(response).length==0){
 				$('#special').append('<li class="post"><div class="post_content"><h5><a>No khulduli right now</a></h5></div></li>');
   					iterator+=1;

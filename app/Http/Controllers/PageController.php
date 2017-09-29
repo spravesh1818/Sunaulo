@@ -166,11 +166,12 @@ class PageController extends Controller
 
 	public function fetchspecial(){
 		$category=category::all()->where('title','जिज्ञासा र खुल्दुली');
-		$id=array();
-		foreach ($category as $category) {
-			$id[0]=$category->id;
+		foreach ($category as $category){
+			$id=$category->id;
 		}
-		$articles=articles::all()->where('category_id',$id[0])->toJson();
+		$articles=articles::all()->where('category_id',$id);
+		$articles=$articles->sortByDesc('created_at');
+		$articles=$articles->toJson();
 		return response()->json($articles);
 	}
 

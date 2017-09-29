@@ -30,14 +30,37 @@
   @endif
   @endforeach
 </div>
-
 <div class="col-3 right" style="padding-top: 10px;">
  <div>
-    <h4 class="box_header"> जिज्ञासा र खुल्दुली </h4>
-    <ul id="special">
-    	
-
-    </ul>
-
+    <h4 class="box_header"> खुल्दुली </h4>
+    <ul>
+    @php
+      $numofkhulduli=0;
+    @endphp
+    @foreach($articles as $article)
+      @if($article->category->title==='जिज्ञासा र खुल्दुली')    
+        @php
+          $numofkhulduli++;
+        @endphp
+      @endif
+    @endforeach
+    
+    @php
+    $n=0;
+    @endphp
+    @foreach($articles as $article)
+      @if($article->category->title==='जिज्ञासा र खुल्दुली')    
+      @if($n<=4)
+       <li class="post"><div class="post_content"><h5><a href="/test?page={{$numofkhulduli}}"> {{$article->title}}</a></h5></div></li>
+       <br>
+        @php
+          $n=$n+1;  
+          $numofkhulduli--;
+        @endphp
+      @endif   
+      @endif
+       
+    @endforeach
+    
  </div>
 </div>
