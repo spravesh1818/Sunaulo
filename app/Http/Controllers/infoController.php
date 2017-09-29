@@ -43,6 +43,7 @@ class infoController extends Controller
         //validate first
         $this->validate($request,array(
           'title'=>'required|max:255',
+          'description'=>'required',
             
             ));
 
@@ -50,6 +51,7 @@ class infoController extends Controller
         $infographic=new infographic;
         $infographic->id=$id;
         $infographic->title=$request->title;
+        $infographic->description=$request->description;
         $infographic->save();
 
         if($request->hasFile('file')){

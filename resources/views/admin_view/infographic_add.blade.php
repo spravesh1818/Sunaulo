@@ -27,6 +27,7 @@ Add Infographic
 
 	{!! Form::open(['route' => 'info.store','files'=>true,'style'=>'margin-left:100px;fontsize:35px;margin-top:20px;width:700px;']) !!}	
 	{{Form::text('title',null,array('class'=>'form-control','id'=>'title','placeholder'=>'Title','required'))}}<br>
+	{{Form::textArea('description',null,array('class'=>'form-control','id'=>'title','placeholder'=>'Description'))}}<br>
 	{{Form::label('file[]','Upload infographics image')}}
 	<input type="file" name="file[]" multiple="true" accept="image/x-png,image/gif,image/jpeg">
 	{{Form::submit('Submit',array('class'=>'btn btn-success','style'=>'width:200px;margin-top:20px;'))}}

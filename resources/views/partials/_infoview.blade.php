@@ -18,6 +18,7 @@
 			<div class="column column_2_3">
 				<div class="row">
 					<ul class="blog big">
+					<div>{{$infographic->description}}</div>
 						@foreach($infographic->info_file as $file)
 						<li class="post">
 							<img src="{{ asset('uploads/public/infographics/'.$file->filename) }}"/>
