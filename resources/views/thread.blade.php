@@ -4,9 +4,9 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 @include('partials._header')
-<div style="text-align:center;background:#b3ffb3;"  class="container">
-	<h2>{{$questions->question}}</h2>
-	<div>Posted by:{{$questions->name}}</div>
+<div style="padding-left: 30px;"  class="container">
+	<h2><strong>{{$questions->question}}</strong></h2>
+	<div><h3>प्रश्नकर्ता :{{$questions->name}}</h3></div>
 </div><br><br>
 
 
@@ -16,8 +16,8 @@
 @foreach($replies as $reply)
 <div class=box_header style="width:80%;">
 <ul class="list-group" >
-	<li class="list-group-item" style="color:#00843D" >नाम :{{$reply->name}}</li>
-	<h3><li class="list-group-item">प्रतिक्रिया :{{$reply->reply}}</li></h3>
+	<li class="list-group-item" style="color:#00843D" >{{$reply->name}}</li>
+	<h3><li class="list-group-item">{{$reply->reply}}</li></h3>
 </ul>
 </div>
 <br>
