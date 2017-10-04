@@ -339,6 +339,15 @@ h6
 	border-bottom: 1px solid #ED1C24;
 	padding: 8px 15px 11px;
 }
+
+
+.box_header_about
+{
+	background: #FFF;
+	border-bottom: 1px solid #ED1C24;
+	padding: 8px 15px 11px;
+}
+
 .footer .box_header_title
 {
 	background: #42494F;

@@ -21,7 +21,7 @@
         @endforeach
       </ul>
     </li>
-    <li><a href="{{ route('info') }}">इन्फोग्रफिक्स</a></li>
+    <li><a href="{{ route('info') }}">इन्फोग्राफिक्स</a></li>
     <li><a href="">हाम्रोबारे</a></li>
   </ul>
 </nav>

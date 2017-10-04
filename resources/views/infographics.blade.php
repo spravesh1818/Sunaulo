@@ -6,7 +6,7 @@
 		<div class="page_header_left">
 			<h1 class="page_title"></h1>
 		</div>
-		<h2>इन्फोग्रफिक्स  का प्रस्तुतीहरु </h2>
+		<h2>इन्फोग्राफिक्स  का प्रस्तुतीहरु </h2>
 	</div>
 	<div class="page_layout clearfix">
 		<div class="divider_block clearfix">
