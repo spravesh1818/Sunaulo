@@ -30,6 +30,8 @@ Route::get('/infographic/{infographic}','PageController@infographic_view')->name
 
 Route::post('/reply','questionController@reply')->name('reply.post');
 Route::post('/questionP','questionController@insertQuestion')->name('postQuestion');
+
+Route::post('/jigyasa','JigyasaController@create')->name('jigyasa.create');
 Route::get('/ask','questionController@show')->name('askQuestion');
 Route::get('/about','PageController@about');
 
@@ -137,6 +139,10 @@ Route::group(['prefix'=>'/dashboard'],function(){
     Route::get('/user/{user}/edit','UserController@edit')->name('user.edit');
     Route::put('/user/{user}','UserController@update')->name('user.update');
     Route::delete('/user/{user}','UserController@destroy')->name('user.destroy');
+
+    //jigyasa routes
+    Route::get('/jigyasa','JigyasaController@index')->name('jigyasa.index');
+    Route::delete('/jigyasa/{jigyasa}','JigyasaController@destroy')->name('jigyasa.destroy');
 });
 
 

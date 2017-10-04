@@ -75,9 +75,9 @@
 
 					<br>
 					<div><h4>तपाईको पनि जिज्ञासाहरु भए सोध्नुहोस | हामी जवाफ दिन्छौ | जिज्ञासा पठाउन तल क्लिक गर्नुहोस | </h4>
-					<input class="button" type="button"  value="जिज्ञासा पठाउनुहोस " style="margin-left:20px" />
 					</div>
 					<br>
+					@include('partials._jigyasa')
 
 					
 

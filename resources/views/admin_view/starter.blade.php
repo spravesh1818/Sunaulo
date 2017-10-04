@@ -184,6 +184,19 @@
           </ul>
         </li>
 
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-video-info"></i> <span>Jigyasa</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-right pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href={{route('jigyasa.index')}}>View</a></li>
+          </ul>
+        </li>
+
+
         <li class="treeview">
           <a href="#"><i class="fa fa-star"></i> <span>Review</span>
             <span class="pull-right-container">
