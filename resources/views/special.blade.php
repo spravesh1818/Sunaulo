@@ -114,6 +114,7 @@ input[type=submit]:hover {
 
 					<br>
 					<div><h4>तपाईको पनि जिज्ञासाहरु भए सोध्नुहोस | हामी जवाफ दिन्छौ | जिज्ञासा पठाउन तल क्लिक गर्नुहोस | </h4>
+					
 					<input type="button" class="button"  value="जिज्ञासा माथि छलफल गरौ" onclick="showDiv()" style="margin-left:20px"/>
 
 					<div id="welcomeDiv"  style="display:none;" class="answer_list"  style="margin-left:20px">
@@ -146,9 +147,9 @@ function hideDiv() {
 }
 </script>
 
-
 					</div>
 					<br>
+					@include('partials._jigyasa')
 
 					
 
