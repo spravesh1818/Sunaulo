@@ -115,40 +115,7 @@ input[type=submit]:hover {
 					<br>
 					<div><h4>तपाईको पनि जिज्ञासाहरु भए सोध्नुहोस | हामी जवाफ दिन्छौ | जिज्ञासा पठाउन तल क्लिक गर्नुहोस | </h4>
 					
-					<input type="button" class="button"  value="जिज्ञासा माथि छलफल गरौ" onclick="showDiv()" style="margin-left:20px"/>
-
-					<div id="welcomeDiv"  style="display:none;" class="answer_list"  style="margin-left:20px">
-<input class="button" type="button"  value="cancel" onclick="hideDiv()" style="margin-left:20px" />
-<div class="container" style="margin-left:20px">
-  <form method="post" id="question_form" action="{{ route('postQuestion') }}" >
-  {{csrf_field()}}
-    <label for="fname">पुरा नाम</label>
-    <input type="text" id="fname" name="firstname" placeholder="नाम..">
-
-    <label for="email">ईमेल </label>
-    <input type="text" id="email" name="email" placeholder="इमेल (गोप्य राखिनेछ !!)">
-
-    <label for="subject">तपाईको जिज्ञासा सोध्नुहोस</label>
-    <textarea id="question" name="question" placeholder="तपाईको जिज्ञासा लेख्नुहोस.." style="height:200px"></textarea>
-
-    <input type="submit" value="पेश गर्नुहोस">
-
-  </form>
-</div>
-</div>
-
-<script type="text/javascript">
-function showDiv() {
-   document.getElementById('welcomeDiv').style.display = "block";
-   $("p").remove();
-}
-function hideDiv() {
-   document.getElementById('welcomeDiv').style.display = "none";
-}
-</script>
-
-					</div>
-					<br>
+					
 					@include('partials._jigyasa')
 
 					
