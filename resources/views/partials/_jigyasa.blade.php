@@ -61,6 +61,9 @@ input[type=submit]:hover {
     <label for="fname">पुरा नाम</label>
     <input type="text" id="fname" name="firstname" placeholder="नाम..">
 
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="email..">
+
     <label for="subject">तपाईको जिज्ञासा सोध्नुहोस</label>
     <textarea id="question" name="question" placeholder="तपाईको जिज्ञासा लेख्नुहोस.." style="height:200px"></textarea>
 
@@ -89,13 +92,14 @@ function hideDiv() {
                     form.submit(function(event)
                     {
                         var name=$('#fname').val();
+                        var email=$('#email').val();
                         
                         var question=$('#question').val();
                         var token=$('input[name=_token]').val()
                         $.ajax({
                             type:'POST',
                             url:'/jigyasa',
-                            data: {'name':name,'question':question,'_token':token},
+                            data: {'name':name,'email':email,'question':question,'_token':token},
                             success:function(data){
                                 console.log(data);
                                 $('#welcomeDiv').hide();

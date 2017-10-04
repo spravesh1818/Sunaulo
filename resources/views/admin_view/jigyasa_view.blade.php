@@ -19,6 +19,7 @@ View Jigyasa Questions
 			<th>#</th>
 			<th>Question</th>
 			<th>Posted By</th>
+			<th>Email</th>
 			<th>Date of Post</th>
 			<th>Actions</th>
 		</tr>
@@ -31,6 +32,7 @@ View Jigyasa Questions
 			<th>{{$article->id}}</th>
 			<td>{{$article->question}}</td>
 			<td>{{$article->name}}</td>
+			<td>{{$article->email}}</td>
 			<td>{{date('F d, Y', strtotime($article->created_at))}}</td>
 			<td>
 				{!!Form::open(['route'=>['jigyasa.destroy',$article->id],'method'=>'delete'])!!}

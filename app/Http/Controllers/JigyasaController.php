@@ -26,6 +26,7 @@ class JigyasaController extends Controller
     public function create(Request $request){
         $question=new Curiousity;
         $question->name=$request->name;
+        $question->email=$request->email;
         $question->question=$request->question;
         $question->save();
         return response("Done");
