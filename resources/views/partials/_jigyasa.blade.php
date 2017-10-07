@@ -61,8 +61,8 @@ input[type=submit]:hover {
     <label for="fname">पुरा नाम</label>
     <input type="text" id="fname" name="firstname" placeholder="नाम..">
 
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email" placeholder="email..">
+    <label for="email">इमेल </label>
+    <input type="text" id="email" name="email" placeholder="इमेल (गोप्य राखिनेछ !!)">
 
     <label for="subject">तपाईको जिज्ञासा सोध्नुहोस</label>
     <textarea id="question" name="question" placeholder="तपाईको जिज्ञासा लेख्नुहोस.." style="height:200px"></textarea>
