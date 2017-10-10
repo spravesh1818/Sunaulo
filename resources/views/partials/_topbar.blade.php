@@ -1,3 +1,4 @@
+
 <div class="header_top_bar_container  clearfix style_2 border">
 			
 				<div class="header_top_bar">
@@ -8,17 +9,17 @@
 						<input type="hidden" name="page" value="search">
 					</form>
 					
-					<ul class="social_icons clearfix dark">
+					<ul class="social_icons clearfix">
 					<li>&nbsp;</li>
 					<li>&nbsp;</li>
 
 					<li>
-						<a href="https://www.facebook.com/Sahi-Umer-Sahi-Kadam-1374142792703076/?ref=all_category_pyml_rhc" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;</a>
+						<a href="https://www.facebook.com/Sahi-Umer-Sahi-Kadam-1374142792703076/?ref=all_category_pyml_rhc" title="facebook" class="social_icon facebook" aria-hidden="true">&nbsp;</a>
 					</li>
 					<li>&nbsp;</li>
 					<li>&nbsp;</li>
 					<li>
-							<a href="https://www.youtube.com/channel/UClmjixDFRpH6wDTtzNWbx8A" title="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+							<a href="https://www.youtube.com/channel/UClmjixDFRpH6wDTtzNWbx8A" title="youtube" class="social_icon youtube" aria-hidden="true">
 								&nbsp;
 							</a>
 						</li>

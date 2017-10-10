@@ -128,24 +128,17 @@ input[type=submit]:hover {
 							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 							@endphp
 							<li>
-								<a target="_blank" title="share on facebook" href="https://www.facebook.com/sharer/sharer.php?u={{$uri}}" class="social_icon facebook">
-									&nbsp;
-								</a>
+								<a title="share on facebook" href="https://www.facebook.com/sharer/sharer.php?u={{$uri}}" class="fa fa-facebook">&nbsp;</a>
 							</li>
 							<li>
-								<a target="_blank" title="share on twitter" href="https://twitter.com/home?status={{$uri}}" class="social_icon twitter">
-									&nbsp;
-								</a>
+								<a title="share on twitter" href="https://twitter.com/home?status={{$uri}}" class="fa fa-twitter">&nbsp;</a>
 							</li>
 							
 							
 							
 							<li>
-								<a title="share on pinterest" href="https://pinterest.com/pin/create/button/?url=&media={{$uri}}&description=" class="social_icon pinterest">
-									&nbsp;
-								</a>
+								<a title="share on pinterest" href="https://pinterest.com/pin/create/button/?url=&media={{$uri}}&description=" class="fa fa-pinterest">&nbsp;</a>
 							</li>
-							
 						</ul>
 					</div>
 				</div>
