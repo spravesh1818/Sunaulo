@@ -44,7 +44,7 @@
 		@endphp
 		<!-- One -->
 		@foreach($questions as $question)
-			<section id="{{$question->id+1}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
+			<section id="{{$question->id}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
