@@ -12,7 +12,7 @@
 					@if($i==0)
 <!-- First Latest Post--><li class="post">
 							<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
-<!-- Image of latest Post--><img src='images/slider/noimage.jpg' alt='img'>
+<!-- Image of latest Post--><!--<img src='images/slider/noimage.jpg' alt='img'>-->
 							</a>
 							<h2 class="with_number">
 								<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
@@ -44,7 +44,7 @@
 <!-- Small Post--><ul class="blog small clearfix">
 								<li class="post">
 									<a href="{{ route('view',$article->id) }}" title="{{$article->title}}">
-<!-- Image--><img src='images/samples/100x100/no_image.jpg' alt='img'>
+<!-- Image--><!--<img src='images/samples/100x100/no_image.jpg' alt='img'>-->
 									</a>
 									<div class="post_content">
 										

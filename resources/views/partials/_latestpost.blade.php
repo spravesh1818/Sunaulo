@@ -34,7 +34,7 @@
 							</a>
 							@else
 							<a href="{{ route('view',$article->id) }}" title={{$article->title}}>
-<!-- Image of latest Post--><img style="pointer-events: none; cursor: default;" src='images/slider/noimage.jpg' alt='img'>
+<!-- Image of latest Post--><!---<img style="pointer-events: none; cursor: default;" src='images/slider/noimage.jpg' alt='img'>-->
 							</a>
 							@endif
 							<h2 class="with_number">
@@ -98,7 +98,7 @@
 							</a>
 							@else
 							<a href="{{ route('view',$article->id) }}" title={{$article->title}}>
-<!-- Image of latest Post--><img src='images/slider/noimage.jpg' alt='img'>
+<!-- Image of latest Post--><!--<img src='images/slider/noimage.jpg' alt='img'>-->
 							</a>
 							@endif
 							<h2 class="with_number">
