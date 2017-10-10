@@ -40,7 +40,7 @@
 		{{csrf_field()}}
 		<input type="text" name="totalItems" style="display:none" value="{{count($questions)}}">
 		@php
-			$i=2;
+			$i=1;
 		@endphp
 		<!-- One -->
 		@foreach($questions as $question)
@@ -62,10 +62,10 @@
 						@endphp
 
 						<div class="content">
-  							<input type="radio" name="choice{{$i}}" value="{{$shuffle[0]}}">{{$shuffle[0]}}<br>
-  							<input type="radio" name="choice{{$i}}" value="{{$shuffle[1]}}">{{$shuffle[1]}}<br>
-  							<input type="radio" name="choice{{$i}}" value="{{$shuffle[2]}}"> {{$shuffle[2]}}<br>
-  							<input type="radio" name="choice{{$i}}" value="{{$shuffle[3]}}">{{$shuffle[3]}}
+  							<h3><input type="radio" name="choice{{$i}}" value="{{$shuffle[0]}}">{{$shuffle[0]}}</h3><br>
+  							<h3><input type="radio" name="choice{{$i}}" value="{{$shuffle[1]}}">{{$shuffle[1]}}</h3><br>
+  							<h3><input type="radio" name="choice{{$i}}" value="{{$shuffle[2]}}"> {{$shuffle[2]}}</h3><br>
+  							<h3><input type="radio" name="choice{{$i}}" value="{{$shuffle[3]}}">{{$shuffle[3]}}</h3>
 							
 						</div>
 						<footer>
