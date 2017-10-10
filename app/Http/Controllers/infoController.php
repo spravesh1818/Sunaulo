@@ -15,6 +15,7 @@ class infoController extends Controller
     public function index()
     {
         $infographic=infographic::all();
+        $infographic=$infographic->sortByDesc('created_at');
         return view('admin_view.infographic_view')->withInfographics($infographic);
     }
 
