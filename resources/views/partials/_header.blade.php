@@ -1,3 +1,10 @@
+
+
+
+<!--script for survey monkey-->
+
+<script>(function(t,e,s,o){var n,c,l;t.SMCX=t.SMCX||[],e.getElementById(o)||(n=e.getElementsByTagName(s),c=n[n.length-1],l=e.createElement(s),l.type="text/javascript",l.async=!0,l.id=o,l.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd5gZDE2yJFFSdgQlvopRc_2BlokbXO42UOXzN8u4IXrYIi.js"].join(""),c.parentNode.insertBefore(l,c))})(window,document,"script","smcx-sdk");</script>
+
 <style>
 h6 { color: #d54d7b; font-family: "Great Vibes", cursive; font-size: 40px;font-weight: normal; margin-bottom: 0px; text-align: center; text-shadow: 0 1px 1px #fff; }
 </style>

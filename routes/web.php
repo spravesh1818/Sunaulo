@@ -33,7 +33,7 @@ Route::post('/questionP','questionController@insertQuestion')->name('postQuestio
 
 Route::post('/jigyasa','JigyasaController@create')->name('jigyasa.create');
 Route::get('/ask','questionController@show')->name('askQuestion');
-Route::get('/about','PageController@about');
+Route::get('/about','PageController@about')->name('about');
 
 Route::get('/','PageController@home')->name('home');
 Route::get('/loadComments/{comment}','PageController@loadComments')->name('loadComments');
