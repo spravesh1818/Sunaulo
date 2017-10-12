@@ -12,7 +12,6 @@
 		<!-- Header -->
 			<header id="header">
 				<div class="logo">हाजिरी जवाफ <span>by सहि उमेर सहि कदम</span></div>
-				
 			</header>
 
 		<!-- Nav -->
@@ -24,11 +23,11 @@
 			to the full filename of your image. This is used in each section to set
 			the background image.
 		-->
-			<section id="1" class="wrapper post bg-img" data-bg="annapurna.jpeg">
+			<section id="banner" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
-							<h1> उत्तरहरु </h1>
+							<h2> परीणाम</h2>
 						</header>
 						<div class="result_box"><h2>तपाईको {{$points}} वटा उत्तरहरु सहि थियो</h2>
 						</div>
