@@ -40,7 +40,7 @@
 		{{csrf_field()}}
 		<input type="text" name="totalItems" style="display:none" value="{{count($questions)}}">
 		@php
-			$i=0;
+			$i=-1;
 		@endphp
 		<!-- One -->
 		@foreach($questions as $question)
