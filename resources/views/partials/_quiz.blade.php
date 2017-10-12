@@ -32,7 +32,7 @@
 					
 					
 				</div>
-				<a href="#{{$questions[0]->id}}" class="more">Start</a>
+				<a href="#1" class="more">Start</a>
 			</section>
 
 
@@ -44,11 +44,11 @@
 		@endphp
 		<!-- One -->
 		@foreach($questions as $question)
-			<section id="{{$question->id}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
+			<section id="<?php echo $i;?>" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
-							<h2><?php echo $i;?>.{{$question->question}}</h2>
+							<h2><?php echo $i;?>. {{$question->question}}</h2>
 						</header>
 
 						<input type="text" name="answer{{$i}}" value="{{$question->answer}}" style="display:none"><br>
@@ -69,12 +69,12 @@
 							
 						</div>
 						<footer>
-						<a href="#{{$question->id+1}}" class="button alt">अर्को </a>
-						<?php echo $i;?>
+						<a href="#<?php echo $i+1;?>" class="button alt">अर्को </a>
+						<!--<?php echo $i;?>-->
 						</footer>
 					</article>
 				</div>
-				<a href="#{{$question->id+1}}" class="more">Start</a>
+				<a href="#<?php echo $i+1;?>" class="more">Start</a>
 
 			</section>
 			@php
@@ -86,7 +86,7 @@
 				$final_section=end($questions);
 			@endphp
 
-			<section id="{{$final_section->id+1}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
+			<section id="<?php echo $i;?>" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
@@ -98,7 +98,7 @@
 					</article>
 				</div>
 			</section>
-		<section id="{{$final_section->id+2}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
+		<section id="<?php echo $i+2;?>" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>

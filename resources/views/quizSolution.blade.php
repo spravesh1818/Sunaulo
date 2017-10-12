@@ -30,16 +30,16 @@
 						<h1> उत्तरहरु </h1>
 					</header>
 				</div>
-				<a href="#{{$questions[0]->id}}" class="more">Start</a>
+				<a href="#1" class="more">Start</a>
 			</section>
 		<form method='post' id="question_form" action="{{ route('check') }}">
 		{{csrf_field()}}
 		@php
-			$i=2;
+			$i=1;
 		@endphp
 		<!-- One -->
 		@foreach($questions as $question)
-			<section id="{{$question->id}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
+			<section id="<?php echo $i;?>" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
@@ -54,7 +54,7 @@
 						</footer>
 					</article>
 				</div>
-				<a href="#{{$question->id+1}}" class="more">Start</a>
+				<a href="#<?php echo $i+1;?>" class="more">Start</a>
 			</section>
 			@php
 				$i++;	
@@ -65,7 +65,7 @@
 				$final_section=end($questions);
 			@endphp
 
-			<section id="{{$final_section->id+1}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
+			<section id="<?php echo $i;?>" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
@@ -78,7 +78,7 @@
 				</div>
 			</section>
 
-			<section id="{{$final_section->id+2}}" class="wrapper post bg-img" data-bg="annapurna.jpeg">
+			<section id="<?php echo $i+2;?>" class="wrapper post bg-img" data-bg="annapurna.jpeg">
 				<div class="inner">
 					<article class="box">
 						<header>
