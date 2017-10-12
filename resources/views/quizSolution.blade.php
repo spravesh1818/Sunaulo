@@ -50,7 +50,7 @@
   							<h3><label id="description">{{$question->description}}</label></h3>
 						</div>
 						<footer>
-						<a href="#{{$question->id+1}}" class="button alt">अर्को </a>
+						<a href="#<?php echo $i+1;?>" class="button alt">अर्को </a>
 						</footer>
 					</article>
 				</div>
