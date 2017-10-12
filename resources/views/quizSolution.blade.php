@@ -46,8 +46,8 @@
 							<h2>{{$question->question}}</h2>
 						</header>						
 						<div class="content">
-							<label id="answer">सहि उत्तर : {{$question->answer}}</label>
-  							<label id="description">{{$question->description}}</label>
+							<h3><label id="answer">सहि उत्तर : {{$question->answer}}</label></h3>
+  							<h3><label id="description">{{$question->description}}</label></h3>
 						</div>
 						<footer>
 						<a href="#{{$question->id+1}}" class="button alt">अर्को </a>

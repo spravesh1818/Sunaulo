@@ -40,7 +40,7 @@
 		{{csrf_field()}}
 		<input type="text" name="totalItems" style="display:none" value="{{count($questions)}}">
 		@php
-			$i=-1;
+			$i=0;
 		@endphp
 		<!-- One -->
 		@foreach($questions as $question)
@@ -109,7 +109,7 @@
 		</form>
 
 			<script src={{ URL::asset('js/jquery.min.js')}}></script>
-			<script src={{ URL::asset('js/jquery.scrolly.min.js')}}></script>
+		
 			<script src={{ URL::asset('js/jquery.scrollex.min.js')}}></script>
 			<script src={{ URL::asset('js/skel.min.js')}}></script>
 			<script src={{ URL::asset('js/util.js')}}></script>
