@@ -40,7 +40,7 @@
 		{{csrf_field()}}
 		<input type="text" name="totalItems" style="display:none" value="{{count($questions)}}">
 		@php
-			$i=0;
+			$i=1;
 		@endphp
 		<!-- One -->
 		@foreach($questions as $question)
@@ -48,7 +48,7 @@
 				<div class="inner">
 					<article class="box">
 						<header>
-							<h2>{{$question->question}}</h2>
+							<h2><?php echo $i;?>.{{$question->question}}</h2>
 						</header>
 
 						<input type="text" name="answer{{$i}}" value="{{$question->answer}}" style="display:none"><br>
@@ -70,10 +70,12 @@
 						</div>
 						<footer>
 						<a href="#{{$question->id+1}}" class="button alt">अर्को </a>
+						<?php echo $i;?>
 						</footer>
 					</article>
 				</div>
 				<a href="#{{$question->id+1}}" class="more">Start</a>
+
 			</section>
 			@php
 				$i++;	
