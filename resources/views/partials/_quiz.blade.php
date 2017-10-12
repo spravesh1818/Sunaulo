@@ -100,7 +100,7 @@
 				<div class="inner">
 					<article class="box">
 						<header>
-							<h2> धन्यवाद! </h2>
+							<h2> धन्यवाद </h2>
 						</header>
 						
 					</article>
