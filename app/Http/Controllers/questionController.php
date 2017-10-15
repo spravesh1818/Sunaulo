@@ -13,6 +13,7 @@ class questionController extends Controller
     public function show(){
         $articles=articles::all();
         $question=question::all();
+        $question=$question->sortByDesc('created_at');
         $category=category::all()->where('title','!=','जिज्ञासा र खुल्दुली');
         return view('askquestion')->withCategories($category)->withArticles($articles)->withQuestions($question);
     }
