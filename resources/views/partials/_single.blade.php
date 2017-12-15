@@ -39,6 +39,15 @@
 
 						@endif
 						<div class="post_content page_margin_top_section clearfix">
+
+							<head>
+  <!-- Comment #1: OG Tags -->
+  <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Your Website Title" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+</head>
 							
 							<div class="col-14">
 							<div class="content_box">
