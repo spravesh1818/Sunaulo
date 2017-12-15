@@ -8,12 +8,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.2" />
 		<meta name="keywords" content="sahi umer, sahi kadam,khulduli,sex query, child  marriage,sahi umer sahi kadam ,sahiumersahikadam, sexuality,teenage" />
 		<meta name="keywords" content="सहि उमेर सहि कदम, सहि उमेर,सहि कदम, यौनिकता,जिज्ञासा, खुल्दुली, समाज,  संस्कृति, यौन तथा प्रजनन् स्वास्थ्य , यौन व्यवहार, हिंसा, जीवन उपयोगी सीप"/>
-
-		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="{{$article->title}}" />
-  <meta property="og:description"   content="{!!substr($article->content,0,300)!!}" />
-  <meta property="og:image"         content="{{asset('uploads/'.$article->image)}}" />
 		
 
 		<meta name="description" content="सहि उमेर सहि कदम" />
