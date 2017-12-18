@@ -6,11 +6,29 @@
 		<!--meta-->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.2" />
-		<meta name="keywords" content="sahi umer, sahi kadam,khulduli,sex query, child  marriage,sahi umer sahi kadam ,sahiumersahikadam, sexuality,teenage" />
-		<meta name="keywords" content="सहि उमेर सहि कदम, सहि उमेर,सहि कदम, यौनिकता,जिज्ञासा, खुल्दुली, समाज,  संस्कृति, यौन तथा प्रजनन् स्वास्थ्य , यौन व्यवहार, हिंसा, जीवन उपयोगी सीप"/>
+		<meta name="keywords" content="sahi umer, sahi kadam,khulduli,sex query, child  marriage,sahi umer sahi kadam ,sahiumersahikadam, sexuality,teenage , सहि उमेर सहि कदम, सहि उमेर,सहि कदम, यौनिकता,जिज्ञासा, खुल्दुली, समाज,  संस्कृति, यौन तथा प्रजनन् स्वास्थ्य , यौन व्यवहार, हिंसा, जीवन उपयोगी सीप" />
+		
 		
 
 		<meta name="description" content="सहि उमेर सहि कदम" />
+
+		<meta id="mtlink" property="og:url" content="http://sahiumersahikadam.org" >
+        <meta id="mttype" property="og:type" content="article" >
+        <meta id="mttitle" property="og:title" content="सहि उमेर सहि कदम" >
+        <meta  id="mtdesc" property="og:description" content="सहि उमेर सहि कदम" >
+
+
+		<script type="text/javascript">
+ window.onload = function () {
+     setProductMeta();
+ }
+function setProductMeta(){
+  $("#mtlink").attr("content","http://albup.com");
+   $("#mtdesc").attr("content","music all the time");
+   $("#mtkwrds").attr("content","mp3, download music, ");
+}
+</script>
+
 		<!--style-->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
