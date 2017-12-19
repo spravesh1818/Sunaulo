@@ -40,12 +40,7 @@
 						@endif
 						<div class="post_content page_margin_top_section clearfix">
 
-  <!-- Comment #1: OG Tags -->
-  <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="{{$article->title}}" />
-  <meta property="og:description"   content="{!!substr($article->content,0,300)!!}" />
-  <meta property="og:image"         content="{{asset('uploads/'.$article->image)}}" />
+
 							
 							<div class="col-14">
 							<div class="content_box">
@@ -92,6 +87,16 @@
 						</ul>
 					</div>
 				</div>
+<head>
+				  <!-- Comment #1: OG Tags -->
+  <meta property="og:url"           content="{{$uri}}" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="{{$article->title}}" />
+  <meta property="og:description"   content="{!!substr($article->content,0,300)!!}" />
+  <meta property="og:image"         content="{{asset('uploads/'.$article->image)}}" />
+</head>
+
+
 				<div class="row page_margin_top">
 					<ul class="taxonomies tags left clearfix">
 						@foreach($article->tags as $tag)
