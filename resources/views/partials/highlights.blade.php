@@ -10,7 +10,7 @@
  
   @if(!empty($article->image))
             <a href="{{ route('view',$article->id) }}" title={{$article->title}}>
-<!-- Image of latest Post--><img style="pointer-events: none; cursor: default; width: 100%;
+<!-- Image of latest Post--><img style="width: 100%;
     height: auto;" src='{{ asset('uploads/'.$article->image) }}' alt='img'>
               </a>
               <br>
