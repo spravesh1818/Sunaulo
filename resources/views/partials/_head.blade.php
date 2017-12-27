@@ -12,6 +12,13 @@
 
 		<meta name="description" content="सहि उमेर सहि कदम" />
 
+		<!-- Comment #1: OG Tags -->
+  <meta property="og:url"           content="http://sahiumersahikadam.org" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="सहि उमेर सहि कदम" />
+  <meta property="og:description"   content="सहि उमेर सहि कदम" />
+  <meta property="og:image"         content="" />
+
 
 		<meta id="mtlink" property="og:url" content="http://sahiumersahikadam.org" >
         <meta id="mttype" property="og:type" content="article" >

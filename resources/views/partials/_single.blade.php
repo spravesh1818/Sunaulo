@@ -72,8 +72,9 @@
 						@php
 							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 							@endphp
-							<li>
 
+
+							<li>
 								<a href="javascript:void(0);" onclick="fb_share('{{$uri}}', '{{$article->title}}')" class="fa fa-facebook" title="share on facebook">&nbsp;</a>
 							</li>
 							<li>
