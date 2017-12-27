@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/share/{id}','PageController@share');
+
+
 Route::get('/test','PageController@special')->name('khulduli');
 Route::get('/numberOfComments','PageController@sortNC')->name('sortNC');
 Route::get('/mostRead','PageController@sortMR')->name('sortMR');

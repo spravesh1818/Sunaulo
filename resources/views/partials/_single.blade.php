@@ -1,3 +1,5 @@
+
+
 <body class="">
 
 <div class="col-12">
@@ -73,10 +75,13 @@
 							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 							@endphp
 
-
 							<li>
-								<a href="javascript:void(0);" onclick="fb_share('{{$uri}}', '{{$article->title}}')" class="fa fa-facebook" title="share on facebook">&nbsp;</a>
+								<a title="share on twitter" href="https://www.facebook.com/sharer/sharer.php?u={{$uri}}" class="fa fa-facebook">&nbsp;</a>
 							</li>
+
+							<!--<li>
+								<a href="javascript:void(0);" onclick="fb_share('{{$uri}}', '{{$article->title}}')" class="fa fa-facebook" title="share on facebook">&nbsp;</a>
+							</li>-->
 							<li>
 								<a title="share on twitter" href="https://twitter.com/home?status={{$uri}}" class="fa fa-twitter">&nbsp;</a>
 							</li>
@@ -89,6 +94,9 @@
 						</ul>
 					</div>
 				</div>
+
+
+
 				@section('facebook_meta')
     <meta property="og:url" content="{{$uri}}">
     <meta property="og:image" content="{{asset('uploads/'.$article->image)}}">
@@ -219,7 +227,7 @@
 
 			</script>
 			  <div id="fb-root"></div>
-    <script>
+  <!--  <script>
     (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id))
@@ -240,6 +248,6 @@
         window.open(pageURL, dynamic_title, 'toolbar=no, location=no, directories=no, status=no, menubar=yes, scrollbars=no, resizable=no, copyhistory=no, width=' + 800 + ', height=' + 650 + ', top=' + top + ', left=' + left)
         return false;
     }
-    </script>
+    </script>-->
 
 			@include('partials._rightbar')

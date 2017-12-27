@@ -15,9 +15,18 @@ use App\gallery_file;
 use App\infographic;
 use App\info_file;
 
+use Illuminate\Support\DB;
+
 
 class PageController extends Controller
 {
+
+public function share($id)
+{
+	$articles=articles::all();
+	return view('partials._head',['article' =>$articles]);
+}
+
 	public function about(){
 		$categories=category::all();
 		$articles=articles::all();
@@ -38,6 +47,7 @@ class PageController extends Controller
 		shuffle($selected);
 		$featured=articles::where('category_id',$selected[0])->limit(4)->get();
 		return view('index')->withArticles($articles)->withCategories($categories)->withFeatured($featured);
+		return view('partials._head',['article' =>$articles]);
 	}
 
 	public function show($id){

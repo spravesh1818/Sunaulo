@@ -12,14 +12,12 @@
 
 		<meta name="description" content="सहि उमेर सहि कदम" />
 
-		@yield('facebook_meta')
 
-		<!-- Comment #1: OG Tags 
-  <meta property="og:url"           content="http://sahiumersahikadam.org" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="" />
-  <meta property="og:description"   content="" />
-  <meta property="og:image"         content="" />-->
+		<meta property="og:url" content="@yield('og:url')">
+		<meta property="og:image" content="@yield('og:image')">
+    	<meta proterty="og:title" content="@yield('og:title')"
+
+		@yield('facebook_meta')
 
 
 		<!--style-->
