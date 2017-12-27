@@ -92,7 +92,7 @@
 				@section('facebook_meta')
     <meta property="og:url" content="{{$uri}}">
     <meta property="og:image" content="{{asset('uploads/'.$article->image)}}">
-    <meta proterty="og:title" content="{{$article->title}}"
+    <meta proterty="og:title" content="{{$article->title}}">
     <meta property="og:description" content="{!!substr($article->content,0,300)!!}">
 @endsection
 
