@@ -22,11 +22,6 @@
   <meta property="og:image"         content="" />-->
 
 
-		<meta id="mtlink" property="og:url" content="http://sahiumersahikadam.org" >
-        <meta id="mttype" property="og:type" content="article" >
-        <meta id="mttitle" property="og:title" content="सहि उमेर सहि कदम" >
-        <meta  id="mtdesc" property="og:description" content="सहि उमेर सहि कदम" >
-
 		<!--style-->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
