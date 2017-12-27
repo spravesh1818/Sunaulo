@@ -89,6 +89,12 @@
 						</ul>
 					</div>
 				</div>
+				@section('facebook_meta')
+    <meta property="og:url" content="{{$uri}}">
+    <meta property="og:image" content="{{asset('uploads/'.$article->image)}}">
+    <meta proterty="og:title" content="{{$article->title}}"
+    <meta property="og:description" content="{!!substr($article->content,0,300)!!}">
+@endsection
 
 
 				<div class="row page_margin_top">
@@ -236,17 +242,4 @@
     }
     </script>
 
-    <script type="text/javascript">
-    	<?
-   // Change Title Tag Version 1.5
-function ch_title($title){
-    $output = ob_get_contents();
-    if ( ob_get_length() > 0) { ob_end_clean(); }
-    $patterns = array("/<title>(.*?)<\/title>/");
-    $replacements = array("<title>$title</title>");
-    $output = preg_replace($patterns, $replacements,$output);
-    echo $output;
-}
-?>
-    </script>>
 			@include('partials._rightbar')

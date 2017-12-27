@@ -6,7 +6,7 @@
    @if($article->category->title==="जिज्ञासा र खुल्दुली")
   @else
   @if($i<=2) 
-  <h2 class="box_header_title">
+  <h2 class="box_header_title" style="min-height: 100%">
  
   @if(!empty($article->image))
             <a href="{{ route('view',$article->id) }}" title={{$article->title}}>
