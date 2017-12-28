@@ -17,9 +17,10 @@
 		
   <meta property="og:url"           content="http://sahiumersahikadam.org" />
   <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="" />
-  <meta property="og:description"   content="" />
+  <meta property="og:title"         content="{{$article->title}}" />
+  <meta property="og:description"   content='{!!substr($article->content,0,300)!!}' />
   <meta property="og:image"         content="" />
+ <div height="500px" width="500px">{{$article->title}}</div>
 
 
 		<!--style-->
