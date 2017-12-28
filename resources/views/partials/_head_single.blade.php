@@ -13,9 +13,11 @@
 		<meta name="description" content="सहि उमेर सहि कदम" />
 
 		@yield('facebook_meta')
-
+@php
+							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+							@endphp
 		
-  <meta property="og:url"           content="http://sahiumersahikadam.org/article/{{$article->id}}" />
+  <meta property="og:url"           content="{{$uri}}" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{$article->title}}" />
   <meta property="og:description"   content='{!!substr($article->content,0,300)!!}' />
