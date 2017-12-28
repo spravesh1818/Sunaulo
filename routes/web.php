@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/share/{id}','PageController@share');
+Route::get('/share','PageController@share');
 
 
 Route::get('/test','PageController@special')->name('khulduli');

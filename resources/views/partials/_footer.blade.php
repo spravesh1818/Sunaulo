@@ -14,7 +14,6 @@
 
 <div class="w3-col l7 m6 s4 w3-dark-grey w3-center">© Copyright</div>
  <div class="w3-col l7 m3 s4 w3-dark-grey w3-center">Developed By</div>
- <div class="w3-col l7 m3 s4 w3-dark-grey w3-center">About us</div>
 </div>
 </div>
 </div>

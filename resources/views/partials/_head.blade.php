@@ -13,9 +13,6 @@
 		<meta name="description" content="सहि उमेर सहि कदम" />
 
 
-		<meta property="og:url" content="@yield('og:url')">
-		<meta property="og:image" content="@yield('og:image')">
-    	<meta proterty="og:title" content="@yield('og:title')"
 
 		@yield('facebook_meta')
 

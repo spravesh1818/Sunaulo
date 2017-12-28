@@ -21,10 +21,10 @@ use Illuminate\Support\DB;
 class PageController extends Controller
 {
 
-public function share($id)
+public function share()
 {
-	$articles=articles::all();
-	return view('partials._head',['article' =>$articles]);
+	$articles= articles::first();
+	return view('index',['article' =>$articles]);
 }
 
 	public function about(){
@@ -47,7 +47,6 @@ public function share($id)
 		shuffle($selected);
 		$featured=articles::where('category_id',$selected[0])->limit(4)->get();
 		return view('index')->withArticles($articles)->withCategories($categories)->withFeatured($featured);
-		return view('partials._head',['article' =>$articles]);
 	}
 
 	public function show($id){
