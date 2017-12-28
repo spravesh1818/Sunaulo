@@ -1,5 +1,5 @@
 
-@include('partials._head')
+@include('partials._head_single')
 @include('partials._header')	
 @include('partials._single')
 
