@@ -15,12 +15,16 @@
 		@yield('facebook_meta')
 
 		
-  <meta property="og:url"           content="http://sahiumersahikadam.org" />
+  <meta property="og:url"           content="" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{$article->title}}" />
   <meta property="og:description"   content='{!!substr($article->content,0,300)!!}' />
-  <meta property="og:image"         content="" />
- <div height="500px" width="500px">{{$article->title}}</div>
+  <meta property="og:image"         content="{{asset('uploads/'.$article->image)}}" />
+ 
+ <!--<div height="500px" width="500px">{{$article->title}}</div>
+ <div>{{$article->id}}</div>
+ <div height="500px" width="500px">{!!substr($article->content,0,300)!!}</div>
+ <div><img src='{{asset('uploads/'.$article->image)}}' alt='img'></div>-->
 
 
 		<!--style-->
