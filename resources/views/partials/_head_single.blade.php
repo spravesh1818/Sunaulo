@@ -20,8 +20,9 @@
   <meta property="og:url"           content="{{$uri}}" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{$article->title}}" />
-  <meta property="og:description"   content='{!!substr($article->content,0,300)!!}' />
+  <meta property="og:description"   content='{{$article->content}}' />
   <meta property="og:image"         content="{{asset('uploads/'.$article->image)}}" />
+
  
  <!--<div height="500px" width="500px">{{$article->title}}</div>
  <div>{{$article->id}}</div>

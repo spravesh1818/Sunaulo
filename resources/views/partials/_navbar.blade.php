@@ -14,7 +14,7 @@
     <li style="z-index:99;"> <a href=""><span>बिषयगत प्रस्तुति</span></a>
       <ul>
         @foreach($categories as $category)
-        @if($category->title==='जिज्ञासा र खुल्दुली')
+        @if($category->title==='जिज्ञासा र ')
         @else
         <li><a href="{{ route('category',$category->id) }}">{{$category->title}}</a></li>
         @endif
