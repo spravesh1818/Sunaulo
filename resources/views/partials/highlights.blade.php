@@ -6,12 +6,12 @@
    @if($article->category->title==="जिज्ञासा र खुल्दुली")
   @else
   @if($i<=2) 
-  <h2 class="box_header_title" style="min-height: 100%">
+  <h2 class="box_header_title">
  
   @if(!empty($article->image))
             <a href="{{ route('view',$article->id) }}" title={{$article->title}}>
 <!-- Image of latest Post--><img style="width: 100%;
-    height: auto;" src='{{ asset('uploads/'.$article->image) }}' alt='img'>
+    height: 100%;" src='{{ asset('uploads/'.$article->image) }}' alt='img'>
               </a>
               <br>
 
@@ -28,7 +28,7 @@
       
       echo '<iframe width="1280" height="720" src="https://www.youtube.com/embed/' . $id . '"frameborder="0" allowfullscreen class="vid1"></iframe>';
   @endphp
-  @endif<br>
+  @endif
   <a href="{{ route('view',$article->id) }}" title="{{$article->title}}">{{$article->title}}</a> </h2>
   @endif  
   @php

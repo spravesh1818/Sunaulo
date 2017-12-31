@@ -22,6 +22,7 @@
   <meta property="og:title"         content="{{$article->title}}" />
   <meta property="og:description"   content='{{$article->content}}' />
   <meta property="og:image"         content="{{asset('uploads/'.$article->image)}}" />
+  <meta property="og:video"			content="{{$article->video_url}}"/>
 
  
  <!--<div height="500px" width="500px">{{$article->title}}</div>
