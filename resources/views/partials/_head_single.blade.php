@@ -21,9 +21,14 @@
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{$article->title}}" />
   <meta property="og:description"   content='{{$article->content}}' />
-  <meta property="og:image"         content="{{asset('uploads/'.$article->image)}}" />
-  <meta property="og:video"			content="{{$article->video_url}}"/>
 
+  @if(!empty($article->image))
+  <meta property="og:image"         content="{{asset('uploads/'.$article->image)}}" />
+  @elseif(!empty($article->video_url))
+  <meta property="og:video"			content="{{$article->video_url}}"/>
+  @else
+  <meta property="og:image"         content="{{asset('images/steps.png')}}" />
+@endif
  
  <!--<div height="500px" width="500px">{{$article->title}}</div>
  <div>{{$article->id}}</div>
