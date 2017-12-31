@@ -26,6 +26,7 @@
   <meta property="og:image"         content="{{asset('uploads/'.$article->image)}}" />
   @elseif(!empty($article->video_url))
   <meta property="og:video"			content="{{$article->video_url}}"/>
+   <meta property="og:url"			content="{{$article->video_url}}"/>
   @else
   <meta property="og:image"         content="{{asset('images/steps.png')}}" />
 @endif
