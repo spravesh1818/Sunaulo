@@ -31,6 +31,9 @@
 
   <meta property="og:title"         content="{{$article->title}}" />
 
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="500" />
+
  <!-- <meta property="og:description"   content='{!!substr($article->content,0,300)!!}' />-->
 
  
