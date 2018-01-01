@@ -24,9 +24,9 @@
   	@elseif(!empty($article->video_url))
   <meta property="og:video"			content="{{$article->video_url}}"/>
   <meta property="og:url"			content="{{$article->video_url}}"/>
-  <meta property="og:image"         content="{{asset('images/steps.png')}}" />
+  <meta property="og:image"         content="{{asset('images/footprints.png')}}" />
   	@else
-  <meta property="og:image"         content="{{asset('images/steps.png')}}" />
+  <meta property="og:image"         content="{{asset('images/footprints.png')}}" />
 	@endif
 
   <meta property="og:title"         content="{{$article->title}}" />
