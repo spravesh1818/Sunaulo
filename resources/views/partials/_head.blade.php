@@ -12,6 +12,8 @@
 
 		<meta name="description" content="सहि उमेर सहि कदम" />
 
+		<meta property="og:image"         content="{{asset('images/ogfoots.png')}}" />
+
 
 		<!--style-->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
