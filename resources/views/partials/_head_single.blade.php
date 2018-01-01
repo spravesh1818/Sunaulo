@@ -11,7 +11,7 @@
 		
 
 		<meta name="description" content="सहि उमेर सहि कदम" />
-		
+
 @php
 							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 							@endphp
@@ -26,6 +26,7 @@
   @elseif(!empty($article->video_url))
   <meta property="og:video"			content="{{$article->video_url}}"/>
    <meta property="og:url"			content="{{$article->video_url}}"/>
+   <meta property="og:image"         content="{{asset('images/steps.png')}}" />
   @else
   <meta property="og:image"         content="{{asset('images/steps.png')}}" />
 @endif
