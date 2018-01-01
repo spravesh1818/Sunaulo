@@ -11,8 +11,7 @@
 		
 
 		<meta name="description" content="सहि उमेर सहि कदम" />
-
-		@yield('facebook_meta')
+		
 @php
 							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 							@endphp
@@ -20,7 +19,7 @@
   <meta property="og:url"           content="{{$uri}}" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="{{$article->title}}" />
-  <meta property="og:description"   content='{{$article->content}}' />
+ <!-- <meta property="og:description"   content='{{$article->content}}' />-->
 
   @if(!empty($article->image))
   <meta property="og:image"         content="{{asset('uploads/'.$article->image)}}" />

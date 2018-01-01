@@ -95,16 +95,6 @@
 					</div>
 				</div>
 
-
-
-				@section('facebook_meta')
-    <meta property="og:url" content="{{$uri}}">
-    <meta property="og:image" content="{{asset('uploads/'.$article->image)}}">
-    <meta proterty="og:title" content="{{$article->title}}">
-    <meta property="og:description" content="{!!substr($article->content,0,300)!!}">
-@endsection
-
-
 				<div class="row page_margin_top">
 					<ul class="taxonomies tags left clearfix">
 						@foreach($article->tags as $tag)
