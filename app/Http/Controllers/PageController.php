@@ -109,7 +109,7 @@ public function share()
 		foreach ($categories as $category) {
 			$id[0]=$category->id;
 		}
-		$articles=articles::where('category_id',$id[0])->simplePaginate(1);
+		$articles=articles::where('category_id',$id[0])->orderBy('created_at','desc')->simplePaginate(1);
 		$comment=comment::all();
 		return view('special')->withArticles($articles)->withCategories($nav)->withComments($comment);
 	}

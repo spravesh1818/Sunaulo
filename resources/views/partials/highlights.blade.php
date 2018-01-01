@@ -58,7 +58,7 @@
     @foreach($articles as $article)
       @if($article->category->title==='जिज्ञासा र खुल्दुली')    
       @if($n<=4)
-       <li class="post"><div class="post_content"><h5><a href="/test?page={{$numofkhulduli}}"> {{$article->title}}</a></h5></div></li>
+       <li class="post"><div class="post_content"><h5><a href="/test?page={{$n+1}}"> {{$article->title}}</a></h5></div></li>
        <br>
         @php
           $n=$n+1;  
