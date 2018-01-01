@@ -13,23 +13,26 @@
 		<meta name="description" content="सहि उमेर सहि कदम" />
 
 @php
-							$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-							@endphp
+	$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+@endphp
 		
   <meta property="og:url"           content="{{$uri}}" />
   <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="{{$article->title}}" />
- <!-- <meta property="og:description"   content='{{$article->content}}' />-->
 
-  @if(!empty($article->image))
+	@if(!empty($article->image))
   <meta property="og:image"         content="{{asset('uploads/'.$article->image)}}" />
-  @elseif(!empty($article->video_url))
+  	@elseif(!empty($article->video_url))
   <meta property="og:video"			content="{{$article->video_url}}"/>
-   <meta property="og:url"			content="{{$article->video_url}}"/>
-   <meta property="og:image"         content="{{asset('images/steps.png')}}" />
-  @else
+  <meta property="og:url"			content="{{$article->video_url}}"/>
   <meta property="og:image"         content="{{asset('images/steps.png')}}" />
-@endif
+  	@else
+  <meta property="og:image"         content="{{asset('images/steps.png')}}" />
+	@endif
+
+  <meta property="og:title"         content="{{$article->title}}" />
+
+ <!-- <meta property="og:description"   content='{!!substr($article->content,0,300)!!}' />-->
+
  
  <!--<div height="500px" width="500px">{{$article->title}}</div>
  <div>{{$article->id}}</div>
