@@ -34,7 +34,7 @@
   <meta property="og:image:width" content="500" />
   <meta property="og:image:height" content="500" />
 
- <!-- <meta property="og:description"   content='{!!substr($article->content,0,300)!!}' />-->
+  <meta property="og:description"   content='{!! str_limit(strip_tags($article->content), $limit = 150, $end = '...') !!}' />
 
  
  <!--<div height="500px" width="500px">{{$article->title}}</div>
