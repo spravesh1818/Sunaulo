@@ -15,9 +15,18 @@ use App\gallery_file;
 use App\infographic;
 use App\info_file;
 
+use Illuminate\Support\DB;
+
 
 class PageController extends Controller
 {
+
+public function share()
+{
+	$articles= articles::first();
+	return view('index',['article' =>$articles]);
+}
+
 	public function about(){
 		$categories=category::all();
 		$articles=articles::all();
@@ -100,7 +109,7 @@ class PageController extends Controller
 		foreach ($categories as $category) {
 			$id[0]=$category->id;
 		}
-		$articles=articles::where('category_id',$id[0])->simplePaginate(1);
+		$articles=articles::where('category_id',$id[0])->orderBy('created_at','desc')->simplePaginate(1);
 		$comment=comment::all();
 		return view('special')->withArticles($articles)->withCategories($nav)->withComments($comment);
 	}

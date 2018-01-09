@@ -12,14 +12,7 @@
 
 		<meta name="description" content="सहि उमेर सहि कदम" />
 
-		@yield('facebook_meta')
-
-		
-  <meta property="og:url"           content="http://sahiumersahikadam.org" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="" />
-  <meta property="og:description"   content="" />
-  <meta property="og:image"         content="" />
+		<meta property="og:image"         content="{{asset('images/ogfoots.png')}}" />
 
 
 		<!--style-->

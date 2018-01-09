@@ -24,8 +24,8 @@ h6 { color: #d54d7b; font-family: "Great Vibes", cursive; font-size: 40px;font-w
 
 						<div>
 						
-						<h1 style="text-align: center; color:#EF008C;">सहि <span style="color:#0072CE;">उमेर </span>
-						<span style="color:#EF008C;">सहि </span>
+						<h1 style="text-align: center; color:#EF008C;">सही <span style="color:#0072CE;">उमेर </span>
+						<span style="color:#EF008C;">सही </span>
 						<span style="color:#0072CE;">कदम </span></h1>
 						
 						<h6 style="text-align: center;"> <span style=" color:#CF000F;">right age right steps</span>
