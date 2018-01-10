@@ -1,4 +1,4 @@
-@include('partials._head')
+@include('partials._head_jigyasa')
 @include('partials._header')
 
 <style>input[type=text], select, textarea {

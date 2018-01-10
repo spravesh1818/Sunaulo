@@ -9,12 +9,11 @@
 		<meta name="keywords" content="sahi umer, sahi kadam,khulduli,sex query, child  marriage,sahi umer sahi kadam ,sahiumersahikadam, sexuality,teenage , सहि उमेर सहि कदम, सहि उमेर,सहि कदम, यौनिकता,जिज्ञासा, खुल्दुली, समाज,  संस्कृति, यौन तथा प्रजनन् स्वास्थ्य , यौन व्यवहार, हिंसा, जीवन उपयोगी सीप" />
 		
 		
-
 		<meta name="description" content="सहि उमेर सहि कदम" />
 
-		<meta property="og:image"         content="{{asset('images/ogfoots.png')}}" />
+		<meta property="og:image" content="{{asset('images/ogfoots.png')}}" />
 
-
+		
 		<!--style-->
 		<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
