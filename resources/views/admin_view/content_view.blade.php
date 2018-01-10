@@ -21,6 +21,7 @@ View Content
 			<th>Category</th>
 			<th>Author</th>
 			<th>Date of Post</th>
+			<th>No. of Views</th>
 			<th>Actions</th>
 		</tr>
 		@php
@@ -35,6 +36,7 @@ View Content
 			<td>{{$article->category->title}}</td>
 			<td>{{$article->author->name}}</td>
 			<td>{{date('F d, Y', strtotime($article->created_at))}}</td>
+			<td>{{$article->mostRead}}</td>
 			<td>
 			@if($article->author->name===auth()->user()->name)
 			<a href='{{route('content.edit',$article->id)}}' class='btn btn-primary btn-sm' style='margin-bottom:2px;width:66px'>Edit</a>
