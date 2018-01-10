@@ -16,6 +16,7 @@
 	$uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 @endphp
 		
+	<!--Open Graph data-->	
   <meta property="og:url"           content="{{$uri}}" />
   <meta property="og:type"          content="website" />
 
@@ -37,6 +38,25 @@
   <meta property="og:description"   content='{!! str_limit(strip_tags($article->content), $limit = 200, $end = '...') !!}' />
 
  
+<!--Twitter Card data-->
+
+<meta name="twitter:site"           content="{{$uri}}" />
+  <meta name="twitter:card"           content="website" />
+
+	@if(!empty($article->image))
+  <meta name="twitter:image"         content="{{asset('uploads/'.$article->image)}}" />
+  	@elseif(!empty($article->video_url))
+  <meta name="twitter:player"			content="{{$article->video_url}}"/>
+  <meta name="twitter:site"			content="{{$article->video_url}}"/>
+  <meta name="twitter:image"          content="{{asset('images/ogfoots.png')}}" />
+  	@else
+  <meta name="twitter:image"         content="{{asset('images/ogfoots.png')}}" />
+	@endif
+
+  <meta name="twitter:title"         content="{{$article->title}}" />
+
+  <meta name="twitter:description"   content='{!! str_limit(strip_tags($article->content), $limit = 200, $end = '...') !!}' />
+
  <!--<div height="500px" width="500px">{{$article->title}}</div>
  <div>{{$article->id}}</div>
  <div height="500px" width="500px">{!!substr($article->content,0,300)!!}</div>
